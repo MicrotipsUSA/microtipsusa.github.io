@@ -1,0 +1,155 @@
+body, html {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+}
+
+.example3 .navbar-brand {
+  height: 80px;
+}
+
+.example3 .nav >li >a {
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+.example3 .navbar-toggle {
+  padding: 10px;
+  margin: 25px 15px 25px 0;
+}
+
+.section {
+	background-color: white;
+ 	background-size: cover;
+ 	-webkit-background-size: cover;
+ 	-moz-background-size: cover;
+ 	-o-background-size: cover;
+ 	background-position: center;
+ 	background-repeat: no-repeat;
+ 	background-attachment: fixed;
+}
+
+.homeSectionOne {
+    background-image: url(Z:/jruhl/NewWebSite/images/index/heartMonitorWithText.jpg);
+
+    min-height: 50%;
+}
+
+.homeSectionTwo {
+	background-color: white;
+
+	color: black;
+	text-align: center;
+
+	min-height: 25%;
+}
+
+.homeSectionThree {
+	background-image: url(Z:/jruhl/NewWebSite/images/index/banner-bg.png);
+
+    min-height: 25%;
+}
+
+#map {
+    height: 200px;
+    width: 75%;
+}
+
+.modal-header, h4, .close {
+      background-color: #5bc0de;
+      color:white !important;
+      text-align: center;
+      font-size: 30px;
+  }
+.modal-footer {
+      background-color: #f9f9f9;
+}
+
+#parent {
+	display: table;
+}
+
+#child {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus {
+    background-color: #bcbcbc;
+    color: white;
+}
+
+a.hs2links {
+	transform: scale(0.92);
+}
+
+a.hs2links:hover {
+	background-color: #1E90FF;
+	color: white;
+	border-radius: 20px;
+	transform: scale(0.98);
+	text-decoration: none;
+}
+
+a {
+	color: black;
+}
+
+a.newsLink:hover {
+	color: white;
+	text-decoration: none;
+	transform: scale(1.05);
+}
+
+.btn-info {
+	background-color: #1E90FF;
+}
+
+.btn-info:hover {
+	background-color: #4DA7FF;
+}
+
+.productImage {
+	border-radius: 35px 35px 15px 15px;
+	padding-top: 15px;
+}
+
+.aboutSectionOne {
+	background-image: url(Z:/jruhl/NewWebSite/images/about/OfficePic.png);
+
+	padding-top: 100px;
+
+    min-height: 85%;
+}
+
+.aboutSectionTwo {
+	min-height: 50%;
+}
+
+.blueSplitter {
+	background-color: #1E90FF;
+	height: 2px;
+	border-radius: 10px;
+}
+
+.aboutSectionThree {
+	min-height: 50%;
+}
+
+div.meetTeam {
+	transform: scale(0.92);
+	text-align: center;
+}
+
+div.meetTeam:hover {
+	background-color: #1E90FF;
+	color: white;
+	border-radius: 20px;
+	transform: scale(0.98);
+	text-decoration: none;
+}
+
+.newsSectionOne {
+	background-image: url(Z:/jruhl/NewWebSite/images/news/newsHeader.jpg);
+
+	min-height: 600px;
+}
