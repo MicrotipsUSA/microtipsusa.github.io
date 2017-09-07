@@ -29,7 +29,7 @@ body, html {
 }
 
 .homeSectionOne {
-    background-image: url(Z:/jruhl/NewWebSite/images/index/heartMonitorWithText.jpg);
+    background-image: url(images/index/heartMonitorWithText.jpg);
 
     min-height: 50%;
 }
@@ -44,7 +44,7 @@ body, html {
 }
 
 .homeSectionThree {
-	background-image: url(Z:/jruhl/NewWebSite/images/index/banner-bg.png);
+	background-image: url(images/index/banner-bg.png);
 
     min-height: 25%;
 }
