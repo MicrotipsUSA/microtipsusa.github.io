@@ -114,7 +114,7 @@ a.newsLink:hover {
 }
 
 .aboutSectionOne {
-	background-image: url(Z:/jruhl/NewWebSite/images/about/OfficePic.png);
+	background-image: url(images/about/OfficePic.png);
 
 	padding-top: 100px;
 
@@ -149,7 +149,7 @@ div.meetTeam:hover {
 }
 
 .newsSectionOne {
-	background-image: url(Z:/jruhl/NewWebSite/images/news/newsHeader.jpg);
+	background-image: url(images/news/newsHeader.jpg);
 
 	min-height: 600px;
 }
