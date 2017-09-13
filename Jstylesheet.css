@@ -203,4 +203,7 @@ div.meetTeam:hover {
     	padding-left: 15px;
     	padding-bottom: 15px;
     }
+    .collapse >ul {
+    	padding-top: 15px;
+    }
 }
