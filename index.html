@@ -6,6 +6,8 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   <link rel="stylesheet" href="Jstylesheet.css">
@@ -32,13 +34,14 @@
         <div class="collapse navbar-collapse" id="myNavbar">
           <ul class="nav navbar-nav">
             <li><a href="about.html">About</a></li>
-            <li><a href="index.html#productSection">Products & Industries</a></li> 
+            <li><a href="index.html#productSection">Products</a></li> 
+            <li><a href="index.html#industrySection">Industries</a></li> 
             <li><a href="news.html">News</a></li>
             <li><a href="distreps.html">Distributors & Reps</a></li>
           </ul>
-          <ul class="nav navbar-nav navbar-right">
-            <li style="padding-top: 15px; padding-left: 15px"><button class="btn btn-info navbar-btn" id="myBtn">Contact Us!</button></li>
-          </ul>
+          <div class="nav navbar-nav navbar-right">
+            <button class="btn btn-info navbar-btn" id="myBtn">Contact Us!</button>
+          </div>
         </div>
       </div>
     </div>
@@ -55,7 +58,7 @@
         <h1>Providing fully custom display solutions since 1990</h1>
       </div>
     </div>
-    <div class="row" style="height: 100px;" id="productSection"></div>
+    <div class="row" style="height: 90px;" id="productSection"></div>
   </div>
 </div>
 
@@ -63,40 +66,72 @@
   <div class="container">
     <div class="row">
       <h1 style="padding-top: 20px;">Products</h1>
-      <a href="products.html#tftTab" class="col-lg-4 col-md-4 col-xs-6 hs2links">
+      <a href="products.html#tftTab" class="col-lg-4 col-sm-4 col-xs-12 hs2links">
         <img class="img-responsive productImage" src="images/index/TFT.png" height="200px">
         <h3>TFT</h3>
         <p>A TFT LCD can give your product the perfect display. You can customize with different sizes, resolutions, and technologies like IPS.</p>
       </a>
-      <a href="products.html#oledTab" class="col-lg-4 col-md-4 col-xs-6 hs2links">
+      <a href="products.html#oledTab" class="col-lg-4 col-sm-4 col-xs-12 hs2links">
         <img class="img-responsive productImage" src="images/index/OLED.jpg" height="200px">
         <h3>OLED</h3>
         <p>An OLED LCD gives your product great resolution and rich, vibrant colors. Available in full-color Active Matrix or single-color Passive Matrix.</p>
       </a>
-      <a href="products.html#tpTab" class="col-lg-4 col-md-4 col-xs-6 hs2links">
+      <a href="products.html#tpTab" class="col-lg-4 col-sm-4 col-xs-12 hs2links">
         <img class="img-responsive productImage" src="images/index/TP.jpg" height="200px">
         <h3>Touch Panel</h3>
         <p>A Touch Panel can bring your product and it's user closer together. We can provide a Capacitive or Resistive Touch Panel to ANY of our displays.</p>
       </a>
     </div>
     <div class="row">
-      <a href="products.html#charmonoTab" class="col-lg-4 col-md-4 col-xs-6 hs2links">
+      <a href="products.html#charmonoTab" class="col-lg-4 col-sm-4 col-xs-12 hs2links">
         <img class="img-responsive productImage" src="images/index/CharacterMonochrome.jpg" height="200px">
         <h3>Character Monochrome</h3>
         <p>A Character Monochrome LCD is a simple, easy to read and use display solution. Although not as popular as before, we still provide fully custom character displays.</p>
       </a>
-      <a href="products.html#graphmonoTab" class="col-lg-4 col-md-4 col-xs-6 hs2links">
+      <a href="products.html#graphmonoTab" class="col-lg-4 col-sm-4 col-xs-12 hs2links">
         <img class="img-responsive productImage" src="images/index/GraphicMonochrome.jpg" height="200px">
         <h3>Graphic Monochrome</h3>
         <p>A Graphic Monochrome LCD can add a lot of customization to your product over a character display. We provide any size, resolution, and color.</p>
       </a>
-      <a href="products.html#customTab" class="col-lg-4 col-md-4 col-xs-6 hs2links">
+      <a href="products.html#customTab" class="col-lg-4 col-sm-4 col-xs-12 hs2links">
         <img class="img-responsive productImage" src="images/index/CustomSegment.jpg" height="200px">
         <h3>Custom Segment</h3>
         <p>For when your project needs a truly iconic look. We can provide a Custom Segment LCD with any number of segments, custom icons, and in any color.</p>
       </a>
     </div>
+    <div class="row" style="height: 50px;" id="industrySection"></div>
+    <div class="blueSplitter"></div>
+    <div class="row" style="height: 45px;"></div>
+    <h1 style="padding-bottom: 30px;">Industries</h1>
   </div>
+    <div class="row">
+      <div class="col-md-3 col-sm-0"></div>
+      <div class="col-md-1 col-sm-4 col-xs-4" style="padding-bottom: 20px;">
+        <i class="fa fa-car" style="font-size: 64px;"></i>
+        <p style="font-weight: bold; padding-top: 10px;">Automotive</p>
+      </div>
+      <div class="col-md-1 col-sm-4 col-xs-4" style="padding-bottom: 20px;">
+        <i class="fa fa-industry" style="font-size: 64px;"></i>
+        <p style="font-weight: bold; padding-top: 10px">Industrial</p>
+      </div>
+      <div class="col-md-1 col-sm-4 col-xs-4" style="padding-bottom: 20px;">
+        <i class="fa fa-heartbeat" style="font-size: 64px;"></i>
+        <p style="font-weight: bold; padding-top: 10px">Medical</p>
+      </div>
+      <div class="col-md-1 col-sm-4 col-xs-4" style="padding-bottom: 20px;">
+        <i class="fa fa-desktop" style="font-size: 64px;"></i>
+        <p style="font-weight: bold; padding-top: 10px">Consumer</p>
+      </div>
+      <div class="col-md-1 col-sm-4 col-xs-4" style="padding-bottom: 20px;">
+        <i class="fa fa-thermometer-half" style="font-size: 64px;"></i>
+        <p style="font-weight: bold; padding-top: 10px">HVAC</p>
+      </div>
+      <div class="col-md-1 col-sm-4 col-xs-4" style="padding-bottom: 20px;">
+        <i class="fa fa-phone" style="font-size: 64px;"></i>
+        <p style="font-weight: bold; padding-top: 10px">Telecom</p>
+      </div>
+      <div class="col-md-3 col-sm-0"></div>
+    </div>
 </div>
 
 <div style="background-color: white;" class="row">
