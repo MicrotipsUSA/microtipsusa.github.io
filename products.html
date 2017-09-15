@@ -5,6 +5,11 @@
   <link rel="icon" href="images\logo_only.png">
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script>
+    var shiftWindow = function() { scrollBy(0, -150) };
+    window.addEventListener("hashchange", shiftWindow);
+    function load() { if (window.location.hash) shiftWindow(); }
+  </script>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
@@ -13,7 +18,7 @@
   <link rel="stylesheet" href="Jstylesheet.css">
 </head>
 
-<body link="black">
+<body link="black" onload="load()">
 
 <div class="example3">
   <nav class="navbar navbar-default navbar-fixed-top" style="background-color: white;">
@@ -53,7 +58,7 @@
 <div class="navbar nav">
   <div class="tabbable"> <!-- Only required for left/right tabs -->
     <div class="container">
-      <ul class="nav nav-tabs">
+      <ul class="nav nav-tabs nav-justified">
         <li class="active"><a href="#tftTab" data-toggle="tab">TFT</a></li>
         <li><a href="#oledTab" data-toggle="tab">OLED</a></li>
         <li><a href="#tpTab" data-toggle="tab">Touch Panel</a></li>
