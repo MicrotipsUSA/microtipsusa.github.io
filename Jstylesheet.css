@@ -84,6 +84,11 @@ body, html {
 
 a.hs2links {
 	transform: scale(0.92);
+	-o-transition:.5s;
+	-ms-transition:.5s;
+	-moz-transition:.5s;
+	-webkit-transition:.5s;
+	transition:.5s;
 }
 
 a.hs2links:hover {
@@ -91,6 +96,19 @@ a.hs2links:hover {
 	color: white;
 	border-radius: 20px;
 	transform: scale(0.98);
+	text-decoration: none;
+}
+
+a.industryLinks {
+	-o-transition:.5s;
+	-ms-transition:.5s;
+	-moz-transition:.5s;
+	-webkit-transition:.5s;
+	transition:.5s;
+}
+
+a.industryLinks:hover {
+	color: #999999;
 	text-decoration: none;
 }
 
@@ -125,18 +143,10 @@ a.newsLink:hover {
     min-height: 85%;
 }
 
-.aboutSectionTwo {
-	min-height: 50%;
-}
-
 .blueSplitter {
 	background-color: #1E90FF;
 	height: 2px;
 	border-radius: 10px;
-}
-
-.aboutSectionThree {
-	min-height: 50%;
 }
 
 div.meetTeam {

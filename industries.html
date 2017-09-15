@@ -5,6 +5,11 @@
   <link rel="icon" href="images\logo_only.png">
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script>
+    var shiftWindow = function() { scrollBy(0, -500) };
+    window.addEventListener("hashchange", shiftWindow);
+    function load() { if (window.location.hash) shiftWindow(); }
+  </script>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
@@ -53,19 +58,19 @@
 <div class="navbar nav">
   <div class="tabbable"> <!-- Only required for left/right tabs -->
     <div class="container">
-      <ul class="nav nav-tabs">
-        <li class="active"><a href="#tftTab" data-toggle="tab">TFT</a></li>
-        <li><a href="#oledTab" data-toggle="tab">OLED</a></li>
-        <li><a href="#tpTab" data-toggle="tab">Touch Panel</a></li>
-        <li><a href="#charmonoTab" data-toggle="tab">Character Monochrome</a></li>
-        <li><a href="#graphmonoTab" data-toggle="tab">Graphic Monochrome</a></li>
-        <li><a href="#customTab" data-toggle="tab">Custom Segment</a></li>
+      <ul class="nav nav-tabs nav-justified">
+        <li class="active"><a href="#automotiveTab" data-toggle="tab">Automotive</a></li>
+        <li><a href="#industrialTab" data-toggle="tab">Industrial</a></li>
+        <li><a href="#medicalTab" data-toggle="tab">Medical</a></li>
+        <li><a href="#consumerTab" data-toggle="tab">Consumer</a></li>
+        <li><a href="#hvacTab" data-toggle="tab">HVAC</a></li>
+        <li><a href="#telecomTab" data-toggle="tab">Telecom</a></li>
       </ul>
       <div class="tab-content">
-        <div class="tab-pane active" id="tftTab">
+        <div class="tab-pane active" id="automotiveTab">
           <div class="row">
             <div class="col-xs-12" style="">
-              <h2>TFT LCD</h2>
+              <h2>Automotive LCD</h2>
             </div>
           </div>
           <div class="row">
@@ -81,7 +86,7 @@
               <img class="img-responsive" src="images/products/tft/2.4 TFT.JPG">
             </div>
             <div class="col-sm-8 col-xs-12">
-              <p>Our Color TFT LCDs are designed for ultra high crystals, with high quality, and performance. TFT LCD Module helps a person to see the contrast more clearly and precisely. The construction of a Color LCD Module or TFT LCD Module is quite extraordinary because of the circuitry layout process upon which TFT LCD Modules are made is quite similar to that of a semiconductor product. Color LCD Modules comes in many different sizes such as 2.4 inch, 2.8 inch 3.5 inch 4.3 inch 5.7 inch, 7.0 inch. Our 3.5” is our most popular one, because of the different type of application involve with this display. The interface types are CPU Mode (RGB/Digital TTL) 2.4, 2.8, 3.5, 5.7 and 7”. Our color LCD Module has a Sync Mode(RGB/Digital TTL) with data Enable mode (RGB/Digital TTL) LVDS. Most of our color TFT LCD Modules has White LED backlighting which is a energy saver in the long run. High or extended temperature TFTs available with 4-8 wire resistive and capacitive touch panel.</p>
+              <p>Our Color TFT LCDs are designed for ultra high crystals, with high quality, and performance. TFT LCD Module helps a person to see the contrast more clearly and precisely. The construction of a Color LCD Module or TFT LCD Module is quite extraordinary because of the circuitry layout process upon which TFT LCD Modules are made is quite similar to that of a semiconductor product. Color LCD Modules comes in many different sizes such as 2.4 inch, 2.8 inch 3.5 inch 4.3 inch 5.7 inch, 7.0 inch. Our 3.5” is our most popular one, because of the different type of application involve with this display. The interface types are CPU Mode (RGB/Digital TTL) 2.4, 2.8, 3.5, 5.7 and 7”. Our color LCD Module has a Sync Mode(RGB/Digital TTL) with data Enable mode (RGB/Digital TTL) LVDS. Most of our color TFT LCD Modules has White LED backlighting which is a energy saver in the long run. High or extended temperature TFTs available with 4-8 wire resistive and capacitive Medical.</p>
             </div>
           </div>
           <div class="row">
@@ -112,9 +117,9 @@
             <div style="background-color: #1E90FF; height: 2px;"></div>
           </div>
         </div>
-        <div class="tab-pane" id="oledTab">
+        <div class="tab-pane" id="industrialTab">
           <div class="col-xs-12" style="">
-            <h2>OLED</h2>
+            <h2>Industrial</h2>
           </div>
           <div class="row">
             <div class="col-xs-12 col-sm-4">
@@ -147,27 +152,27 @@
             <div style="background-color: #1E90FF; height: 2px;"></div>
           </div>
         </div>
-        <div class="tab-pane" id="tpTab">
+        <div class="tab-pane" id="medicalTab">
           <div class="col-xs-12" style="">
-            <h2>Touch Panel</h2>
+            <h2>Medical</h2>
           </div>
           <p>Howdy, I'm in Section Touch panel.</p>
         </div>
-        <div class="tab-pane" id="charmonoTab">
+        <div class="tab-pane" id="consumerTab">
           <div class="col-xs-12" style="">
-            <h2>Character Monochrome LCD</h2>
+            <h2>Consumer</h2>
           </div>
           <p>Howdy, I'm in Section Character Monochrome.</p>
         </div>
-        <div class="tab-pane" id="graphmonoTab">
+        <div class="tab-pane" id="hvacTab">
           <div class="col-xs-12" style="">
-            <h2>Graphic Monochrome LCD</h2>
+            <h2>HVAC</h2>
           </div>
           <p>Howdy, I'm in Section Graphic Monochrome.</p>
         </div>
-        <div class="tab-pane" id="customTab">
+        <div class="tab-pane" id="telecomTab">
           <div class="col-xs-12" style="">
-            <h2>Custom Segment Display</h2>
+            <h2>Telecom</h2>
           </div>
           <p>Howdy, I'm in Section Custom Segment.</p>
         </div>
@@ -218,7 +223,7 @@
     <div class="modal-content">
       <div class="modal-header" style="padding:35px 50px;">
         <button type="button" class="close" data-dismiss="modal">&times;</button>
-        <h4><span class="glyphicon glyphicon-lock"></span> Contact Us!</h4>
+        <h4> Contact Us!</h4>
       </div>
       <div class="modal-body" style="padding:40px 50px;">
         <form role="form">
@@ -277,6 +282,19 @@ function initMap() {
     map: map
   });
 }
+</script>
+
+<script>
+  // Javascript to enable link to tab
+  var url = document.location.toString();
+  if (url.match('#')) {
+    $('.nav-tabs a[href="#' + url.split('#')[1] + '"]').tab('show');
+  } 
+
+  // Change hash for page-reload
+  $('.nav-tabs a').on('shown.bs.tab', function (e) {
+    window.location.hash = e.target.hash;
+  })
 </script>
 
 <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDo7ru1y7ntwm1nlOAogse-gWPyCC3hYXY&callback=initMap"></script>
