@@ -39,11 +39,15 @@ display: none;
 .homeSectionOne {
     background-image: url(images/index/heartMonitorWithText.jpg);
 
+    background-position: center;
+
     min-height: 50%;
 }
 
 .homeSectionTwo {
 	background-color: white;
+
+    background-position: center;
 
 	color: black;
 	text-align: center;
@@ -53,6 +57,8 @@ display: none;
 
 .homeSectionThree {
 	background-image: url(images/index/banner-bg.png);
+
+    background-position: center;
 
     min-height: 25%;
 }
@@ -146,6 +152,8 @@ a.newsLink:hover {
 .aboutSectionOne {
 	background-image: url(images/about/OfficePic.png);
 
+    background-position: center;
+
 	padding-top: 100px;
 
     min-height: 85%;
@@ -172,6 +180,8 @@ div.meetTeam:hover {
 
 .newsSectionOne {
 	background-image: url(images/news/newsHeader.jpg);
+
+    background-position: center;
 
 	min-height: 600px;
 }
@@ -242,6 +252,10 @@ div.meetTeam:hover {
     
     .collapse >ul {
     	padding-top: 15px;
+    }
+
+    .section {
+    	background-attachment: scroll;
     }
 }
 
