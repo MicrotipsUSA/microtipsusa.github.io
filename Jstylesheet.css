@@ -180,10 +180,10 @@ div.meetTeam:hover {
 
 .newsSectionOne {
 	background-image: url(images/news/newsHeader.jpg);
-
+	background-attachment: scroll;
+	margin-top: 100px;
     background-position: center;
-
-	min-height: 600px;
+	height: 40%;
 }
 
 @media (max-width: 993px) {
@@ -256,6 +256,11 @@ div.meetTeam:hover {
 
     .section {
     	background-attachment: scroll;
+    }
+
+    .newsSectionOne {
+    	height: 25%;
+    	margin-top: 100px;
     }
 }
 
