@@ -151,11 +151,8 @@ a.newsLink:hover {
 
 .aboutSectionOne {
 	background-image: url(images/about/OfficePic.png);
-
     background-position: center;
-
 	padding-top: 100px;
-
     min-height: 85%;
 }
 
@@ -184,6 +181,14 @@ div.meetTeam:hover {
 	margin-top: 100px;
     background-position: center;
 	height: 40%;
+}
+
+.reps {
+	text-align: center;
+}
+
+h2.news {
+	margin-top: 10px;
 }
 
 @media (max-width: 993px) {
@@ -262,12 +267,4 @@ div.meetTeam:hover {
     	height: 25%;
     	margin-top: 100px;
     }
-}
-
-.reps {
-	text-align: center;
-}
-
-h2.news {
-	margin-top: 10px;
 }
