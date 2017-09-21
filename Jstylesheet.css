@@ -127,6 +127,7 @@ a.newsLink:hover {
 	color: white;
 	text-decoration: none;
 	transform: scale(1.05);
+	transition:.5s;
 }
 
 .btn-info {
@@ -158,6 +159,7 @@ a.newsLink:hover {
 div.meetTeam {
 	transform: scale(0.92);
 	text-align: center;
+	transition:.5s;
 }
 
 div.meetTeam:hover {
