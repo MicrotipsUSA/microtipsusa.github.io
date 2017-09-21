@@ -13,16 +13,16 @@ display: none;
 }
 
 .example3 .navbar-brand {
-  height: 80px;
+	height: 80px;
 }
 
 .example3 .nav >li >a {
-  padding-top: 30px;
-  padding-bottom: 30px;
+	padding-top: 30px;
+	padding-bottom: 30px;
 }
 .example3 .navbar-toggle {
-  padding: 10px;
-  margin: 25px 15px 25px 0;
+	padding: 10px;
+	margin: 25px 15px 25px 0;
 }
 
 .section {
@@ -38,28 +38,21 @@ display: none;
 
 .homeSectionOne {
     background-image: url(images/index/heartMonitorWithText.jpg);
-
     background-position: center;
-
     min-height: 50%;
 }
 
 .homeSectionTwo {
 	background-color: white;
-
     background-position: center;
-
 	color: black;
 	text-align: center;
-
 	min-height: 25%;
 }
 
 .homeSectionThree {
 	background-image: url(images/index/banner-bg.png);
-
     background-position: center;
-
     min-height: 25%;
 }
 
@@ -69,13 +62,13 @@ display: none;
 }
 
 .modal-header, h4, .close {
-      background-color: #5bc0de;
-      color:white !important;
-      text-align: center;
-      font-size: 30px;
+    background-color: #5bc0de;
+    color:white !important;
+    text-align: center;
+    font-size: 30px;
   }
 .modal-footer {
-      background-color: #f9f9f9;
+    background-color: #f9f9f9;
 }
 
 #parent {
@@ -193,11 +186,11 @@ h2.news {
 
 @media (max-width: 993px) {
 	#content-desktop {
-	display: none;
+		display: none;
 	}
 
 	#content-mobile {
-	display: inline;
+		display: inline;
 	}
 
     .navbar-header {
