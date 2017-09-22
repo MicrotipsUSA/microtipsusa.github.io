@@ -156,8 +156,7 @@ a.newsLink:hover {
 	border-radius: 10px;
 }
 
-div.meetTeam {
-	transform: scale(0.92);
+div.meetTeam2 {
 	text-align: center;
 	transition:.5s;
 }
@@ -184,6 +183,45 @@ div.meetTeam:hover {
 
 h2.news {
 	margin-top: 10px;
+}
+
+.teamImage {
+	opacity: 1;
+	display: block;
+	width: 100%;
+	height: auto;
+	transition: .5s ease;
+	backface-visibility: hidden;
+	transform: scale(0.92);
+}
+
+.middle {
+	transition: .5s ease;
+	opacity: 0;
+	position: absolute;
+	top: 40%;
+	left: 50%;
+	width: 80%;
+	transform: translate(-50%, -50%);
+	-ms-transform: translate(-50%, -50%)
+}
+
+.meetTeam2:hover .teamImage {
+	opacity: 0.3;
+	transform: scale(0.98);
+}
+
+.meetTeam2:hover .middle {
+	opacity: 1;
+}
+
+.text {
+	background-color: #4CAF50;
+	border-radius: 10px;
+	color: white;
+	text-align: left;
+	font-size: 16px;
+	padding: 10px 20px;
 }
 
 @media (max-width: 993px) {
