@@ -61,12 +61,13 @@ display: none;
     width: 75%;
 }
 
-.modal-header, h4, .close {
+.modal-header, .close {
     background-color: #5bc0de;
     color:white !important;
     text-align: center;
     font-size: 30px;
-  }
+}
+
 .modal-footer {
     background-color: #f9f9f9;
 }
@@ -178,7 +179,7 @@ div.meetTeam:hover {
 }
 
 .reps {
-	text-align: center;
+	text-align: left;
 }
 
 h2.news {
@@ -224,13 +225,62 @@ h2.news {
 	padding: 10px 20px;
 }
 
+.otherFive {
+	width: 20%;
+}
+
+.distributors {
+	padding-top: 30px;
+}
+
+table { 
+    display: table;
+    border-collapse: separate;
+    border-spacing: 2px;
+    border-color: gray;
+    height: 100px;
+    width: 100%;
+    align-items: center;
+}
+
+table, th, td {
+    padding: 15px;
+}
+
+th, td {
+	width: 50%;
+}
+
+th img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+
+#stateSelector {
+	display: none;
+}
+
+#provinceSelector {
+	display: none;
+}
+
+.USAreps {
+	display: block;
+}
+
+.CANreps {
+	display: block;
+}
+
 @media (max-width: 993px) {
 	#content-desktop {
-		display: none;
+		display: inline;
 	}
 
 	#content-mobile {
-		display: inline;
+		display: none;
 	}
 
     .navbar-header {
@@ -300,4 +350,26 @@ h2.news {
     	height: 25%;
     	margin-top: 100px;
     }
+
+    .distributors {
+    	padding-top: 0px;
+    }
 }
+
+@media (max-width: 767px) {
+	#content-desktop {
+		display: none;
+	}
+
+	#content-mobile {
+		display: inline;
+	}
+
+	.otherFive {
+		width: 100%;
+	}
+}
+
+#myoutercontainer { position:relative }
+
+#myinnercontainer { position:absolute; top:50%; height:10em; margin-top:-5em }
