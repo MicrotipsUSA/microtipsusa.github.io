@@ -216,7 +216,7 @@ h2.news {
 	opacity: 1;
 }
 
-.text {
+.aboutFloatingText {
 	background-color: #4CAF50;
 	border-radius: 10px;
 	color: white;
@@ -227,10 +227,6 @@ h2.news {
 
 .otherFive {
 	width: 20%;
-}
-
-.distributors {
-	padding-top: 30px;
 }
 
 table { 
@@ -247,8 +243,8 @@ table, th, td {
     padding: 15px;
 }
 
-th, td {
-	width: 50%;
+th {
+	width: 25%;
 }
 
 th img{
@@ -258,20 +254,21 @@ th img{
 
 }
 
-#stateSelector {
-	display: none;
+.repRegions > p {
+	margin: 5px;
 }
 
-#provinceSelector {
-	display: none;
+.repRegions {
+	width: 20%;
+	text-align: center;
+	transform: scale(0.95);
+	transition: 0.5s;
+	border-radius: 5px;
 }
 
-.USAreps {
-	display: block;
-}
-
-.CANreps {
-	display: block;
+.repRegions:hover {
+	transform: scale(1.05);
+	background-color: #4CAF50;
 }
 
 @media (max-width: 993px) {
@@ -370,6 +367,142 @@ th img{
 	}
 }
 
-#myoutercontainer { position:relative }
+#stateSelector {
+	display: none;
+}
 
-#myinnercontainer { position:absolute; top:50%; height:10em; margin-top:-5em }
+#provinceSelector {
+	display: none;
+}
+
+.USAreps {display: block;}
+
+.CANreps {display: block;}
+
+.MEXreps {display: block;}
+
+.AKreps {display: block;}
+
+.ALreps {display: block;}
+
+.ARreps {display: block;}
+
+.AZreps {display: block;}
+
+.CAreps {display: block;}
+
+.COreps {display: block;}
+
+.CTreps {display: block;}
+
+.DEreps {display: block;}
+
+.FLreps {display: block;}
+
+.GAreps {display: block;}
+
+.HIreps {display: block;}
+
+.IAreps {display: block;}
+
+.IDreps {display: block;}
+
+.ILreps {display: block;}
+
+.INreps {display: block;}
+
+.KSreps {display: block;}
+
+.KYreps {display: block;}
+
+.LAreps {display: block;}
+
+.MAreps {display: block;}
+
+.MDreps {display: block;}
+
+.MEreps {display: block;}
+
+.MIreps {display: block;}
+
+.MNreps {display: block;}
+
+.MOreps {display: block;}
+
+.MSreps {display: block;}
+
+.MTreps {display: block;}
+
+.NCreps {display: block;}
+
+.NDreps {display: block;}
+
+.NEreps {display: block;}
+
+.NHreps {display: block;}
+
+.NJreps {display: block;}
+
+.NMreps {display: block;}
+
+.NVreps {display: block;}
+
+.NYreps {display: block;}
+
+.OHreps {display: block;}
+
+.OKreps {display: block;}
+
+.ORreps {display: block;}
+
+.PAreps {display: block;}
+
+.RIreps {display: block;}
+
+.SCreps {display: block;}
+
+.SDreps {display: block;}
+
+.TNreps {display: block;}
+
+.TXreps {display: block;}
+
+.UTreps {display: block;}
+
+.VAreps {display: block;}
+
+.VTreps {display: block;}
+
+.WAreps {display: block;}
+
+.WIreps {display: block;}
+
+.WVreps {display: block;}
+
+.WYreps {display: block;}
+
+.ABreps {display: block;}
+
+.BCreps {display: block;}
+
+.MBreps {display: block;}
+
+.NBreps {display: block;}
+
+.NLreps {display: block;}
+
+.NSreps {display: block;}
+
+.NTreps {display: block;}
+
+.NUreps {display: block;}
+
+.ONreps {display: block;}
+
+.PEreps {display: block;}
+
+.QCreps {display: block;}
+
+.SKreps {display: block;}
+
+.YTreps {display: block;}
