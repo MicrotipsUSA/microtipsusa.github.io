@@ -108,6 +108,7 @@ a.hs2links:hover {
 }
 
 a.industryLinks {
+	transform: scale(0.95);
 	-o-transition:.5s;
 	-ms-transition:.5s;
 	-moz-transition:.5s;
@@ -116,6 +117,7 @@ a.industryLinks {
 }
 
 a.industryLinks:hover {
+	transform: scale(1.2);
 	color: #999999;
 	text-decoration: none;
 }
