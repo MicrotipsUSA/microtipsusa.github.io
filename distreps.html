@@ -54,12 +54,29 @@
         $(document.getElementById("stateSelector")).hide();
         $(document.getElementById("provinceSelector")).hide();
         $(".repInfo").show();
+        $(".repInfo").not(".MEXreps").hide();
       }
       if(country == "OTH"){
         $(document.getElementById("stateSelector")).hide();
         $(document.getElementById("provinceSelector")).hide();
         $(".repInfo").show();
       }
+    }
+
+    function showHideState(state) {
+      $(".repInfo").hide();
+
+      var str = "." + state + "reps";
+
+      $(str).show();
+    }
+
+    function showHideProvince(province) {
+      $(".repInfo").hide();
+
+      var str = "." + province + "reps";
+
+      $(str).show();
     }
   </script>
 
@@ -340,12 +357,269 @@
       </div>
     </div>
     <div class="col-xs-12 col-sm-9">
-      <ul>
-
-        <div class="repInfo USAreps ALreps MSreps TNreps" style="padding-top: 10px;">
-          <p>
-            <strong>SouthTech Marketing LLC</strong><br>Eddie Falconbury<br>301 Wellington Road<br>Athens, AL 35613<br>Phone: 256-293-4502<br>Email: <a href="mailto:eddie@southtechmarketing.com">eddie@southtechmarketing.com</a><br>URL: <a target="_blank" href="http://www.southtechmarketing.com">www.southtechmarketing.com</a><br>Areas Covered: AL, MS and Western TN
-          </p>
+      <ul style="padding-left: 10px;">
+        <div class="repInfo USAreps" style="display: none;">
+          <h3>United States</h3>
+          <div class="blueSplitter"></div>
+        </div>
+        <div class="repInfo CANreps" style="display: none;">
+          <h3>Canada</h3>
+          <div class="blueSplitter"></div>
+        </div>
+        <div class="repInfo MEXreps" style="display: none;">
+          <h3>Mexico</h3>
+          <div class="blueSplitter"></div>
+        </div>
+        <div class="repInfo AKreps" style="display: none;">
+          <h3>Alaska</h3>
+          <div class="blueSplitter"></div>
+        </div>
+        <div class="repInfo ALreps" style="display: none;">
+          <h3>Alabama</h3>
+          <div class="blueSplitter"></div>
+        </div>
+        <div class="repInfo ARreps" style="display: none;">
+          <h3>Arkansas</h3>
+          <div class="blueSplitter"></div>
+        </div>
+        <div class="repInfo AZreps" style="display: none;">
+          <h3>Arizona</h3>
+          <div class="blueSplitter"></div>
+        </div>
+        <div class="repInfo CAreps" style="display: none;">
+          <h3>California</h3>
+          <div class="blueSplitter"></div>
+        </div>
+        <div class="repInfo COreps" style="display: none;">
+          <h3>Colorado</h3>
+          <div class="blueSplitter"></div>
+        </div>
+        <div class="repInfo CTreps" style="display: none;">
+          <h3>Connecticut</h3>
+          <div class="blueSplitter"></div>
+        </div>
+        <div class="repInfo DEreps" style="display: none;">
+          <h3>Delaware</h3>
+          <div class="blueSplitter"></div>
+        </div>
+        <div class="repInfo FLreps" style="display: none;">
+          <h3>Florida</h3>
+          <div class="blueSplitter"></div>
+        </div>
+        <div class="repInfo GAreps" style="display: none;">
+          <h3>Georgia</h3>
+          <div class="blueSplitter"></div>
+        </div>
+        <div class="repInfo HIreps" style="display: none;">
+          <h3>Hawaii</h3>
+          <div class="blueSplitter"></div>
+        </div>
+        <div class="repInfo IAreps" style="display: none;">
+          <h3>Iowa</h3>
+          <div class="blueSplitter"></div>
+        </div>
+        <div class="repInfo IDreps" style="display: none;">
+          <h3>Idaho</h3>
+          <div class="blueSplitter"></div>
+        </div>
+        <div class="repInfo ILreps" style="display: none;">
+          <h3>Illinois</h3>
+          <div class="blueSplitter"></div>
+        </div>
+        <div class="repInfo INreps" style="display: none;">
+          <h3>Indiana</h3>
+          <div class="blueSplitter"></div>
+        </div>
+        <div class="repInfo KSreps" style="display: none;">
+          <h3>Kansas</h3>
+          <div class="blueSplitter"></div>
+        </div>
+        <div class="repInfo KYreps" style="display: none;">
+          <h3>Kentucky</h3>
+          <div class="blueSplitter"></div>
+        </div>
+        <div class="repInfo LAreps" style="display: none;">
+          <h3>Louisiana</h3>
+          <div class="blueSplitter"></div>
+        </div>
+        <div class="repInfo MAreps" style="display: none;">
+          <h3>Massachusetts</h3>
+          <div class="blueSplitter"></div>
+        </div>
+        <div class="repInfo MDreps" style="display: none;">
+          <h3>Maryland</h3>
+          <div class="blueSplitter"></div>
+        </div>
+        <div class="repInfo MEreps" style="display: none;">
+          <h3>Maine</h3>
+          <div class="blueSplitter"></div>
+        </div>
+        <div class="repInfo MIreps" style="display: none;">
+          <h3>Michigan</h3>
+          <div class="blueSplitter"></div>
+        </div>
+        <div class="repInfo MNreps" style="display: none;">
+          <h3>Minnesota</h3>
+          <div class="blueSplitter"></div>
+        </div>
+        <div class="repInfo MOreps" style="display: none;">
+          <h3>Missouri</h3>
+          <div class="blueSplitter"></div>
+        </div>
+        <div class="repInfo MSreps" style="display: none;">
+          <h3>Mississippi</h3>
+          <div class="blueSplitter"></div>
+        </div>
+        <div class="repInfo MTreps" style="display: none;">
+          <h3>Montana</h3>
+          <div class="blueSplitter"></div>
+        </div>
+        <div class="repInfo NCreps" style="display: none;">
+          <h3>North Carolina</h3>
+          <div class="blueSplitter"></div>
+        </div>
+        <div class="repInfo NDreps" style="display: none;">
+          <h3>North Dakota</h3>
+          <div class="blueSplitter"></div>
+        </div>
+        <div class="repInfo NEreps" style="display: none;">
+          <h3>Nebraska</h3>
+          <div class="blueSplitter"></div>
+        </div>
+        <div class="repInfo NHreps" style="display: none;">
+          <h3>New Hampshire</h3>
+          <div class="blueSplitter"></div>
+        </div>
+        <div class="repInfo NJreps" style="display: none;">
+          <h3>New Jersey</h3>
+          <div class="blueSplitter"></div>
+        </div>
+        <div class="repInfo NMreps" style="display: none;">
+          <h3>New Mexico</h3>
+          <div class="blueSplitter"></div>
+        </div>
+        <div class="repInfo NVreps" style="display: none;">
+          <h3>Nevada</h3>
+          <div class="blueSplitter"></div>
+        </div>
+        <div class="repInfo NYreps" style="display: none;">
+          <h3>New York</h3>
+          <div class="blueSplitter"></div>
+        </div>
+        <div class="repInfo OHreps" style="display: none;">
+          <h3>Ohio</h3>
+          <div class="blueSplitter"></div>
+        </div>
+        <div class="repInfo OKreps" style="display: none;">
+          <h3>Oklahoma</h3>
+          <div class="blueSplitter"></div>
+        </div>
+        <div class="repInfo ORreps" style="display: none;">
+          <h3>Oregon</h3>
+          <div class="blueSplitter"></div>
+        </div>
+        <div class="repInfo PAreps" style="display: none;">
+          <h3>Pennsylvania</h3>
+          <div class="blueSplitter"></div>
+        </div>
+        <div class="repInfo RIreps" style="display: none;">
+          <h3>Rhode Island</h3>
+          <div class="blueSplitter"></div>
+        </div>
+        <div class="repInfo SCreps" style="display: none;">
+          <h3>South Carolina</h3>
+          <div class="blueSplitter"></div>
+        </div>
+        <div class="repInfo SDreps" style="display: none;">
+          <h3>South Dakota</h3>
+          <div class="blueSplitter"></div>
+        </div>
+        <div class="repInfo TNreps" style="display: none;">
+          <h3>Tennessee</h3>
+          <div class="blueSplitter"></div>
+        </div>
+        <div class="repInfo TXreps" style="display: none;">
+          <h3>Texas</h3>
+          <div class="blueSplitter"></div>
+        </div>
+        <div class="repInfo UTreps" style="display: none;">
+          <h3>Utah</h3>
+          <div class="blueSplitter"></div>
+        </div>
+        <div class="repInfo VAreps" style="display: none;">
+          <h3>Virginia</h3>
+          <div class="blueSplitter"></div>
+        </div>
+        <div class="repInfo VTreps" style="display: none;">
+          <h3>Vermont</h3>
+          <div class="blueSplitter"></div>
+        </div>
+        <div class="repInfo WAreps" style="display: none;">
+          <h3>Washington</h3>
+          <div class="blueSplitter"></div>
+        </div>
+        <div class="repInfo WIreps" style="display: none;">
+          <h3>Wisconsin</h3>
+          <div class="blueSplitter"></div>
+        </div>
+        <div class="repInfo WVreps" style="display: none;">
+          <h3>West Virginia</h3>
+          <div class="blueSplitter"></div>
+        </div>
+        <div class="repInfo WYreps" style="display: none;">
+          <h3>Wyoming</h3>
+          <div class="blueSplitter"></div>
+        </div>
+        <div class="repInfo ABreps" style="display: none;">
+          <h3>Alberta</h3>
+          <div class="blueSplitter"></div>
+        </div>
+        <div class="repInfo BCreps" style="display: none;">
+          <h3>British Columbia</h3>
+          <div class="blueSplitter"></div>
+        </div>
+        <div class="repInfo MBreps" style="display: none;">
+          <h3>Manitoba</h3>
+          <div class="blueSplitter"></div>
+        </div>
+        <div class="repInfo NBreps" style="display: none;">
+          <h3>New Brunswick</h3>
+          <div class="blueSplitter"></div>
+        </div>
+        <div class="repInfo NLreps" style="display: none;">
+          <h3>Newfoundland and Labrador</h3>
+          <div class="blueSplitter"></div>
+        </div>
+        <div class="repInfo NSreps" style="display: none;">
+          <h3>Nova Scotia</h3>
+          <div class="blueSplitter"></div>
+        </div>
+        <div class="repInfo NTreps" style="display: none;">
+          <h3>Northwest Territories</h3>
+          <div class="blueSplitter"></div>
+        </div>
+        <div class="repInfo NUreps" style="display: none;">
+          <h3>Nunavut</h3>
+          <div class="blueSplitter"></div>
+        </div>
+        <div class="repInfo ONreps" style="display: none;">
+          <h3>Ontario</h3>
+          <div class="blueSplitter"></div>
+        </div>
+        <div class="repInfo PEreps" style="display: none;">
+          <h3>Prince Edward Island</h3>
+          <div class="blueSplitter"></div>
+        </div>
+        <div class="repInfo QCreps" style="display: none;">
+          <h3>Quebec</h3>
+          <div class="blueSplitter"></div>
+        </div>
+        <div class="repInfo SKreps" style="display: none;">
+          <h3>Saskatchewan</h3>
+          <div class="blueSplitter"></div>
+        </div>
+        <div class="repInfo YTreps" style="display: none;">
+          <h3>Yukon Territories</h3>
           <div class="blueSplitter"></div>
         </div>
 
@@ -363,11 +637,142 @@
           <div class="blueSplitter"></div>
         </div>
 
+        <div class="repInfo USAreps TXreps OKreps ARreps LAreps MEXreps" style="padding-top: 10px;">
+          <p>
+            <strong>ION Associates</strong><br>David Reed<br>2221 E. Lamar Blvd., Suite 250<br>Arlington, TX 76006<br>Phone: 817-695-8000<br>Email: <a href="mailto:DReed@ionassoc.com">DReed@ionassoc.com</a><br>URL: <a target="_blank" href="http://www.ionassoc.com">www.ionassoc.com</a><br>Areas Covered: TX, OK, AR, LA, and Mexico
+          </p>
+          <div class="blueSplitter"></div>
+        </div>
+
+        <div class="repInfo USAreps AZreps CAreps NMreps" style="padding-top: 10px;">
+          <p>
+            <strong>IEM Inc.</strong><br>Tom Wright<br>2651 Dow Avenue<br>Tustin, CA 92780<br>Phone: 714-368-1740<br>Cell: 949-485-8080<br>Fax: 714-368-1737<br>Email: <a href="mailto:twright@iemrep.com">twright@iemrep.com</a><br>URL: <a target="_blank" href="http://www.iemrep.com">http://www.iemrep.com</a><br>Areas Covered: AZ, Southern CA, NM
+          </p>
+          <div class="blueSplitter"></div>
+        </div>
+
+        <div class="repInfo USAreps CAreps" style="padding-top: 10px;">
+          <p>
+            <strong>Alta Sales Group</strong><br>Dave Murawski<br>5201 Great America Parkway, Suite# 320<br>Santa Clara, CA 95054<br>Phone: 408-218-3178<br>Email: <a href="mailto:davem@teamalta.com">davem@teamalta.com</a><br>URL: <a target="_blank" href="http://www.teamalta.com">http://www.teamalta.com</a><br>Areas Covered: Northern CA
+          </p>
+          <div class="blueSplitter"></div>
+        </div>
+
+        <div class="repInfo USAreps COreps UTreps WYreps MTreps IDreps" style="padding-top: 10px;">
+          <p>
+            <strong>English Damco Sales Co., Inc.</strong><br>Carla Laudano<br>3000 S. Jamaica Court, Ste # 370<br>Aurora, CO 80014<br>Phone: 303-695-0706 ext. # 18<br>Fax: 303-695-0827<br>Email: <a href="mailto:carla@englishdamco.com">carla@englishdamco.com</a><br>URL: <a target="_blank" href="http://www.englishdamco.com">www.englishdamco.com</a><br>Areas Covered: CO, UT, WY, MT, Southern ID
+          </p>
+          <div class="blueSplitter"></div>
+        </div>
+
+        <div class="repInfo USAreps MEreps NYreps CTreps RIreps MAreps NHreps VTreps" style="padding-top: 10px;">
+          <p>
+            <strong>Omega Tech</strong><br>Russ Grandahl<br>1 Curry Cross Court<br>Suffield, CT 06078<br>Phone: 508-523-9762<br>Email: <a href="mailto:rgrandahl@omegatech-rep.com">rgrandahl@omegatech-rep.com</a><br>Areas Covered: ME, Upstate NY, CT, RI, MA, NH and VT
+          </p>
+          <div class="blueSplitter"></div>
+        </div>
+
+        <div class="repInfo USAreps NYreps NJreps DEreps PAreps" style="padding-top: 10px;">
+          <p>
+            <strong>Sylvester Sales Associates</strong><br>Roy McCollum<br>4 Mill Pond Rd<br>Milford, NJ 08848-2002<br>Phone: 908-996-8842<br>Fax: 908-996-8878<br>Email: <a href="mailto:sylsales@earthlink.net">sylsales@earthlink.net</a><br>Areas Covered: NY (Long Island), NJ, DE, and eastern PA
+          </p>
+          <div class="blueSplitter"></div>
+        </div>
+
+        <div class="repInfo USAreps FLreps" style="padding-top: 10px;">
+          <p>
+            <strong>South Tech Marketing LLC</strong><br>Cesar Vargas<br>1609 Bryn Mawr St.<br>Orlando, FL 32804<br>Phone: 407-928-9751<br>Fax: 866-806-4609<br>Email: <a href="mailto:cvargas@southtechmarketing.com">cvargas@southtechmarketing.com</a><br>URL: <a target="_blank" href="http://www.southtechmarketing.com">www.southtechmarketing.com</a><br>Areas Covered: FL and Puerto Rico
+          </p>
+          <div class="blueSplitter"></div>
+        </div>
+
+        <div class="repInfo USAreps FLreps" style="padding-top: 10px;">
+          <p>
+            <strong>South Tech Marketing LLC</strong><br>Jeremy Karns<br>440 82nd Avenue<br>St. Pete Beach, FL  33706<br>Phone: 727-363-1122<br>Cell: 727-430-1784<br>Fax: 866-806-4609<br>Email: <a href="mailto:jkarns@southtechmarketing.com">jkarns@southtechmarketing.com</a><br>URL: <a target="_blank" href="http://www.southtechmarketing.com">www.southtechmarketing.com</a><br>Areas Covered: FL and Puerto Rico
+          </p>
+          <div class="blueSplitter"></div>
+        </div>
+
+        <div class="repInfo USAreps GAreps TNreps" style="padding-top: 10px;">
+          <p>
+            <strong>SouthTech Marketing LLC</strong><br>Richard Marabito<br>2451 Merrion Park Court<br>Dacula, GA 30019<br>Phone: 770-963-4614<br>Cell: 678-602-6267<br>Fax: 866-242-9103<br>Areas Covered: GA, East TN
+          </p>
+          <div class="blueSplitter"></div>
+        </div>
+
+        <div class="repInfo USAreps WAreps IDreps" style="padding-top: 10px;">
+          <p>
+            <strong>MaRC Technologies</strong><br>Jennifer Eby<br>914-164th Avenue SE # 411<br>Mill Creek, WA 98012<br>Phone: 206-940-4528<br>Email: <a href="mailto:jennifer@marctechnologies.com">jennifer@marctechnologies.com</a><br>URL: <a target="_blank" href="http://www.marctechnologies.com">www.marctechnologies.com</a><br>Areas Covered: WA and Northern ID
+          </p>
+          <div class="blueSplitter"></div>
+        </div>
+
+        <div class="repInfo USAreps ILreps WIreps" style="padding-top: 10px;">
+          <p>
+            <strong>Rendell Sales Company</strong><br>3621 W. Devon Ave<br>Chicago, IL 60659<br>Phone: 773-539-1820<br>Fax: 773-539-2773<br>Email: <a href="mailto:office@rendellsales.com">office@rendellsales.com</a><br>URL: <a target="_blank" href="http://www.rendellsales.com">www.rendellsales.com</a><br>Areas Covered: IL, and WI
+          </p>
+          <div class="blueSplitter"></div>
+        </div>
+
+        <div class="repInfo USAreps INreps KYreps MIreps OHreps PAreps" style="padding-top: 10px;">
+          <p>
+            <strong>Priconics</strong><br>Stephen Price<br>5366 Mapledale Way<br>Mason, OH  45040<br>Phone: 513-218-7777<br>Email: <a href="mailto:steveprice@priconics.com">steveprice@priconics.com</a><br>Areas Covered: IN, KY, MI, OH, Western PA
+          </p>
+          <div class="blueSplitter"></div>
+        </div>
+
+        <div class="repInfo USAreps MDreps VAreps" style="padding-top: 10px;">
+          <p>
+            <strong>Hillman Sales Corporation</strong><br>Rich Hillman<br>1265 Lancaster Drive<br>Eldersburg, MD  21784<br>Phone: 443-745-8930<br>Email: <a href="mailto:rich@hillmansalescorp.com">rich@hillmansalescorp.com</a><br>URL: <a target="_blank" href="http://www.hillmansalescorp.com">http://www.hillmansalescorp.com</a><br>Areas Covered: MD, VA
+          </p>
+          <div class="blueSplitter"></div>
+        </div>
+
+        <div class="repInfo USAreps MNreps NDreps SDreps WIreps" style="padding-top: 10px;">
+          <p>
+            <strong>Northstar Technology Sales</strong><br>Chuck Diehl<br>5720 Smetana Dr., Suite 100<br>Minnetonka, MN 55343<br>Phone: 952-831-6777<br>Mobile: 612-802-9790<br>Email: <a href="mailto:diehl@northstartek.com">diehl@northstartek.com</a><br>Areas Covered: MN, ND, SD and Western WI
+          </p>
+          <div class="blueSplitter"></div>
+        </div>
+
+        <div class="repInfo USAreps NCreps SCreps" style="padding-top: 10px;">
+          <p>
+            <strong>SouthTech Marketing LLC</strong><br>Patrick Renberg <br>8213 Nantahala Drive <br>Raleigh, NC 27612 <br>Phone: 919-781-0444 <br>Email: <a href="mailto:prenberg@southtechmarketing.com ">prenberg@southtechmarketing.com </a><br>URL: <a target="_blank" href="http://www.southtechmarketing.com">www.southtechmarketing.com</a><br>Areas Covered: NC, SC
+          </p>
+          <div class="blueSplitter"></div>
+        </div>
+
+        <div class="repInfo USAreps ORreps" style="padding-top: 10px;">
+          <p>
+            <strong>MaRC Technologies</strong><br>Mike Gunderson<br>14765 SE 82nd Drive<br>Clackamas, OR 97015<br>Phone: 503-789-2561<br>Email: <a href="mailto:mike@marctechnologies.com">mike@marctechnologies.com</a><br>URL: <a target="_blank" href="http://www.marctechnologies.com">www.marctechnologies.com</a><br>Areas Covered: OR
+          </p>
+          <div class="blueSplitter"></div>
+        </div>
+
+        <div class="repInfo CANreps ABreps BCreps MBreps SKreps" style="padding-top: 10px;">
+          <p>
+            <strong>INTERFACE DESIGN SOLUTIONS - West</strong><br>Doug Broadland<br>633 Allmandine Court<br>Kelowna, BC  V1W 4Z5<br />CANADA<br>Phone: 604-913-7738, 604-913-7739<br>Email: <a href="mailto:dougb@ids-west.com">dougb@ids-west.com</a><br>URL: <a target="_blank" href="http://www.ids-west.com">www.ids-west.com</a><br>Areas Covered: MB, BC, AB and SK
+          </p>
+          <div class="blueSplitter"></div>
+        </div>
+
+        <div class="repInfo CANreps ONreps" style="padding-top: 10px;">
+          <p>
+            <strong>Triple Tech Services, Inc</strong><br>Rob Davis<br>56 Cottonwood Crescent<br>Cambridge, Ontario  N1T 2J1<br>Phone: 647-588-3501<br>Email: <a href="mailto:rob@tt-si.com">rob@tt-si.com</a>
+          </p>
+          <div class="blueSplitter"></div>
+        </div>
+
+        <div class="repInfo USAreps ALreps MSreps TNreps" style="padding-top: 10px;">
+          <p>
+            <strong>SouthTech Marketing LLC</strong><br>Eddie Falconbury<br>301 Wellington Road<br>Athens, AL 35613<br>Phone: 256-293-4502<br>Email: <a href="mailto:eddie@southtechmarketing.com">eddie@southtechmarketing.com</a><br>URL: <a target="_blank" href="http://www.southtechmarketing.com">www.southtechmarketing.com</a><br>Areas Covered: AL, MS and Western TN
+          </p>
+          <div class="blueSplitter"></div>
+        </div>
+
       </ul>
     </div>
   </div>
-  <div class="row" style="height: 50px;"></div>
-  <div class="blueSplitter"></div>
 </div>
 
 <div id="content-mobile">
@@ -403,7 +808,7 @@
       </div>
       <div id="stateSelector">
       <h4>State</h4>
-      <select style="width: 100%;">
+      <select style="width: 100%;" onchange="showHideState(this.value)">
         <option value="NoSelect">Please Select State</option>
         <option value="AL">Alabama</option>
         <option value="AK">Alaska</option>
@@ -413,7 +818,6 @@
         <option value="CO">Colorado</option>
         <option value="CT">Connecticut</option>
         <option value="DE">Delaware</option>
-        <option value="DC">District Of Columbia</option>
         <option value="FL">Florida</option>
         <option value="GA">Georgia</option>
         <option value="HI">Hawaii</option>
@@ -460,7 +864,7 @@
       </div>
       <div id="provinceSelector">
         <h4>Province</h4>
-        <select style="width: 100%;">
+        <select style="width: 100%;" onchange="showHideProvince(this.value)">
           <option value="NoSelect">Please Select Province</option>
           <option value="AB">Alberta</option>
           <option value="BC">British Columbia</option>
@@ -481,13 +885,6 @@
     <div class="col-xs-12">
       <ul style="padding-left: 0px;">
 
-        <div class="repInfo USAreps ALreps MSreps TNreps" style="padding-top: 10px;">
-          <p>
-            <strong>SouthTech Marketing LLC</strong><br>Eddie Falconbury<br>301 Wellington Road<br>Athens, AL 35613<br>Phone: 256-293-4502<br>Email: <a href="mailto:eddie@southtechmarketing.com">eddie@southtechmarketing.com</a><br>URL: <a target="_blank" href="http://www.southtechmarketing.com">www.southtechmarketing.com</a><br>Areas Covered: AL, MS and Western TN
-          </p>
-          <div class="blueSplitter"></div>
-        </div>
-
         <div class="repInfo USAreps CANreps WVreps NBreps NLreps NSreps PEreps QCreps" style="padding-top: 10px;">
           <p>
             <strong>Microtips Technology</strong><br>George Van Driessche<br>Senior Regional Sales Manager (East)<br>3504 Lake Lynda Dr, Ste #110 <br>Orlando, Fl  32817<br>Phone: 407-273-0204 x102<br>Fax: 407-273-0771<br>Email: <a href="mailto:george@microtipsusa.com">george@microtipsusa.com</a>
@@ -498,6 +895,139 @@
         <div class="repInfo USAreps CANreps AKreps HIreps IAreps KSreps MOreps NEreps NVreps NTreps NUreps YTreps" style="padding-top: 10px;">
           <p>
             <strong>Microtips Technology</strong><br>Jordan Baker<br>Regional Sales Manager (West)<br>3504 Lake Lynda Dr, Ste #110 <br>Orlando, Fl  32817<br>Phone: 407-273-0204 x105<br>Fax: 407-273-0771<br>Email: <a href="mailto:jordan@microtipsusa.com">jordan@microtipsusa.com</a>
+          </p>
+          <div class="blueSplitter"></div>
+        </div>
+
+        <div class="repInfo USAreps TXreps OKreps ARreps LAreps MEXreps" style="padding-top: 10px;">
+          <p>
+            <strong>ION Associates</strong><br>David Reed<br>2221 E. Lamar Blvd., Suite 250<br>Arlington, TX 76006<br>Phone: 817-695-8000<br>Email: <a href="mailto:DReed@ionassoc.com">DReed@ionassoc.com</a><br>URL: <a target="_blank" href="http://www.ionassoc.com">www.ionassoc.com</a><br>Areas Covered: TX, OK, AR, LA, and Mexico
+          </p>
+          <div class="blueSplitter"></div>
+        </div>
+
+        <div class="repInfo USAreps AZreps CAreps NMreps" style="padding-top: 10px;">
+          <p>
+            <strong>IEM Inc.</strong><br>Tom Wright<br>2651 Dow Avenue<br>Tustin, CA 92780<br>Phone: 714-368-1740<br>Cell: 949-485-8080<br>Fax: 714-368-1737<br>Email: <a href="mailto:twright@iemrep.com">twright@iemrep.com</a><br>URL: <a target="_blank" href="http://www.iemrep.com">http://www.iemrep.com</a><br>Areas Covered: AZ, Southern CA, NM
+          </p>
+          <div class="blueSplitter"></div>
+        </div>
+
+        <div class="repInfo USAreps CAreps" style="padding-top: 10px;">
+          <p>
+            <strong>Alta Sales Group</strong><br>Dave Murawski<br>5201 Great America Parkway, Suite# 320<br>Santa Clara, CA 95054<br>Phone: 408-218-3178<br>Email: <a href="mailto:davem@teamalta.com">davem@teamalta.com</a><br>URL: <a target="_blank" href="http://www.teamalta.com">http://www.teamalta.com</a><br>Areas Covered: Northern CA
+          </p>
+          <div class="blueSplitter"></div>
+        </div>
+
+        <div class="repInfo USAreps COreps UTreps WYreps MTreps IDreps" style="padding-top: 10px;">
+          <p>
+            <strong>English Damco Sales Co., Inc.</strong><br>Carla Laudano<br>3000 S. Jamaica Court, Ste # 370<br>Aurora, CO 80014<br>Phone: 303-695-0706 ext. # 18<br>Fax: 303-695-0827<br>Email: <a href="mailto:carla@englishdamco.com">carla@englishdamco.com</a><br>URL: <a target="_blank" href="http://www.englishdamco.com">www.englishdamco.com</a><br>Areas Covered: CO, UT, WY, MT, Southern ID
+          </p>
+          <div class="blueSplitter"></div>
+        </div>
+
+        <div class="repInfo USAreps MEreps NYreps CTreps RIreps MAreps NHreps VTreps" style="padding-top: 10px;">
+          <p>
+            <strong>Omega Tech</strong><br>Russ Grandahl<br>1 Curry Cross Court<br>Suffield, CT 06078<br>Phone: 508-523-9762<br>Email: <a href="mailto:rgrandahl@omegatech-rep.com">rgrandahl@omegatech-rep.com</a><br>Areas Covered: ME, Upstate NY, CT, RI, MA, NH and VT
+          </p>
+          <div class="blueSplitter"></div>
+        </div>
+
+        <div class="repInfo USAreps NYreps NJreps DEreps PAreps" style="padding-top: 10px;">
+          <p>
+            <strong>Sylvester Sales Associates</strong><br>Roy McCollum<br>4 Mill Pond Rd<br>Milford, NJ 08848-2002<br>Phone: 908-996-8842<br>Fax: 908-996-8878<br>Email: <a href="mailto:sylsales@earthlink.net">sylsales@earthlink.net</a><br>Areas Covered: NY (Long Island), NJ, DE, and eastern PA
+          </p>
+          <div class="blueSplitter"></div>
+        </div>
+
+        <div class="repInfo USAreps FLreps" style="padding-top: 10px;">
+          <p>
+            <strong>South Tech Marketing LLC</strong><br>Cesar Vargas<br>1609 Bryn Mawr St.<br>Orlando, FL 32804<br>Phone: 407-928-9751<br>Fax: 866-806-4609<br>Email: <a href="mailto:cvargas@southtechmarketing.com">cvargas@southtechmarketing.com</a><br>URL: <a target="_blank" href="http://www.southtechmarketing.com">www.southtechmarketing.com</a><br>Areas Covered: FL and Puerto Rico
+          </p>
+          <div class="blueSplitter"></div>
+        </div>
+
+        <div class="repInfo USAreps FLreps" style="padding-top: 10px;">
+          <p>
+            <strong>South Tech Marketing LLC</strong><br>Jeremy Karns<br>440 82nd Avenue<br>St. Pete Beach, FL  33706<br>Phone: 727-363-1122<br>Cell: 727-430-1784<br>Fax: 866-806-4609<br>Email: <a href="mailto:jkarns@southtechmarketing.com">jkarns@southtechmarketing.com</a><br>URL: <a target="_blank" href="http://www.southtechmarketing.com">www.southtechmarketing.com</a><br>Areas Covered: FL and Puerto Rico
+          </p>
+          <div class="blueSplitter"></div>
+        </div>
+
+        <div class="repInfo USAreps GAreps TNreps" style="padding-top: 10px;">
+          <p>
+            <strong>SouthTech Marketing LLC</strong><br>Richard Marabito<br>2451 Merrion Park Court<br>Dacula, GA 30019<br>Phone: 770-963-4614<br>Cell: 678-602-6267<br>Fax: 866-242-9103<br>Areas Covered: GA, East TN
+          </p>
+          <div class="blueSplitter"></div>
+        </div>
+
+        <div class="repInfo USAreps WAreps IDreps" style="padding-top: 10px;">
+          <p>
+            <strong>MaRC Technologies</strong><br>Jennifer Eby<br>914-164th Avenue SE # 411<br>Mill Creek, WA 98012<br>Phone: 206-940-4528<br>Email: <a href="mailto:jennifer@marctechnologies.com">jennifer@marctechnologies.com</a><br>URL: <a target="_blank" href="http://www.marctechnologies.com">www.marctechnologies.com</a><br>Areas Covered: WA and Northern ID
+          </p>
+          <div class="blueSplitter"></div>
+        </div>
+
+        <div class="repInfo USAreps ILreps WIreps" style="padding-top: 10px;">
+          <p>
+            <strong>Rendell Sales Company</strong><br>3621 W. Devon Ave<br>Chicago, IL 60659<br>Phone: 773-539-1820<br>Fax: 773-539-2773<br>Email: <a href="mailto:office@rendellsales.com">office@rendellsales.com</a><br>URL: <a target="_blank" href="http://www.rendellsales.com">www.rendellsales.com</a><br>Areas Covered: IL, and WI
+          </p>
+          <div class="blueSplitter"></div>
+        </div>
+
+        <div class="repInfo USAreps INreps KYreps MIreps OHreps PAreps" style="padding-top: 10px;">
+          <p>
+            <strong>Priconics</strong><br>Stephen Price<br>5366 Mapledale Way<br>Mason, OH  45040<br>Phone: 513-218-7777<br>Email: <a href="mailto:steveprice@priconics.com">steveprice@priconics.com</a><br>Areas Covered: IN, KY, MI, OH, Western PA
+          </p>
+          <div class="blueSplitter"></div>
+        </div>
+
+        <div class="repInfo USAreps MDreps VAreps" style="padding-top: 10px;">
+          <p>
+            <strong>Hillman Sales Corporation</strong><br>Rich Hillman<br>1265 Lancaster Drive<br>Eldersburg, MD  21784<br>Phone: 443-745-8930<br>Email: <a href="mailto:rich@hillmansalescorp.com">rich@hillmansalescorp.com</a><br>URL: <a target="_blank" href="http://www.hillmansalescorp.com">http://www.hillmansalescorp.com</a><br>Areas Covered: MD, VA
+          </p>
+          <div class="blueSplitter"></div>
+        </div>
+
+        <div class="repInfo USAreps MNreps NDreps SDreps WIreps" style="padding-top: 10px;">
+          <p>
+            <strong>Northstar Technology Sales</strong><br>Chuck Diehl<br>5720 Smetana Dr., Suite 100<br>Minnetonka, MN 55343<br>Phone: 952-831-6777<br>Mobile: 612-802-9790<br>Email: <a href="mailto:diehl@northstartek.com">diehl@northstartek.com</a><br>Areas Covered: MN, ND, SD and Western WI
+          </p>
+          <div class="blueSplitter"></div>
+        </div>
+
+        <div class="repInfo USAreps NCreps SCreps" style="padding-top: 10px;">
+          <p>
+            <strong>SouthTech Marketing LLC</strong><br>Patrick Renberg <br>8213 Nantahala Drive <br>Raleigh, NC 27612 <br>Phone: 919-781-0444 <br>Email: <a href="mailto:prenberg@southtechmarketing.com ">prenberg@southtechmarketing.com </a><br>URL: <a target="_blank" href="http://www.southtechmarketing.com">www.southtechmarketing.com</a><br>Areas Covered: NC, SC
+          </p>
+          <div class="blueSplitter"></div>
+        </div>
+
+        <div class="repInfo USAreps ORreps" style="padding-top: 10px;">
+          <p>
+            <strong>MaRC Technologies</strong><br>Mike Gunderson<br>14765 SE 82nd Drive<br>Clackamas, OR 97015<br>Phone: 503-789-2561<br>Email: <a href="mailto:mike@marctechnologies.com">mike@marctechnologies.com</a><br>URL: <a target="_blank" href="http://www.marctechnologies.com">www.marctechnologies.com</a><br>Areas Covered: OR
+          </p>
+          <div class="blueSplitter"></div>
+        </div>
+
+        <div class="repInfo CANreps ABreps BCreps MBreps SKreps" style="padding-top: 10px;">
+          <p>
+            <strong>INTERFACE DESIGN SOLUTIONS - West</strong><br>Doug Broadland<br>633 Allmandine Court<br>Kelowna, BC  V1W 4Z5<br />CANADA<br>Phone: 604-913-7738, 604-913-7739<br>Email: <a href="mailto:dougb@ids-west.com">dougb@ids-west.com</a><br>URL: <a target="_blank" href="http://www.ids-west.com">www.ids-west.com</a><br>Areas Covered: MB, BC, AB and SK
+          </p>
+          <div class="blueSplitter"></div>
+        </div>
+
+        <div class="repInfo CANreps ONreps" style="padding-top: 10px;">
+          <p>
+            <strong>Triple Tech Services, Inc</strong><br>Rob Davis<br>56 Cottonwood Crescent<br>Cambridge, Ontario  N1T 2J1<br>Phone: 647-588-3501<br>Email: <a href="mailto:rob@tt-si.com">rob@tt-si.com</a>
+          </p>
+          <div class="blueSplitter"></div>
+        </div>
+
+        <div class="repInfo USAreps ALreps MSreps TNreps" style="padding-top: 10px;">
+          <p>
+            <strong>SouthTech Marketing LLC</strong><br>Eddie Falconbury<br>301 Wellington Road<br>Athens, AL 35613<br>Phone: 256-293-4502<br>Email: <a href="mailto:eddie@southtechmarketing.com">eddie@southtechmarketing.com</a><br>URL: <a target="_blank" href="http://www.southtechmarketing.com">www.southtechmarketing.com</a><br>Areas Covered: AL, MS and Western TN
           </p>
           <div class="blueSplitter"></div>
         </div>
