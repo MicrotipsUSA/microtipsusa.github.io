@@ -37,7 +37,7 @@ display: none;
 }
 
 .homeSectionOne {
-    background-image: url(images/index/heartMonitorWithText.jpg);
+    background-image: url(images/index/banner1.jpg);
     background-position: center;
     min-height: 50%;
 }
@@ -51,7 +51,7 @@ display: none;
 }
 
 .homeSectionThree {
-	background-image: url(images/index/banner-bg.png);
+	background-image: url(images/index/banner2.png);
     background-position: center;
     min-height: 25%;
 }
@@ -148,9 +148,9 @@ a.newsLink:hover {
 
 .aboutSectionOne {
 	background-image: url(images/about/OfficePic.png);
+	margin-top: 80px;
     background-position: center;
-	padding-top: 100px;
-    min-height: 85%;
+	height: 85%;
 }
 
 .blueSplitter {
@@ -173,11 +173,27 @@ div.meetTeam:hover {
 }
 
 .newsSectionOne {
-	background-image: url(images/news/newsHeader.jpg);
+	background-image: url(images/news/newsHeader2.png);
 	background-attachment: scroll;
-	margin-top: 100px;
+	margin-top: 80px;
     background-position: center;
-	height: 40%;
+	height: 50%;
+}
+
+.productsSectionOne {
+	background-image: url(images/products/products.png);
+	background-attachment: scroll;
+	margin-top: 80px;
+    background-position: center;
+	height: 50%;
+}
+
+.industriesSectionOne {
+	background-image: url(images/industries/industriesBanner.png);
+	background-attachment: scroll;
+	margin-top: 80px;
+    background-position: center;
+	height: 50%;
 }
 
 .reps {
@@ -345,9 +361,24 @@ th img{
     	background-attachment: scroll;
     }
 
+    .aboutSectionOne {
+    	height: 50%;
+    	margin-top: 70px;
+    }
+
     .newsSectionOne {
-    	height: 25%;
-    	margin-top: 100px;
+    	height: 35%;
+    	margin-top: 70px;
+    }
+
+    .productsSectionOne {
+    	height: 35%;
+    	margin-top: 70px;
+    }
+
+    .industriesSectionOne {
+    	height: 35%;
+    	margin-top: 70px;
     }
 
     .distributors {
