@@ -5,17 +5,17 @@ body, html {
 }
 
 @font-face {
-	font-family: PermanentMarker;
-	src: url('fonts/PermanentMarker-Regular.ttf');
+	font-family: Kadwa;
+	src: url('fonts/Kadwa-Bold.ttf');
 }
 
 h1 {
-	font-family: PermanentMarker;
+	font-family: Kadwa;
 	font-size: 350%;
 }
 
 h2 {
-	font-family: PermanentMarker;
+	font-family: Kadwa;
 	font-size: 250%;
 }
 
@@ -165,7 +165,6 @@ a.newsLink:hover {
 	background-image: url(images/about/OfficePic.png);
 	margin-top: 80px;
     background-position: center;
-	height: 85%;
 }
 
 .blueSplitter {
@@ -382,7 +381,6 @@ th img{
     }
 
     .aboutSectionOne {
-    	height: 50%;
     	margin-top: 70px;
     }
 
@@ -443,134 +441,136 @@ th img{
 	display: none;
 }
 
-.USAreps {display: block;}
+.startingReps {display: block;}
 
-.CANreps {display: block;}
+.USAreps {display: none;}
 
-.MEXreps {display: block;}
+.CANreps {display: none;}
 
-.AKreps {display: block;}
+.MEXreps {display: none;}
 
-.ALreps {display: block;}
+.AKreps {display: none;}
 
-.ARreps {display: block;}
+.ALreps {display: none;}
 
-.AZreps {display: block;}
+.ARreps {display: none;}
 
-.CAreps {display: block;}
+.AZreps {display: none;}
 
-.COreps {display: block;}
+.CAreps {display: none;}
 
-.CTreps {display: block;}
+.COreps {display: none;}
 
-.DEreps {display: block;}
+.CTreps {display: none;}
 
-.FLreps {display: block;}
+.DEreps {display: none;}
 
-.GAreps {display: block;}
+.FLreps {display: none;}
 
-.HIreps {display: block;}
+.GAreps {display: none;}
 
-.IAreps {display: block;}
+.HIreps {display: none;}
 
-.IDreps {display: block;}
+.IAreps {display: none;}
 
-.ILreps {display: block;}
+.IDreps {display: none;}
 
-.INreps {display: block;}
+.ILreps {display: none;}
 
-.KSreps {display: block;}
+.INreps {display: none;}
 
-.KYreps {display: block;}
+.KSreps {display: none;}
 
-.LAreps {display: block;}
+.KYreps {display: none;}
 
-.MAreps {display: block;}
+.LAreps {display: none;}
 
-.MDreps {display: block;}
+.MAreps {display: none;}
 
-.MEreps {display: block;}
+.MDreps {display: none;}
 
-.MIreps {display: block;}
+.MEreps {display: none;}
 
-.MNreps {display: block;}
+.MIreps {display: none;}
 
-.MOreps {display: block;}
+.MNreps {display: none;}
 
-.MSreps {display: block;}
+.MOreps {display: none;}
 
-.MTreps {display: block;}
+.MSreps {display: none;}
 
-.NCreps {display: block;}
+.MTreps {display: none;}
 
-.NDreps {display: block;}
+.NCreps {display: none;}
 
-.NEreps {display: block;}
+.NDreps {display: none;}
 
-.NHreps {display: block;}
+.NEreps {display: none;}
 
-.NJreps {display: block;}
+.NHreps {display: none;}
 
-.NMreps {display: block;}
+.NJreps {display: none;}
 
-.NVreps {display: block;}
+.NMreps {display: none;}
 
-.NYreps {display: block;}
+.NVreps {display: none;}
 
-.OHreps {display: block;}
+.NYreps {display: none;}
 
-.OKreps {display: block;}
+.OHreps {display: none;}
 
-.ORreps {display: block;}
+.OKreps {display: none;}
 
-.PAreps {display: block;}
+.ORreps {display: none;}
 
-.RIreps {display: block;}
+.PAreps {display: none;}
 
-.SCreps {display: block;}
+.RIreps {display: none;}
 
-.SDreps {display: block;}
+.SCreps {display: none;}
 
-.TNreps {display: block;}
+.SDreps {display: none;}
 
-.TXreps {display: block;}
+.TNreps {display: none;}
 
-.UTreps {display: block;}
+.TXreps {display: none;}
 
-.VAreps {display: block;}
+.UTreps {display: none;}
 
-.VTreps {display: block;}
+.VAreps {display: none;}
 
-.WAreps {display: block;}
+.VTreps {display: none;}
 
-.WIreps {display: block;}
+.WAreps {display: none;}
 
-.WVreps {display: block;}
+.WIreps {display: none;}
 
-.WYreps {display: block;}
+.WVreps {display: none;}
 
-.ABreps {display: block;}
+.WYreps {display: none;}
 
-.BCreps {display: block;}
+.ABreps {display: none;}
 
-.MBreps {display: block;}
+.BCreps {display: none;}
 
-.NBreps {display: block;}
+.MBreps {display: none;}
 
-.NLreps {display: block;}
+.NBreps {display: none;}
 
-.NSreps {display: block;}
+.NLreps {display: none;}
 
-.NTreps {display: block;}
+.NSreps {display: none;}
 
-.NUreps {display: block;}
+.NTreps {display: none;}
 
-.ONreps {display: block;}
+.NUreps {display: none;}
 
-.PEreps {display: block;}
+.ONreps {display: none;}
 
-.QCreps {display: block;}
+.PEreps {display: none;}
 
-.SKreps {display: block;}
+.QCreps {display: none;}
 
-.YTreps {display: block;}
+.SKreps {display: none;}
+
+.YTreps {display: none;}
