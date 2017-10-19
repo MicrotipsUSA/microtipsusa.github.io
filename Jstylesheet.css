@@ -4,6 +4,21 @@ body, html {
     margin: 0;
 }
 
+@font-face {
+	font-family: PermanentMarker;
+	src: url('fonts/PermanentMarker-Regular.ttf');
+}
+
+h1 {
+	font-family: PermanentMarker;
+	font-size: 350%;
+}
+
+h2 {
+	font-family: PermanentMarker;
+	font-size: 250%;
+}
+
 #content-desktop {
 display: inline;
 }
@@ -51,7 +66,7 @@ display: none;
 }
 
 .homeSectionThree {
-	background-image: url(images/index/banner2.png);
+	background-image: url(images/index/bannerNews.png);
     background-position: center;
     min-height: 25%;
 }
@@ -174,26 +189,20 @@ div.meetTeam:hover {
 
 .newsSectionOne {
 	background-image: url(images/news/newsHeader2.png);
-	background-attachment: scroll;
 	margin-top: 80px;
     background-position: center;
-	height: 50%;
 }
 
 .productsSectionOne {
-	background-image: url(images/products/products.png);
-	background-attachment: scroll;
+	background-image: url(images/products/productsBanner.png);
 	margin-top: 80px;
     background-position: center;
-	height: 50%;
 }
 
 .industriesSectionOne {
 	background-image: url(images/industries/industriesBanner.png);
-	background-attachment: scroll;
 	margin-top: 80px;
     background-position: center;
-	height: 50%;
 }
 
 .reps {
@@ -202,6 +211,8 @@ div.meetTeam:hover {
 
 h2.news {
 	margin-top: 10px;
+	font-family: Arial;
+	font-size: 225%;
 }
 
 .teamImage {
