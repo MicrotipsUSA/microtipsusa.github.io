@@ -9,6 +9,16 @@ body, html {
 	src: url('fonts/Kadwa-Bold.ttf');
 }
 
+@font-face {
+	font-family: FiraSans;
+	src: url('fonts/Fira_Sans/FiraSans-Light.ttf');
+}
+
+@font-face {
+	font-family: Montserrat;
+	src: url('fonts/Montserrat/Montserrat-Regular.ttf');
+}
+
 h1 {
 	font-family: Kadwa;
 	font-size: 350%;
@@ -17,6 +27,31 @@ h1 {
 h2 {
 	font-family: Kadwa;
 	font-size: 250%;
+}
+
+h3 {
+	font-family: Montserrat;
+	font-size: 24px;
+}
+
+h4 {
+	font-family: Montserrat;
+	font-size: 20px;
+}
+
+h5 {
+	font-family: Montserrat;
+	font-size: 14px;
+}
+
+p {
+	font-family: FiraSans;
+	font-size: 16px;
+}
+
+li {
+	font-family: FiraSans;
+	font-size: 16px;
 }
 
 #content-desktop {
@@ -219,8 +254,7 @@ div.meetTeam:hover {
 
 h2.news {
 	margin-top: 10px;
-	font-family: Arial;
-	font-size: 225%;
+	font-family: Montserrat;
 }
 
 .teamImage {
@@ -306,6 +340,22 @@ th img{
 .repRegions:hover {
 	transform: scale(1.05);
 	background-color: #4CAF50;
+}
+
+.repRegionsCountry {
+	padding: 5px;
+	transform: scale(0.95);
+	transition: 0.5s;
+	border-radius: 5px;
+}
+
+.repRegionsCountry:hover {
+	transform: scale(1.05);
+	background-color: #4CAF50;
+}
+
+.modal-header > h1 {
+	font-size: 150%;
 }
 
 @media (max-width: 993px) {
