@@ -49,9 +49,13 @@
             <li><a href="../news/page-1.html">News</a></li>
             <li><a href="../distreps.html">Distributors & Reps</a></li>
           </ul>
-          <ul class="nav navbar-nav navbar-right">
-            <li style="padding-top: 15px; padding-left: 15px"><button class="btn btn-info navbar-btn" id="myBtn">Contact Us!</button></li>
-          </ul>
+          <div class="nav navbar-nav navbar-right">
+            <a href="https://www.facebook.com/MicrotipsTechnology"><i class="navbarIcons fa fa-facebook-square"></i></a>
+            <a href="https://www.linkedin.com/company/microtips-technology-usa"><i class="navbarIcons fa fa-linkedin-square"></i></a>
+            <a href="https://twitter.com/MicroTipsUSA"><i class="navbarIcons fa fa-twitter-square"></i></a>
+            <a href="https://www.youtube.com/channel/UCUW7bcaTxuToVjchC2AKgAw"><i class="navbarIcons fa fa-youtube-square"></i></a>
+            <button class="btn btn-info navbar-btn" id="contactBtn" style="margin-left: 0px; margin-top: -6px;">Contact Us!</button>
+          </div>
         </div>
       </div>
     </div>
@@ -235,7 +239,7 @@
 
 <script>
 $(document).ready(function(){
-    $("#myBtn").click(function(){
+    $("#contactBtn").click(function(){
         $("#myModal").modal();
     });
 });

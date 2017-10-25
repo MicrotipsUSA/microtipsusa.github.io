@@ -140,6 +140,17 @@ display: none;
 	padding-top: 15px;
 }
 
+.navbarIcons {
+	font-size:30px; 
+	margin-top: 10px; 
+	margin-right: 5px; 
+	color: #1E90FF;
+}
+
+.navbarIcons:hover {
+	color: #4DA7FF;
+}
+
 a.hs2links {
 	transform: scale(0.92);
 	-o-transition:.5s;
@@ -386,7 +397,7 @@ th img{
     
     .navbar-nav {
         float: none!important;
-        margin: 7.5px -15px;
+        margin: 7.5px 0px;
     }
     
     .navbar-nav>li {
