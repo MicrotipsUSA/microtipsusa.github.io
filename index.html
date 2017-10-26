@@ -1,14 +1,3 @@
-<?php
-
-if(isset($_POST[fullName]) && isset($_POST[companyName]) && isset($_POST[companyLocation]) && isset($_POST[contactEmail]) && isset($_POST[contactPhoneNumber]) && isset($_POST[message])){
-  mail('jordanruhl@gmail.com', 'all good', 'all good');
-}
-else {
-  $url = 'http://www.facebook.com'
-}
-
-?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -22,25 +11,6 @@ else {
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   <link rel="stylesheet" href="Jstylesheet.css">
-
-  <script>
-    $(document).ready(function(){
-      $("button#submit").click(function(){
-        $.ajax({
-          type: "POST",
-          url: "sendContactForm.php",
-          data: $('form.feedback').serialize(),
-          success: function(message){
-            $("#feedback").html(message)
-            $("#feedback-modal").modal('hide');
-          },
-          error: function(){
-            alert("Error");
-          }
-        });
-      });
-    });
-  </script>
 </head>
 
 <body link="black">
@@ -244,7 +214,7 @@ else {
         <h1>Contact Us!</h1>
       </div>
       <div class="modal-body" style="padding:40px 50px;">
-        <form role="form" class="feedback" name="feedback">
+        <form role="form" action="sendContactForm.php">
           <div class="form-group">
             <label for="usrname"></span> Full Name</label>
             <input type="text" class="form-control" id="fullName" name="fullName" placeholder="Enter full name">
