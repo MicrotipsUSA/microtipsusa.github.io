@@ -336,6 +336,21 @@ th img{
 
 }
 
+.comingSoon > div > div > h1 {
+	text-align: center;
+	color: white;
+	text-shadow: 1px 1px 8px black;
+	font-size: 150px;
+}
+
+.comingSoon > div > div > h2 {
+	text-align: center;
+	color: white;
+	text-shadow: 1px 1px 8px black;
+	font-size: 50px;
+	margin-top: -10px;
+}
+
 .repRegions > p {
 	margin: 5px;
 }
@@ -469,6 +484,21 @@ th img{
     .distributors {
     	padding-top: 0px;
     }
+
+    .comingSoon > div > div > h1 {
+		text-align: center;
+		color: white;
+		text-shadow: 1px 1px 8px black;
+		font-size: 90px;
+	}
+
+	.comingSoon > div > div > h2 {
+		text-align: center;
+		color: white;
+		text-shadow: 1px 1px 8px black;
+		font-size: 30px;
+		margin-top: -10px;
+	}
 }
 
 @media (max-width: 767px) {
@@ -491,6 +521,20 @@ th img{
 		padding-bottom: 50px;
 		font-size: 75px;
 		text-shadow: 2px 2px 15px black;
+	}
+	.comingSoon > div > div > h1 {
+		text-align: center;
+		color: white;
+		text-shadow: 1px 1px 8px black;
+		font-size: 70px;
+	}
+
+	.comingSoon > div > div > h2 {
+		text-align: center;
+		color: white;
+		text-shadow: 1px 1px 8px black;
+		font-size: 20px;
+		margin-top: -10px;
 	}
 }
 
