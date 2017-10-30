@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <title>Microtips Technology USA</title>
-  <link rel="icon" href="..\images\logo_only.png">
+  <link rel="icon" href="images\logo_only.png">
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
@@ -10,11 +10,41 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-  <link rel="stylesheet" href="../Jstylesheet.css">
-  
-  <script src="../MTUSAjavascript.js"></script>
+  <link rel="stylesheet" href="Jstylesheet.css">
 
-  <script src='https://www.google.com/recaptcha/api.js'></script>
+  <script>
+    function _(id){
+      return document.getElementById(id);
+    }
+
+    $(document).ready(function(){
+      $('#contactForm').on('submit', function(event){
+        event.preventDefault();
+        if($('#fullName').val() == "")
+        {
+          alert("Name is required");
+        }
+        else if($('#companyName').val() == "")
+        {
+          alert("Company name is required");
+        }
+        else
+        {
+          $.ajax({
+            url:"sendContactForm2.php",
+            method:"POST",
+            data:$('#contactForm').serialize(),
+            success:function(data)
+            {
+              $('#contactForm')[0].reset();
+              $('#contactModal').modal('hide');
+              alert("Your contact request has been sent!");
+            }
+          });
+        }
+      });
+    });
+  </script>
 
 </head>
 
@@ -31,16 +61,9 @@
           <span class="icon-bar"></span>
           <span class="icon-bar"></span> 
           </button>
-          <a class="navbar-brand" href="../index.html"><img src="..\images\logo_name_white.jpg" alt="Microtips Technology USA" height=50px></a>
+          <a class="navbar-brand" href="comingSoon.html"><img src="images\logo_name_white.jpg" alt="Microtips Technology USA" height=50px></a>
         </div>
         <div class="collapse navbar-collapse" id="myNavbar">
-          <ul class="nav navbar-nav">
-            <li><a href="../about.html">About</a></li>
-            <li><a href="../products.html">Products</a></li> 
-            <li><a href="../industries.html">Industries</a></li> 
-            <li><a href="../news/page-1.html">News</a></li>
-            <li><a href="../distreps.html">Distributors & Reps</a></li>
-          </ul>
           <div class="nav navbar-nav navbar-right">
             <a href="https://www.facebook.com/MicrotipsTechnology"><i class="navbarIcons fa fa-facebook-square"></i></a>
             <a href="https://www.linkedin.com/company/microtips-technology-usa"><i class="navbarIcons fa fa-linkedin-square"></i></a>
@@ -54,65 +77,50 @@
   </nav>
 </div>
 
-<div style="height: 110px;"></div>
-<div class="container" style="height: 15px;">
-  <a href="../news/page-1.html" style="padding-left: 15px;">News Home</a>
-</div>
+<div class="section homeSectionOne">
+  <div style="height: 80px;"></div>
 
-<div class="container">
-  <div class="col-md-9 col-sm-8 col-xs-12">
-    <h1 style="">7.0” Drone TFT Transmissive Display</h1>
-    <p style="padding-bottom: 20px; font-style: italic;">October 20, 2016</p>
+  <div class="comingSoon container">
     <div class="row">
-      <div class="col-sm-6 col-xs-12" style="padding-bottom: 30px;">
-        <img class="img-responsive" src="../images/news/2016/1020/DCT_1.png" width="100%">
-      </div>
-      <div class="col-sm-6 col-xs-12" style="padding-bottom: 30px;">
-        <p>
-          Microtips Technology is excited to announce our 7.0 inch transmissive type, active matrix TFT display. Our product uses amorphous silicon TFT, as switching devices. As drone industries become more popular, both internationally, and domestically, Microtips Technology has been paying close attention to drones hand held controllers. Our 7.0 inch LCD displays is a great drop in replacement, for this form of application, which is also great for the user ability to view flight patterns, and enable camera systems for landscape photography. Furthermore it can use as a notification mechanism for low battery, and wifi enable.<br><br>
-          Our graphics, and texts can be displayed on a WVGA 800 (W) x RGB x 480 (H), with an aspect ratio of 16:9.The power supply voltage for our display, used a 3.3Volts, along with the operating temperature of -20 ~ 70 degrees Celsius, and a storage temperature of -30 ~ 80 degrees Celsius. Our display also has an active area of 152.4 x 91.44mm, with viewing direction, defined by the rubbing direction of its TFT surface treatment. Not only does our 7.0 TFT LCD have great features, but has a response time of 5ms, a brightness of 1000cd/m^2, and ensuring that the Vss interface pin being grounded instead of being floated.<br><br>
-          The lifetime on our 7.0 inch TFT display is 40,000 hr, at Ta = 25+- 2 degrees Celsius. Furthermore this LCD display has a power consumption of 2574mW, when IB is 260mA and VB at 9.9 volts. Our 7.0 TFT display has its LEDs as a 3 series x 13 parallel type, with this type of set up, our LCD has surpasses many customer quality expectations, and tests, along with a contrast ratio of 400:1. Many drones controllers provide precise aircraft control, with real-time information, which are displayed on either a direct sunlight viewable display, either touch, or no touch which we have demonstrated the capability of the 7.0 transmissive TFT display. Other drones used different type of dashboard to navigate their drones, but we are confident in saying, we can meet customer requirements whether its small, or big 7-segment, character, OLED, or graphics display. Helping customers realizing their potential is what we do best.
-        </p>
+      <div class="col-xs-12">
+        <h1>COMING SOON</h1>
+        <h3 style="text-align: center; color: white; text-shadow: 1px 1px 8px black; padding-bottom: 50px;">We're working on a new website! Please check back in...</h3>
       </div>
     </div>
-    <div style="padding-bottom: 30px; text-align: center;">
-      <a href="../news/page-1.html#7.0_Drone_TFT_Transmissive_Display">
-        <button type="button" class="btn btn-info">Back</button>
-      </a>
+    <div class="row">
+      <div class="col-sm-3 col-xs-6">
+        <h1 id="days">0</h1>
+        <h2>Days</h2>
+      </div>
+      <div class="col-sm-3 col-xs-6">
+        <h1 id="hours">0</h1>
+        <h2>Hours</h2>
+      </div>
+      <div class="col-sm-3 col-xs-6">
+        <h1 id="minutes">0</h1>
+        <h2>Minutes</h2>
+      </div>
+      <div class="col-sm-3 col-xs-6">
+        <h1 id="seconds">0</h1>
+        <h2>Seconds</h2>
+      </div>
     </div>
-  </div>
-  <div class="col-md-3 col-sm-4 col-xs-12">
-    
-    <div class="row" style="background-color: #1E90FF; border-radius: 10px;">
-      <div style="padding: 20px; text-align: center; color: white;">
-        <h3>Subscribe to our</h3>
-        <h2 style="padding-bottom: 10px;">MAILING LIST</h2>
-        <p>Subscribe to our mailing list to receive our monthly newsletter and other company updates via email.</p>
-        <form method="post" id="subscribe-form">
+    <div class="row">
+      <h3 style="text-align: center; color: white; text-shadow: 1px 1px 8px black; padding-top: 100px;">Or Subscribe to our mailing list and we'll let you know when our new website has launched.</h3>
+      <div style="text-align: center;">
+        <form action="subscribe.php" method="post" id="subscribe-form">
           <div class="form-group">
             <label for="email"></label>
-            <input type="email" class="form-control" name="email" id="email" placeholder="someone@example.com">
+            <input type="email" class="form-control" name="email" id="email" placeholder="someone@example.com" style="width: 300px; margin: 0 auto;">
           </div>
-          <input type="submit" name="submit" id="submit" value="Sign Up!" class="btn btn-default btn-block" style="width: 100px; margin: 0 auto;">
+          <button type="submit" class="btn btn-default">Sign Up</button>
         </form>
       </div>
     </div>
-    
-    <div class="row" style="height: 20px;"></div>
-    
-    <div class="row" style="background-color: #ABABAB; height: 400px; border-radius: 10px;">
-      <a class="twitter-timeline" data-width="300" data-height="400" href="https://twitter.com/MicrotipsUSA">Tweets by MicrotipsUSA</a> 
-    </div>
-    
-    <div class="row" style="height: 20px;"></div>
-    
   </div>
-</div>
 
-<div class="container">
-  <div class="row">
-    <div style="background-color: #1E90FF; height: 2px;"></div>
-  </div>
+  <div style="height: 80px;"></div>
+
 </div>
 
 <div class="subsection">
@@ -185,10 +193,7 @@
             <label for="msg"></span> Message</label>
             <textarea class="form-control" style="width: 100%;" rows="5" id="msg" name="msg" required></textarea>
           </div>
-          <div style="width: 304px; margin: 0 auto; margin-bottom: 10px;">
-            <div class="g-recaptcha" data-sitekey="6LdBfDYUAAAAADot7wZ9jpcgMwJar2_tJhQL1PtH"></div>
-          </div>
-          <input type="submit" name="submit" id="submit" value="Request & we will get back to you soon!" class="btn btn-info btn-block">
+            <input type="submit" name="submit" id="submit" value="Request & we will get back to you soon!" class="btn btn-info btn-block">
         </form>
       </div>
       <div class="modal-footer">
@@ -197,6 +202,67 @@
     </div>
   </div>
 </div> 
+
+<script>
+// Set the date we're counting down to
+var countDownDate = new Date("Jan 8, 2018 12:00:00").getTime();
+
+// Update the count down every 1 second
+var x = setInterval(function() {
+
+    // Get todays date and time
+    var now = new Date().getTime();
+    
+    // Find the distance between now an the count down date
+    var distance = countDownDate - now;
+    
+    // Time calculations for days, hours, minutes and seconds
+    var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+    var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+    var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+    
+    // Output the result in an element with id="demo"
+    // document.getElementById("demo").innerHTML = days + " days <br>" + hours + " hours <br>" + minutes + " minutes <br>" + seconds + " seconds <br>";
+
+    document.getElementById("days").innerHTML = days;
+
+    document.getElementById("hours").innerHTML = hours;
+
+    document.getElementById("minutes").innerHTML = minutes;
+
+    document.getElementById("seconds").innerHTML = seconds;
+    
+    // If the count down is over, write some text 
+    if (distance < 0) {
+        clearInterval(x);
+        document.getElementById("demo").innerHTML = "EXPIRED";
+    }
+}, 1000);
+</script>
+
+<script>
+$(document).ready(function(){
+    $("#contactBtn").click(function(){
+        $("#contactModal").modal();
+    });
+});
+</script>
+
+<script>
+function initMap() {
+  var uluru = {lat: 28.601167, lng: -81.223228};
+  var map = new google.maps.Map(document.getElementById('map'), {
+    zoom: 15,
+    center: uluru,
+    clickableIcons: true
+  });
+  var marker = new google.maps.Marker({
+    position: uluru,
+    map: map
+  });
+}
+</script>
 
 <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDo7ru1y7ntwm1nlOAogse-gWPyCC3hYXY&callback=initMap"></script>
 

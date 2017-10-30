@@ -23,6 +23,11 @@
     }
   </script>
   <link rel="stylesheet" href="Jstylesheet.css">
+  
+  <script src="MTUSAjavascript.js"></script>
+
+  <script src='https://www.google.com/recaptcha/api.js'></script>
+
 </head>
 
 <body link="black" onload="load()">
@@ -224,7 +229,7 @@
 </div>
 
     <!-- Modal -->
-<div class="modal fade" id="myModal" role="dialog">
+<div class="modal fade" id="contactModal" role="dialog">
   <div class="modal-dialog">
     
     <!-- Modal content-->
@@ -234,32 +239,35 @@
         <h1>Contact Us!</h1>
       </div>
       <div class="modal-body" style="padding:40px 50px;">
-        <form role="form">
+        <form id="contactForm" method="post">
           <div class="form-group">
             <label for="usrname"></span> Full Name</label>
-            <input type="text" class="form-control" id="usrname" placeholder="Enter full name">
+            <input type="text" class="form-control" id="fullName" name="fullName" placeholder="Enter full name" required>
           </div>
           <div class="form-group">
             <label for="compName"></span> Company Name</label>
-            <input type="text" class="form-control" id="usrname" placeholder="Enter company name">
+            <input type="text" class="form-control" id="companyName" name="companyName" placeholder="Enter company name" required>
           </div>
           <div class="form-group">
             <label for="location"></span> Company Location</label>
-            <input type="text" class="form-control" id="psw" placeholder="Orlando, FL">
+            <input type="text" class="form-control" id="companyLocation" name="companyLocation" placeholder="Orlando, FL" required>
           </div>
           <div class="form-group">
             <label for="eml"></span> Contact E-mail Address</label>
-            <input type="text" class="form-control" id="psw" placeholder="someone@example.com">
+            <input type="email" class="form-control" id="contactEmail" name="contactEmail" placeholder="someone@example.com" required>
           </div>
           <div class="form-group">
             <label for="phnum"></span> Contact Phone Number</label>
-            <input type="text" class="form-control" id="psw" placeholder="(407) 867-5309">
+            <input type="text" class="form-control" id="contactPhoneNumber" name="contactPhoneNumber" placeholder="(407) 867-5309" required>
           </div>
           <div class="form-group">
-            <label for="message"></span> Message</label>
-            <textarea class="form-control" style="width: 100%;" rows="5"></textarea>
+            <label for="msg"></span> Message</label>
+            <textarea class="form-control" style="width: 100%;" rows="5" id="msg" name="msg" required></textarea>
           </div>
-            <button type="submit" class="btn btn-info btn-block"></span> Request & we will get back to you soon!</button>
+          <div style="width: 304px; margin: 0 auto; margin-bottom: 10px;">
+            <div class="g-recaptcha" data-sitekey="6LdBfDYUAAAAADot7wZ9jpcgMwJar2_tJhQL1PtH"></div>
+          </div>
+          <input type="submit" name="submit" id="submit" value="Request & we will get back to you soon!" class="btn btn-info btn-block">
         </form>
       </div>
       <div class="modal-footer">
@@ -268,29 +276,6 @@
     </div>
   </div>
 </div> 
-
-<script>
-$(document).ready(function(){
-    $("#contactBtn").click(function(){
-        $("#myModal").modal();
-    });
-});
-</script>
-
-<script>
-function initMap() {
-  var uluru = {lat: 28.601167, lng: -81.223228};
-  var map = new google.maps.Map(document.getElementById('map'), {
-    zoom: 15,
-    center: uluru,
-    clickableIcons: true
-  });
-  var marker = new google.maps.Marker({
-    position: uluru,
-    map: map
-  });
-}
-</script>
 
 <script>
   // Javascript to enable link to tab
