@@ -118,3 +118,5 @@ function initMap() {
   }
 }
 (document,"script","twitter-wjs");
+
+$('.carousel').carousel();
