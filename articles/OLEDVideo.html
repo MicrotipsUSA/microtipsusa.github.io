@@ -10,21 +10,8 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-  <script>
-    if ( $(window).width() > 767) {      
-      var shiftWindow = function() { scrollBy(0, -120) };
-      window.addEventListener("hashchange", shiftWindow);
-      function load() { if (window.location.hash) shiftWindow(); }
-    } 
-    else {
-      var shiftWindow = function() { scrollBy(0, -130) };
-      window.addEventListener("hashchange", shiftWindow);
-      function load() { if (window.location.hash) shiftWindow(); }
-    }
-  </script>
-
   <link rel="stylesheet" href="../Jstylesheet.css">
-
+  
   <script src="../MTUSAjavascript.js"></script>
 
   <script src='https://www.google.com/recaptcha/api.js'></script>
@@ -44,7 +31,7 @@
           <span class="icon-bar"></span>
           <span class="icon-bar"></span> 
           </button>
-          <a class="navbar-brand" href="../index.html"><img src="../images\logo_name_white.jpg" alt="Microtips Technology USA" height=50px></a>
+          <a class="navbar-brand" href="../index.html"><img src="..\images\logo_name_white.jpg" alt="Microtips Technology USA" height=50px></a>
         </div>
         <div class="collapse navbar-collapse" id="myNavbar">
           <ul class="nav navbar-nav">
@@ -67,87 +54,25 @@
   </nav>
 </div>
 
-<div class="section newsSectionOne">
-  <h1 class="headerWords">News</h1>
+<div style="height: 110px;"></div>
+<div class="container" style="height: 15px;">
+  <a href="../news/page-1.html" style="padding-left: 15px;">News Home</a>
 </div>
-
-<div class="col-xs-12" style="height: 50px;"></div>
 
 <div class="container">
   <div class="col-md-9 col-sm-8 col-xs-12">
-
-    <div class="row" id="Fingerprint_Scanner" style="padding-bottom: 30px;">
-      <div class="col-sm-4 col-xs-12">
-        <img class="img-responsive" src="../images/news/2016/1120/FP.png">
-      </div>
-      <div class="col-sm-8 col-xs-12">
-        <h2 class="news">Fingerprint Scanner</h2>
-        <p style="font-style: italic;">November 20, 2016</p>
-        <p>Humans fingerprints are detailed, unique and very difficult to alter, even though a Identical twins has the same feature, they have experience different things and stress level may have been different which leads to the alteration of their identity, reason why Identical twins does not have the same finger print.</p>
-        <a href="../articles/Fingerprint_Scanner.html">
-          <button type="button" class="btn btn-info">Read More!</button>
-        </a>
-      </div>
-    </div>    
-
-    <div class="row" id="7.0_Drone_TFT_Transmissive_Display" style="padding-bottom: 30px;">
-      <div class="col-sm-4 col-xs-12">
-        <img class="img-responsive" src="../images/news/2016/1020/DCT_1.png">
-      </div>
-      <div class="col-sm-8 col-xs-12">
-        <h2 class="news">7.0” Drone TFT Transmissive Display</h2>
-        <p style="font-style: italic;">October 20, 2016</p>
-        <p>Microtips Technology is excited to announce our 7.0 inch transmissive type, active matrix TFT display. Our product uses amorphous silicon TFT, as switching devices. As drone industries become more popular, both internationally, and domestically, Microtips Technology has been paying close attention to drones hand held controllers.</p>
-        <a href="../articles/7.0_Drone_TFT_Transmissive_Display.html">
-          <button type="button" class="btn btn-info">Read More!</button>
-        </a>
+    <h1 style="">George Explains: OLED Displays</h1>
+    <p style="padding-bottom: 20px; font-style: italic;">July 18, 2017</p>
+    <div class="row" style="padding-bottom: 20px;">
+      <div class="videoContainer">
+        <iframe src="https://www.youtube.com/embed/1MHS386tyxk" frameborder="0" allowfullscreen class="video"></iframe>
       </div>
     </div>
-
-    <div class="row" id="128x64_White_Passive_OLED_Matrix" style="padding-bottom: 30px;">
-      <div class="col-sm-4 col-xs-12">
-        <img class="img-responsive" src="../images/news/2016/0920/Gr_O1.png">
-      </div>
-      <div class="col-sm-8 col-xs-12">
-        <h2 class="news">128x64 White Passive OLED Matrix</h2>
-        <p style="font-style: italic;">September 20, 2016</p>
-        <p>Microtips Technology is excited to announce our 128x64 white passive matrix OLED, with polarized OLED display. We are also excited to be in partnership with Raystar Optronics, Inc.</p>
-        <a href="../articles/128x64_White_Passive_OLED_Matrix.html">
-          <button type="button" class="btn btn-info">Read More!</button>
-        </a>
-      </div>
+    <div style="padding-bottom: 30px; text-align: center;">
+      <a href="../news/page-2.html#128x64_White_Passive_OLED_Matrix">
+        <button type="button" class="btn btn-info">Back</button>
+      </a>
     </div>
-
-    <div class="row" id="7.0_inch_LVDS_Capacitive_Touch_Panel" style="padding-bottom: 30px;">
-      <div class="col-sm-4 col-xs-12">
-        <img class="img-responsive" src="../images/news/2016/0820/LT7.png">
-      </div>
-      <div class="col-sm-8 col-xs-12">
-        <h2 class="news">7.0 inch LVDS Capacitive Touch Panel</h2>
-        <p style="font-style: italic;">August 20, 2016</p>
-        <p>Microtips Technology is excited to announce our 7.0 inch LVDS Capacitive touch panel, transmissive Normal White, with an operating temperature of -20 ~ 70 degrees celsius, and a storage temperature of -30 ~ 80 degrees celsius.</p>
-        <a href="../articles/7.0_inch_LVDS_Capacitive_Touch_Panel.html">
-          <button type="button" class="btn btn-info">Read More!</button>
-        </a>
-      </div>
-    </div>
-
-    <div class="row" id="So_does_PMOLED" style="padding-bottom: 30px;">
-      <div class="col-sm-4 col-xs-12">
-        <img class="img-responsive" src="../images/news/2016/0720/PAO.png">
-      </div>
-      <div class="col-sm-8 col-xs-12">
-        <h2 class="news">As Future technologies advances: So does PMOLED</h2>
-        <p style="font-style: italic;">July 20, 2016</p>
-        <p>Did you know that you can save cost and simplify the manufacturing processes for your next product build, by simply bundling together a few complementary components? This is where Microtips value added services and component integration really shines!</p>
-        <a href="../articles/So_does_PMOLED.html">
-          <button type="button" class="btn btn-info">Read More!</button>
-        </a>
-      </div>
-    </div>
-
-    
-
   </div>
   <div class="col-md-3 col-sm-4 col-xs-12">
     
@@ -175,13 +100,6 @@
     <div class="row" style="height: 20px;"></div>
     
   </div>
-</div>
-
-<div class="container" style="text-align: center;">
-  <ul class="pagination">
-    <li><a href="../news/page-1.html">1</a></li>
-    <li class="active"><a href="#">2</a></li>
-  </ul>
 </div>
 
 <div class="container">
