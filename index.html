@@ -55,12 +55,12 @@
 </div>
 
 <div style="min-height: 50%;">
-  <div class="carousel slide carousel-fade" data-ride="carousel">
+  <div class="carousel slide carousel-fade indexCarousel indexCarousel-fade" data-ride="indexCarousel">
     <!-- Wrapper for slides -->
-    <div class="carousel-inner" role="listbox">
-      <div class="item active"></div>
-      <div class="item"></div>
-      <div class="item"></div>
+    <div class="carousel-inner indexCarousel-inner" role="listbox">
+      <div class="item indexItem active indexActive"></div>
+      <div class="item indexItem"></div>
+      <div class="item indexItem"></div>
     </div>
   </div>
 
@@ -201,7 +201,7 @@
       <div class="col-sm-6" style="padding-top: 60px; padding-bottom: 50px;">
         <h1>Contact us today!</h1>
         <p>E-mail: 
-          <a href="mailto:mtusainfo@microtipsusa.com">mtusainfo@microtipsusa.com</a>
+          <a href="mailto:&#109;&#116;&#117;&#115;&#97;&#105;&#110;&#102;&#111;&#64;&#109;&#105;&#99;&#114;&#111;&#116;&#105;&#112;&#115;&#117;&#115;&#97;&#46;&#99;&#111;&#109;">&#109;&#116;&#117;&#115;&#97;&#105;&#110;&#102;&#111;&#64;&#109;&#105;&#99;&#114;&#111;&#116;&#105;&#112;&#115;&#117;&#115;&#97;&#46;&#99;&#111;&#109;</a>
         </p>
         <p>Address: 3504 Lake Lynda Drive, Orlando, FL, 32817</p>
         <p>Phone: (888) 499-8477</p> 
@@ -266,6 +266,10 @@
 </div> 
 
 <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDo7ru1y7ntwm1nlOAogse-gWPyCC3hYXY&callback=initMap"></script>
+
+<script type="text/javascript">
+  $('.carousel').carousel({interval: 5000});
+</script>
 
 </body>
 </html>
