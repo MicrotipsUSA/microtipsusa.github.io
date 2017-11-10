@@ -267,6 +267,7 @@ div.meetTeam:hover {
 .allProductsSection {
 	background-image: url(images/products/background.jpg);
     background-position: center;
+    background-attachment: scroll;
 }
 
 .reps {
