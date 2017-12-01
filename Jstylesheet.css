@@ -270,6 +270,30 @@ div.meetTeam:hover {
     background-attachment: scroll;
 }
 
+.autoSection {
+	background-image: url(images/industries/automotive/dash1.jpeg);
+    background-position: center;
+    background-attachment: scroll;
+    color: white;
+    text-shadow: 2px 2px 15px black;
+}
+
+.industrialSection {
+	background-image: url(images/industries/industrial/ems2.jpeg);
+    background-position: center;
+    background-attachment: scroll;
+    color: white;
+    text-shadow: 2px 2px 15px black;
+}
+
+.medicalSection {
+	background-image: url(images/industries/medical/medical.jpeg);
+    background-position: center;
+    background-attachment: scroll;
+    color: white;
+    text-shadow: 2px 2px 15px black;
+}
+
 .reps {
 	text-align: left;
 }
