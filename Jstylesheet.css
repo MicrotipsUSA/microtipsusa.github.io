@@ -294,6 +294,30 @@ div.meetTeam:hover {
     text-shadow: 2px 2px 15px black;
 }
 
+.consumerSection {
+	background-image: url(images/industries/consumer/consumer.jpeg);
+    background-position: center;
+    background-attachment: scroll;
+    color: white;
+    text-shadow: 2px 2px 15px black;
+}
+
+.hvacSection {
+	background-image: url(images/industries/hvac/hvac.jpeg);
+    background-position: center;
+    background-attachment: scroll;
+    color: white;
+    text-shadow: 2px 2px 15px black;
+}
+
+.telecomSection {
+	background-image: url(images/industries/telecom/telecom.jpeg);
+    background-position: center;
+    background-attachment: scroll;
+    color: white;
+    text-shadow: 2px 2px 15px black;
+}
+
 .reps {
 	text-align: left;
 }
