@@ -617,6 +617,32 @@ th img{
 	}
 }
 
+@media (max-width: 767px) and (min-width: 400px) and (orientation:landscape) {
+	.team > div > .col-sm-4 {
+		width: 33%;
+	}
+
+	.team > div > .col-sm-3 {
+		width: 25%;
+	}
+
+	.prods > div > div > .col-sm-3 {
+		width: 50%;
+	}
+
+	.news > div > div > .col-sm-4 {
+		width: 50%;
+	}
+
+	.news > div > div > .col-sm-8 {
+		width: 50%;
+	}
+
+	.news > div > .col-xs-12 {
+		width: 50%;
+	}
+}
+
 .indexCarousel-fade .indexCarousel-inner .indexItem {
     opacity: 0;
     transition-property: opacity;
