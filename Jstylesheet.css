@@ -630,6 +630,10 @@ th img{
 		width: 50%;
 	}
 
+	.prods > .col-sm-6 {
+		width: 50%;
+	}
+
 	.news > div > div > .col-sm-4 {
 		width: 50%;
 	}
