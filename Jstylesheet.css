@@ -238,19 +238,19 @@ div.meetTeam:hover {
 }
 
 .newsSectionOne {
-	background-image: url(images/news/newsHeader2.png);
+	background-image: url(images/news/newsHeader2.jpg);
 	margin-top: 80px;
     background-position: center;
 }
 
 .productsSectionOne {
-	background-image: url(images/products/productsBanner.png);
+	background-image: url(images/products/productsBanner.jpg);
 	margin-top: 80px;
     background-position: center;
 }
 
 .industriesSectionOne {
-	background-image: url(images/industries/industriesBanner.png);
+	background-image: url(images/industries/industriesBanner.jpg);
 	margin-top: 80px;
     background-position: center;
 }
