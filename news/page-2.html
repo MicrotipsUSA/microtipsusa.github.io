@@ -12,12 +12,12 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   <script>
     if ( $(window).width() > 767) {      
-      var shiftWindow = function() { scrollBy(0, -120) };
+      var shiftWindow = function() { scrollBy(0, -100) };
       window.addEventListener("hashchange", shiftWindow);
       function load() { if (window.location.hash) shiftWindow(); }
     } 
     else {
-      var shiftWindow = function() { scrollBy(0, -130) };
+      var shiftWindow = function() { scrollBy(0, -100) };
       window.addEventListener("hashchange", shiftWindow);
       function load() { if (window.location.hash) shiftWindow(); }
     }
@@ -31,7 +31,7 @@
 
 </head>
 
-<body link="black">
+<body link="black" onload="load()">
 
 <div class="example3">
   <nav class="navbar navbar-default navbar-fixed-top" style="background-color: white;">

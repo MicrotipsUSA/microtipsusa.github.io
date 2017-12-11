@@ -40,12 +40,12 @@
 			$phonenum = $_POST["contactPhoneNumber"];
 			$msg = $_POST["msg"];
 
-			$recipient = "j.ruhl@rocketmail.com";
+			$recipient = "mtusainfo@microtipsusa.com";
 			$from = $email;
-			$subject = "Please reply to $name";
+			$subject = "THIS IS A TEST! Please reply to $name";
 			$headers = "From: $from";
 
-			$message = 'Name: '.$name. "\r\n" . ' Company: '.$comp. "\r\n" . ' Location: '.$location. "\r\n" . ' Email: '.$email. "\r\n" . ' Phone Number: '.$phonenum. "\r\n" . ' Message: '.$msg;
+			$message = 'Name: '.$name. "\r\n" . 'Company: '.$comp. "\r\n" . 'Location: '.$location. "\r\n" . 'Email: '.$email. "\r\n" . 'Phone Number: '.$phonenum. "\r\n" . 'Message: '.$msg;
 
 			if(mail($recipient, $subject, $message, $headers))
 			{

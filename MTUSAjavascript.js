@@ -40,7 +40,7 @@ $(document).ready(function(){
     else
     {
       $.ajax({
-        url:"subscribe.php",
+        url:"../subscribe.php",
         method:"POST",
         data:$('#subscribe-form').serialize(),
         success:function(data)
