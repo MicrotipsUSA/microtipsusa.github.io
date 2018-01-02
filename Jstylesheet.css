@@ -63,39 +63,6 @@ display: inline;
 display: none;
 }
 
-@media all and (transform-3d), (-webkit-transform-3d) {
-  .carousel-inner > .item {
-    -webkit-transition: -webkit-transform .6s ease-in-out;
-         -o-transition:      -o-transform .6s ease-in-out;
-            transition:         transform .6s ease-in-out;
-
-
-    -webkit-backface-visibility: hidden;
-            backface-visibility: hidden;
-    -webkit-perspective: 1000;
-            perspective: 1000;
-  }
-  .carousel-inner > .item.next,
-  .carousel-inner > .item.active.right {
-    left: 0;
-    -webkit-transform: translate3d(100%, 0, 0);
-            transform: translate3d(100%, 0, 0);
-  }
-  .carousel-inner > .item.prev,
-  .carousel-inner > .item.active.left {
-    left: 0;
-    -webkit-transform: translate3d(-100%, 0, 0);
-            transform: translate3d(-100%, 0, 0);
-  }
-  .carousel-inner > .item.next.left,
-  .carousel-inner > .item.prev.right,
-  .carousel-inner > .item.active {
-    left: 0;
-    -webkit-transform: translate3d(0, 0, 0);
-            transform: translate3d(0, 0, 0);
-  }
-}
-
 .example3 .navbar-brand {
 	height: 80px;
 }
@@ -243,6 +210,14 @@ a.newsLink:hover {
 .productImage {
 	border-radius: 15px;
 	margin-top: 15px;
+}
+
+.tab-pane > div > ul > li {
+}
+
+.tab-pane > div > ul > li:hover {
+	transform: scale(1.05);
+	transition:.5s;
 }
 
 .aboutSectionOne {
@@ -442,6 +417,10 @@ th img{
 
 }
 
+td > p {
+	margin-bottom: 0px;
+}
+
 .productFeatures {}
 
 .comingSoon > div > div > h1 {
@@ -459,6 +438,16 @@ th img{
 	margin-top: -10px;
 }
 
+.repInfo > h3 {
+	margin-top: 15px;
+	margin-bottom: 5px;
+}
+
+.repInfo > p {
+	margin-top: 5px;
+	margin-bottom: 5px;
+}
+
 .repRegions > p {
 	margin: 5px;
 }
@@ -469,6 +458,7 @@ th img{
 	transform: scale(0.95);
 	transition: 0.5s;
 	border-radius: 5px;
+	padding: 5px 0px;
 }
 
 .repRegions:hover {
@@ -747,6 +737,85 @@ th img{
     z-index: -99;
 }
 .indexCarousel .indexItem {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+}
+
+.aboutCarousel-fade .aboutCarousel-inner .aboutItem {
+    opacity: 0;
+    transition-property: opacity;
+}
+.aboutCarousel-fade .aboutCarousel-inner .aboutActive {
+    opacity: 1;
+}
+.aboutCarousel-fade .aboutCarousel-inner .aboutActive.left,
+.aboutCarousel-fade .aboutCarousel-inner .aboutActive.right {
+    left: 0;
+    opacity: 0;
+    z-index: 1;
+}
+.aboutCarousel-fade .aboutCarousel-inner .next.left,
+.aboutCarousel-fade .aboutCarousel-inner .prev.right {
+    opacity: 1;
+}
+.aboutCarousel-fade .aboutCarousel-control {
+    z-index: 2;
+}
+@media all and (transform-3d),
+(-webkit-transform-3d) {
+    .aboutCarousel-fade .aboutCarousel-inner > .aboutItem.next,
+    .aboutCarousel-fade .aboutCarousel-inner > .aboutItem.aboutActive.right {
+        opacity: 0;
+        -webkit-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0);
+    }
+    .aboutCarousel-fade .aboutCarousel-inner > .aboutItem.prev,
+    .aboutCarousel-fade .aboutCarousel-inner > .aboutItem.aboutActive.left {
+        opacity: 0;
+        -webkit-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0);
+    }
+    .aboutCarousel-fade .aboutCarousel-inner > .aboutItem.next.left,
+    .aboutCarousel-fade .aboutCarousel-inner > .aboutItem.prev.right,
+    .aboutCarousel-fade .aboutCarousel-inner > .aboutItem.active {
+        opacity: 1;
+        -webkit-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0);
+    }
+}
+.aboutItem:nth-child(1) {
+    background: url(images/about/OfficePic.png) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+.aboutItem:nth-child(2) {
+    background: url(images/about/conference2.jpg) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+.aboutItem:nth-child(3) {
+    background: url(images/about/actionShot2.jpg) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+.aboutItem:nth-child(4) {
+    background: url(images/about/actionShot7.jpg) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+.aboutCarousel {
+    z-index: -99;
+}
+.aboutCarousel .aboutItem {
     position: fixed;
     width: 100%;
     height: 100%;
