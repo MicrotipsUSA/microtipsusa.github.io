@@ -482,6 +482,40 @@ td > p {
 	font-size: 150%;
 }
 
+.industriesNavbar {
+	background-color: white;
+	border-color: white;
+	border-radius: 0px;
+	border-width: 0px;
+}
+
+.industriesNavbar > div > div > div {
+	text-align: center;
+	padding-top: 15px;
+	padding-bottom: 15px;
+}
+
+.industriesNavbar > div > div > div:hover {
+	background-color: #bcbcbc;
+    color: white;
+}
+
+.affix {
+	top: 81px;
+	width: 100%;
+    z-index: 9999 !important;
+}
+
+.affix ~ .content {
+	position: relative;
+	top: 80px;
+	bottom: 0px;
+}
+
+.industriesContent {
+	display: none;
+}
+
 @media (max-width: 993px) {
 	#content-desktop {
 		display: inline;
