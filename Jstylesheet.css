@@ -672,6 +672,14 @@ td > p {
 	th, td {
 		width: 100%;
 	}
+
+	.affix {
+		position: static;	
+	}
+
+	.affix ~ .content {
+		position: static;
+	}
 }
 
 @media (max-width: 767px) and (min-width: 400px) and (orientation:landscape) {
