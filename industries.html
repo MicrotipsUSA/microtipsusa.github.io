@@ -10,20 +10,14 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-  <script>
-    if ( $(window).width() > 767) {      
-      var shiftWindow = function() { scrollBy(0, -180) };
-      window.addEventListener("hashchange", shiftWindow);
-      function load() { if (window.location.hash) shiftWindow(); }
-    } 
-    else {
-      var shiftWindow = function() { scrollBy(0, -80) };
-      window.addEventListener("hashchange", shiftWindow);
-      function load() { if (window.location.hash) shiftWindow(); }
-    }
-  </script>
 
   <script type="text/javascript">
+    function showContentFromDiffPage(link) {
+      var splitLink = link.split("#");
+      var showLink = "." + splitLink[1];
+      $(showLink).show();
+    }
+
     function showContent(tabExtra) {
       $(".industriesContent").hide();
 
@@ -58,7 +52,7 @@
 
 </head>
 
-<body link="black" onload="load()">
+<body link="black" onload="showContentFromDiffPage(window.location.href)">
 
 <div class="example3">
   <nav class="navbar navbar-default navbar-fixed-top" style="background-color: white;">
@@ -108,283 +102,285 @@
   </div>
 </div>
 
-<nav class="industriesNavbar navbar navbar-default" data-spy="affix" data-offset-top="665" style="margin-bottom: 0px;">
-  <div class="container">
-    <div class="row">
-      <div class="col-xs-4 col-sm-2" onclick="showContent(this.innerHTML)"><i class="fa fa-car industryLinks" style="font-size: 40px;"></i><br>Automotive</div>
-      <div class="col-xs-4 col-sm-2" onclick="showContent(this.innerHTML)"><i class="fa fa-industry industryLinks" style="font-size: 40px;"></i><br>Industrial</div>
-      <div class="col-xs-4 col-sm-2" onclick="showContent(this.innerHTML)"><i class="fa fa-heartbeat industryLinks" style="font-size: 40px;"></i><br>Medical</div>
-      <div class="col-xs-4 col-sm-2" onclick="showContent(this.innerHTML)"><i class="fa fa-desktop industryLinks" style="font-size: 40px;"></i><br>Consumer</div>
-      <div class="col-xs-4 col-sm-2" onclick="showContent(this.innerHTML)"><i class="fa fa-thermometer-half industryLinks" style="font-size: 40px;"></i><br>HVAC</div>
-      <div class="col-xs-4 col-sm-2" onclick="showContent(this.innerHTML)"><i class="fa fa-phone industryLinks" style="font-size: 40px;"></i><br>Telecom</div>
-    </div>
-  </div>
-</nav>
-
-<div class="content">
-  <div class="industriesContent automotiveTab">
-    <div class="section autoSection">
-      <div class="container">
-        <div style="text-align: center;" id="content-desktop">
-          <h1 style="font-size: 100px; padding: 75px 0px;">Automotive</h1>
-        </div>
-        <div style="text-align: center;" id="content-mobile">
-          <h1 style="font-size: 75px; padding: 50px 0px;">Automotive</h1>
-        </div>
-      </div>
-    </div>
+<div class="industriesNav">
+  <nav class="industriesNavbar navbar navbar-default" data-spy="affix" data-offset-top="665" style="margin-bottom: 0px;">
     <div class="container">
-      <div class="blueSplitter" style="margin-top: 10px;"></div>
-      <div class="row" style="margin: 50px 0px;">
-        <div class="col-xs-12 col-sm-6">
-          <h4>Features: </h4>
-          <p style="padding-left: 20px;">
-            Automotive Grade Fluid<br>
-            Wide Temperature Range<br>
-            IPS Technology Available<br>
-            Anti-Glare & Anti-Reflective Films Available<br>
-            TS 16949 Certification<br>
-          </p>
-        </div>
-        <div class="col-xs-12 col-sm-6">
-          <h4>Solutions: </h4>
-          <p style="padding-left: 20px;">
-            Speedometer & Tachometer<br>
-            Satellite Navigation<br>
-            Radio & Dash Control<br>
-            Back-Up Camera<br>
-            Guage Cluster<br>
-          </p>
-        </div>
+      <div class="row">
+        <div class="col-xs-4 col-sm-2" onclick="showContent(this.innerHTML)"><i class="fa fa-car industryLinks" style="font-size: 40px;"></i><br>Automotive</div>
+        <div class="col-xs-4 col-sm-2" onclick="showContent(this.innerHTML)"><i class="fa fa-industry industryLinks" style="font-size: 40px;"></i><br>Industrial</div>
+        <div class="col-xs-4 col-sm-2" onclick="showContent(this.innerHTML)"><i class="fa fa-heartbeat industryLinks" style="font-size: 40px;"></i><br>Medical</div>
+        <div class="col-xs-4 col-sm-2" onclick="showContent(this.innerHTML)"><i class="fa fa-desktop industryLinks" style="font-size: 40px;"></i><br>Consumer</div>
+        <div class="col-xs-4 col-sm-2" onclick="showContent(this.innerHTML)"><i class="fa fa-thermometer-half industryLinks" style="font-size: 40px;"></i><br>HVAC</div>
+        <div class="col-xs-4 col-sm-2" onclick="showContent(this.innerHTML)"><i class="fa fa-phone industryLinks" style="font-size: 40px;"></i><br>Telecom</div>
       </div>
-      <div class="blueSplitter"></div>
-      <div>
-        <h2 style="margin-top: 10px;">Featured Automotive Products</h2>
-      </div>
-      <iframe src="https://docs.google.com/presentation/d/e/2PACX-1vREs7OZHfkxfDelhy_QNBuahD6pBnnVN6JdHqQJFNMvgXh4fwguckxOD0iUEBpMWwJrVOywhYyJB_jb/embed?start=false&loop=false&delayms=3000" frameborder="0" width="100%" height="700px" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
     </div>
-  </div>
+  </nav>
 
-  <div class="industriesContent industrialTab">
-    <div class="section industrialSection">
+  <div class="content">
+    <div class="industriesContent automotiveTab">
+      <div class="section autoSection">
+        <div class="container">
+          <div style="text-align: center;" id="content-desktop">
+            <h1 style="font-size: 100px; padding: 75px 0px;">Automotive</h1>
+          </div>
+          <div style="text-align: center;" id="content-mobile">
+            <h1 style="font-size: 75px; padding: 50px 0px;">Automotive</h1>
+          </div>
+        </div>
+      </div>
       <div class="container">
-        <div style="text-align: center;" id="content-desktop">
-          <h1 style="font-size: 100px; padding: 75px 0px;">Industrial</h1>
+        <div class="blueSplitter" style="margin-top: 10px;"></div>
+        <div class="row" style="margin: 50px 0px;">
+          <div class="col-xs-12 col-sm-6">
+            <h4>Features: </h4>
+            <p style="padding-left: 20px;">
+              Automotive Grade Fluid<br>
+              Wide Temperature Range<br>
+              IPS Technology Available<br>
+              Anti-Glare & Anti-Reflective Films Available<br>
+              TS 16949 Certification<br>
+            </p>
+          </div>
+          <div class="col-xs-12 col-sm-6">
+            <h4>Solutions: </h4>
+            <p style="padding-left: 20px;">
+              Speedometer & Tachometer<br>
+              Satellite Navigation<br>
+              Radio & Dash Control<br>
+              Back-Up Camera<br>
+              Guage Cluster<br>
+            </p>
+          </div>
         </div>
-        <div style="text-align: center;" id="content-mobile">
-          <h1 style="font-size: 75px; padding: 50px 0px;">Industrial</h1>
+        <div class="blueSplitter"></div>
+        <div>
+          <h2 style="margin-top: 10px;">Featured Automotive Products</h2>
         </div>
+        <iframe src="https://docs.google.com/presentation/d/e/2PACX-1vREs7OZHfkxfDelhy_QNBuahD6pBnnVN6JdHqQJFNMvgXh4fwguckxOD0iUEBpMWwJrVOywhYyJB_jb/embed?start=false&loop=false&delayms=3000" frameborder="0" width="100%" height="700px" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
       </div>
     </div>
-    <div class="container">
-      <div class="blueSplitter" style="margin-top: 10px;"></div>
-      <div class="row" style="margin: 50px 0px;">
-        <div class="col-xs-12 col-sm-6">
-          <h4>Features: </h4>
-          <p style="padding-left: 20px;">
-            Ruggedization & Durability<br>
-            Wide Temperature Range<br>
-            PCAP with Glove Tuning Available<br>
-            Anti-Glare & Anti-Reflective Films Available<br>
-            Long-term Availability<br>
-          </p>
-        </div>
-        <div class="col-xs-12 col-sm-6">
-          <h4>Solutions: </h4>
-          <p style="padding-left: 20px;">
-            Measurement Tools<br>
-            Human Interface Devices<br>
-            Machine Control<br>
-            Factory Automation Tools<br>
-            Field Diagnostic Devices<br>
-          </p>
+
+    <div class="industriesContent industrialTab">
+      <div class="section industrialSection">
+        <div class="container">
+          <div style="text-align: center;" id="content-desktop">
+            <h1 style="font-size: 100px; padding: 75px 0px;">Industrial</h1>
+          </div>
+          <div style="text-align: center;" id="content-mobile">
+            <h1 style="font-size: 75px; padding: 50px 0px;">Industrial</h1>
+          </div>
         </div>
       </div>
-      <div class="blueSplitter"></div>
-      <div>
-        <h2 style="margin-top: 10px;">Featured Industrial Products</h2>
-      </div>
-      <iframe src="https://docs.google.com/presentation/d/e/2PACX-1vSh1Bm_eseLQcOx5yQM-0bDC2kedaDc32DH2-JwystWuWUfjmJTfPqg4Ore46wObmN0bOy1vVUKQZhA/embed?start=false&loop=false&delayms=5000" frameborder="0" width="100%" height="700px" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
-    </div>
-  </div>
-
-
-  <div class="industriesContent medicalTab">
-    <div class="section medicalSection">
       <div class="container">
-        <div style="text-align: center;" id="content-desktop">
-          <h1 style="font-size: 100px; padding: 75px 0px;">Medical</h1>
+        <div class="blueSplitter" style="margin-top: 10px;"></div>
+        <div class="row" style="margin: 50px 0px;">
+          <div class="col-xs-12 col-sm-6">
+            <h4>Features: </h4>
+            <p style="padding-left: 20px;">
+              Ruggedization & Durability<br>
+              Wide Temperature Range<br>
+              PCAP with Glove Tuning Available<br>
+              Anti-Glare & Anti-Reflective Films Available<br>
+              Long-term Availability<br>
+            </p>
+          </div>
+          <div class="col-xs-12 col-sm-6">
+            <h4>Solutions: </h4>
+            <p style="padding-left: 20px;">
+              Measurement Tools<br>
+              Human Interface Devices<br>
+              Machine Control<br>
+              Factory Automation Tools<br>
+              Field Diagnostic Devices<br>
+            </p>
+          </div>
         </div>
-        <div style="text-align: center;" id="content-mobile">
-          <h1 style="font-size: 75px; padding: 50px 0px;">Medical</h1>
+        <div class="blueSplitter"></div>
+        <div>
+          <h2 style="margin-top: 10px;">Featured Industrial Products</h2>
         </div>
+        <iframe src="https://docs.google.com/presentation/d/e/2PACX-1vSh1Bm_eseLQcOx5yQM-0bDC2kedaDc32DH2-JwystWuWUfjmJTfPqg4Ore46wObmN0bOy1vVUKQZhA/embed?start=false&loop=false&delayms=5000" frameborder="0" width="100%" height="700px" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
       </div>
     </div>
-    <div class="container">
-      <div class="blueSplitter" style="margin-top: 10px;"></div>
-      <div class="row" style="margin: 50px 0px;">
-        <div class="col-xs-12 col-sm-6">
-          <h4>Features: </h4>
-          <p style="padding-left: 20px;">
-            High-Brightness and High-Resolutions<br>
-            Waterproofing Available<br>
-            PCAP with Glove Tuning Available<br>
-            Anti-Glare & Anti-Reflective Films Available<br>
-            Long-term Availability<br>
-          </p>
-        </div>
-        <div class="col-xs-12 col-sm-6">
-          <h4>Solutions: </h4>
-          <p style="padding-left: 20px;">
-            Patient Health Monitors<br>
-            Measurement Equipment<br>
-            Wrist-Mounted Monitoring Devices<br>
-            Tablet PCs<br>
-            Small Meters: blood pressure, glucose, insulin, heart rate, etc.<br>
-          </p>
-        </div>
-      </div>
-      <div class="blueSplitter"></div>
-      <div>
-        <h2 style="margin-top: 10px;">Featured Medical Products</h2>
-      </div>
-      <iframe src="https://docs.google.com/presentation/d/e/2PACX-1vRjDm5imCeYw5hu3P0jFgb-d_suBfyn64JCk6q8P2UUzPue9EDVPiAnuT_g_BtMwLv331FyNRO4MzRW/embed?start=false&loop=false&delayms=5000" frameborder="0" width="100%" height="700px" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
-    </div>
-  </div>
 
 
-  <div class="industriesContent consumerTab">
-    <div class="section consumerSection">
+    <div class="industriesContent medicalTab">
+      <div class="section medicalSection">
+        <div class="container">
+          <div style="text-align: center;" id="content-desktop">
+            <h1 style="font-size: 100px; padding: 75px 0px;">Medical</h1>
+          </div>
+          <div style="text-align: center;" id="content-mobile">
+            <h1 style="font-size: 75px; padding: 50px 0px;">Medical</h1>
+          </div>
+        </div>
+      </div>
       <div class="container">
-        <div style="text-align: center;" id="content-desktop">
-          <h1 style="font-size: 100px; padding: 75px 0px;">Consumer</h1>
+        <div class="blueSplitter" style="margin-top: 10px;"></div>
+        <div class="row" style="margin: 50px 0px;">
+          <div class="col-xs-12 col-sm-6">
+            <h4>Features: </h4>
+            <p style="padding-left: 20px;">
+              High-Brightness and High-Resolutions<br>
+              Waterproofing Available<br>
+              PCAP with Glove Tuning Available<br>
+              Anti-Glare & Anti-Reflective Films Available<br>
+              Long-term Availability<br>
+            </p>
+          </div>
+          <div class="col-xs-12 col-sm-6">
+            <h4>Solutions: </h4>
+            <p style="padding-left: 20px;">
+              Patient Health Monitors<br>
+              Measurement Equipment<br>
+              Wrist-Mounted Monitoring Devices<br>
+              Tablet PCs<br>
+              Small Meters: blood pressure, glucose, insulin, heart rate, etc.<br>
+            </p>
+          </div>
         </div>
-        <div style="text-align: center;" id="content-mobile">
-          <h1 style="font-size: 75px; padding: 50px 0px;">Consumer</h1>
+        <div class="blueSplitter"></div>
+        <div>
+          <h2 style="margin-top: 10px;">Featured Medical Products</h2>
         </div>
+        <iframe src="https://docs.google.com/presentation/d/e/2PACX-1vRjDm5imCeYw5hu3P0jFgb-d_suBfyn64JCk6q8P2UUzPue9EDVPiAnuT_g_BtMwLv331FyNRO4MzRW/embed?start=false&loop=false&delayms=5000" frameborder="0" width="100%" height="700px" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
       </div>
     </div>
-    <div class="container">
-      <div class="blueSplitter" style="margin-top: 10px;"></div>
-      <div class="row" style="margin: 50px 0px;">
-        <div class="col-xs-12 col-sm-6">
-          <h4>Features: </h4>
-          <p style="padding-left: 20px;">
-            High-Brightness and High-Resolutions<br>
-            Waterproofing Available<br>
-            Capacitive Touchscreen Available<br>
-            Anti-Glare & Anti-Reflective Films Available<br>
-            Custom Shapes and Sizes Available<br>
-          </p>
-        </div>
-        <div class="col-xs-12 col-sm-6">
-          <h4>Solutions: </h4>
-          <p style="padding-left: 20px;">
-            Smartphones<br>
-            Wearable Devices<br>
-            Cameras<br>
-            Tablet PCs<br>
-            White Goods<br>
-          </p>
-        </div>
-      </div>
-      <div class="blueSplitter"></div>
-      <div>
-        <h2 style="margin-top: 10px;">Featured Consumer Products</h2>
-      </div>
-      <iframe src="https://docs.google.com/presentation/d/e/2PACX-1vSLPandX2Au1K1AN7b6V03jlP3a6YwVOwML8pHG1xqx777Oh_rxNT437WDMeqwqfG5Bw6IufA8jhQBP/embed?start=false&loop=false&delayms=5000" frameborder="0" width="100%" height="700px" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
-    </div>
-  </div>
 
 
-  <div class="industriesContent hvacTab">
-    <div class="section hvacSection">
+    <div class="industriesContent consumerTab">
+      <div class="section consumerSection">
+        <div class="container">
+          <div style="text-align: center;" id="content-desktop">
+            <h1 style="font-size: 100px; padding: 75px 0px;">Consumer</h1>
+          </div>
+          <div style="text-align: center;" id="content-mobile">
+            <h1 style="font-size: 75px; padding: 50px 0px;">Consumer</h1>
+          </div>
+        </div>
+      </div>
       <div class="container">
-        <div style="text-align: center;" id="content-desktop">
-          <h1 style="font-size: 100px; padding: 75px 0px;">HVAC</h1>
+        <div class="blueSplitter" style="margin-top: 10px;"></div>
+        <div class="row" style="margin: 50px 0px;">
+          <div class="col-xs-12 col-sm-6">
+            <h4>Features: </h4>
+            <p style="padding-left: 20px;">
+              High-Brightness and High-Resolutions<br>
+              Waterproofing Available<br>
+              Capacitive Touchscreen Available<br>
+              Anti-Glare & Anti-Reflective Films Available<br>
+              Custom Shapes and Sizes Available<br>
+            </p>
+          </div>
+          <div class="col-xs-12 col-sm-6">
+            <h4>Solutions: </h4>
+            <p style="padding-left: 20px;">
+              Smartphones<br>
+              Wearable Devices<br>
+              Cameras<br>
+              Tablet PCs<br>
+              White Goods<br>
+            </p>
+          </div>
         </div>
-        <div style="text-align: center;" id="content-mobile">
-          <h1 style="font-size: 75px; padding: 50px 0px;">HVAC</h1>
+        <div class="blueSplitter"></div>
+        <div>
+          <h2 style="margin-top: 10px;">Featured Consumer Products</h2>
         </div>
+        <iframe src="https://docs.google.com/presentation/d/e/2PACX-1vSLPandX2Au1K1AN7b6V03jlP3a6YwVOwML8pHG1xqx777Oh_rxNT437WDMeqwqfG5Bw6IufA8jhQBP/embed?start=false&loop=false&delayms=5000" frameborder="0" width="100%" height="700px" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
       </div>
     </div>
-    <div class="container">
-      <div class="blueSplitter" style="margin-top: 10px;"></div>
-      <div class="row" style="margin: 50px 0px;">
-        <div class="col-xs-12 col-sm-6">
-          <h4>Features: </h4>
-          <p style="padding-left: 20px;">
-            Ruggedization & Durability<br>
-            Wide Temperature Range<br>
-            PCAP with Glove Tuning Available<br>
-            Anti-Glare & Anti-Reflective Films Available<br>
-            Long-term Availability<br>
-          </p>
-        </div>
-        <div class="col-xs-12 col-sm-6">
-          <h4>Solutions: </h4>
-          <p style="padding-left: 20px;">
-            Thermostats<br>
-            Measurement Devices<br>
-            Diagnostic Tools<br>
-            Electricity & Efficiency Meters<br>
-          </p>
-        </div>
-      </div>
-      <div class="blueSplitter"></div>
-      <div>
-        <h2 style="margin-top: 10px;">Featured HVAC Products</h2>
-      </div>
-      <iframe src="https://docs.google.com/presentation/d/e/2PACX-1vQ8qnDmrNTOxipUgN4YBsn9WAjXcIH4kNiVCvwDjqv6cO2IvHGZG9ouEpu60R69aJYdh81HTDe9L3ak/embed?start=false&loop=false&delayms=5000" frameborder="0" width="100%" height="700px" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
-    </div>
-  </div>
 
 
-  <div class="industriesContent telecomTab">
-    <div class="section telecomSection">
+    <div class="industriesContent hvacTab">
+      <div class="section hvacSection">
+        <div class="container">
+          <div style="text-align: center;" id="content-desktop">
+            <h1 style="font-size: 100px; padding: 75px 0px;">HVAC</h1>
+          </div>
+          <div style="text-align: center;" id="content-mobile">
+            <h1 style="font-size: 75px; padding: 50px 0px;">HVAC</h1>
+          </div>
+        </div>
+      </div>
       <div class="container">
-        <div style="text-align: center;" id="content-desktop">
-          <h1 style="font-size: 100px; padding: 75px 0px;">Telecom</h1>
+        <div class="blueSplitter" style="margin-top: 10px;"></div>
+        <div class="row" style="margin: 50px 0px;">
+          <div class="col-xs-12 col-sm-6">
+            <h4>Features: </h4>
+            <p style="padding-left: 20px;">
+              Ruggedization & Durability<br>
+              Wide Temperature Range<br>
+              PCAP with Glove Tuning Available<br>
+              Anti-Glare & Anti-Reflective Films Available<br>
+              Long-term Availability<br>
+            </p>
+          </div>
+          <div class="col-xs-12 col-sm-6">
+            <h4>Solutions: </h4>
+            <p style="padding-left: 20px;">
+              Thermostats<br>
+              Measurement Devices<br>
+              Diagnostic Tools<br>
+              Electricity & Efficiency Meters<br>
+            </p>
+          </div>
         </div>
-        <div style="text-align: center;" id="content-mobile">
-          <h1 style="font-size: 75px; padding: 50px 0px;">Telecom</h1>
+        <div class="blueSplitter"></div>
+        <div>
+          <h2 style="margin-top: 10px;">Featured HVAC Products</h2>
         </div>
+        <iframe src="https://docs.google.com/presentation/d/e/2PACX-1vQ8qnDmrNTOxipUgN4YBsn9WAjXcIH4kNiVCvwDjqv6cO2IvHGZG9ouEpu60R69aJYdh81HTDe9L3ak/embed?start=false&loop=false&delayms=5000" frameborder="0" width="100%" height="700px" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
       </div>
     </div>
-    <div class="container">
-      <div class="blueSplitter" style="margin-top: 10px;"></div>
-      <div class="row" style="margin: 50px 0px;">
-        <div class="col-xs-12 col-sm-6">
-          <h4>Features: </h4>
-          <p style="padding-left: 20px;">
-            High-Brightness and High-Readability<br>
-            Custom Cover Glass Available<br>
-            Capacitive Touchscreen Available<br>
-            Cost Effective Monochrome<br>
-            Long-term Availability<br>
-          </p>
-        </div>
-        <div class="col-xs-12 col-sm-6">
-          <h4>Solutions: </h4>
-          <p style="padding-left: 20px;">
-            VoIP Business Phone<br>
-            Pagers<br>
-            Multi-Way Radio<br>
-          </p>
-        </div>
-      </div>
-      <div class="blueSplitter"></div>
-      <div>
-        <h2 style="margin-top: 10px;">Featured Telecom Products</h2>
-      </div>
-      <iframe src="https://docs.google.com/presentation/d/e/2PACX-1vTqwSUAmZ29nBV8Go0GDOhPXwPCFBuFxy8P1B3QmrmGjVdL2qk8Quvqa8ZCrzCYr3nUb4RZzQYmfKdU/embed?start=false&loop=false&delayms=5000" frameborder="0" width="100%" height="700px" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
-      <iframe id="content-desktop" src='https://onedrive.live.com/embed?cid=032B8AADB2009838&resid=32B8AADB2009838%212495&authkey=AANR1S5hzZ6dlyI&em=2&wdAr=1.7777777777777777' width='100%' height='700px' frameborder='0'>This is an embedded <a target='_blank' href='https://office.com'>Microsoft Office</a> presentation, powered by <a target='_blank' href='https://office.com/webapps'>Office Online</a>.</iframe>
-      <iframe id="content-mobile" src='https://onedrive.live.com/embed?cid=032B8AADB2009838&resid=32B8AADB2009838%212495&authkey=AANR1S5hzZ6dlyI&em=2&wdAr=1.7777777777777777' width='100%' height='300px' frameborder='0'>This is an embedded <a target='_blank' href='https://office.com'>Microsoft Office</a> presentation, powered by <a target='_blank' href='https://office.com/webapps'>Office Online</a>.</iframe>
-    </div>
-  </div>
 
-  <div class="container">
-    <div class="blueSplitter"></div>
+
+    <div class="industriesContent telecomTab">
+      <div class="section telecomSection">
+        <div class="container">
+          <div style="text-align: center;" id="content-desktop">
+            <h1 style="font-size: 100px; padding: 75px 0px;">Telecom</h1>
+          </div>
+          <div style="text-align: center;" id="content-mobile">
+            <h1 style="font-size: 75px; padding: 50px 0px;">Telecom</h1>
+          </div>
+        </div>
+      </div>
+      <div class="container">
+        <div class="blueSplitter" style="margin-top: 10px;"></div>
+        <div class="row" style="margin: 50px 0px;">
+          <div class="col-xs-12 col-sm-6">
+            <h4>Features: </h4>
+            <p style="padding-left: 20px;">
+              High-Brightness and High-Readability<br>
+              Custom Cover Glass Available<br>
+              Capacitive Touchscreen Available<br>
+              Cost Effective Monochrome<br>
+              Long-term Availability<br>
+            </p>
+          </div>
+          <div class="col-xs-12 col-sm-6">
+            <h4>Solutions: </h4>
+            <p style="padding-left: 20px;">
+              VoIP Business Phone<br>
+              Pagers<br>
+              Multi-Way Radio<br>
+            </p>
+          </div>
+        </div>
+        <div class="blueSplitter"></div>
+        <div>
+          <h2 style="margin-top: 10px;">Featured Telecom Products</h2>
+        </div>
+        <iframe src="https://docs.google.com/presentation/d/e/2PACX-1vTqwSUAmZ29nBV8Go0GDOhPXwPCFBuFxy8P1B3QmrmGjVdL2qk8Quvqa8ZCrzCYr3nUb4RZzQYmfKdU/embed?start=false&loop=false&delayms=5000" frameborder="0" width="100%" height="700px" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+        <iframe id="content-desktop" src='https://onedrive.live.com/embed?cid=032B8AADB2009838&resid=32B8AADB2009838%212495&authkey=AANR1S5hzZ6dlyI&em=2&wdAr=1.7777777777777777' width='100%' height='700px' frameborder='0'>This is an embedded <a target='_blank' href='https://office.com'>Microsoft Office</a> presentation, powered by <a target='_blank' href='https://office.com/webapps'>Office Online</a>.</iframe>
+        <iframe id="content-mobile" src='https://onedrive.live.com/embed?cid=032B8AADB2009838&resid=32B8AADB2009838%212495&authkey=AANR1S5hzZ6dlyI&em=2&wdAr=1.7777777777777777' width='100%' height='300px' frameborder='0'>This is an embedded <a target='_blank' href='https://office.com'>Microsoft Office</a> presentation, powered by <a target='_blank' href='https://office.com/webapps'>Office Online</a>.</iframe>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="blueSplitter"></div>
+    </div>
   </div>
 </div>
 

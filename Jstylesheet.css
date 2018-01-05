@@ -493,6 +493,8 @@ td > p {
 	text-align: center;
 	padding-top: 15px;
 	padding-bottom: 15px;
+	font-family: Montserrat;
+	font-size: 14px;
 }
 
 .industriesNavbar > div > div > div:hover {
@@ -500,7 +502,7 @@ td > p {
     color: white;
 }
 
-.affix {
+.industriesNav > .affix {
 	top: 81px;
 	width: 100%;
     z-index: 9999 !important;
@@ -509,11 +511,60 @@ td > p {
 .affix ~ .content {
 	position: relative;
 	top: 80px;
-	bottom: 0px;
 }
 
 .industriesContent {
 	display: none;
+}
+
+.productsNavbar {
+	background-color: white;
+	border-color: white;
+	border-radius: 0px;
+	border-width: 0px;
+	margin-bottom: 0px; 
+	margin-top: 80px;
+}
+
+.productsNavbar > div > div > div {
+	text-align: center;
+	padding-top: 15px;
+	padding-bottom: 15px;
+	font-family: Montserrat;
+	font-size: 14px;
+}
+
+.productsNavbar > div > div > div:hover {
+	background-color: #bcbcbc;
+    color: white;
+}
+
+.productsNav > .affix {
+	top: 1px;
+	width: 100%;
+    z-index: 9999 !important;
+}
+
+.productsNav > .affix ~ .content {
+	position: relative;
+	top: 130px;
+}
+
+.col-sm-eigth {
+	width: 12.5%;
+}
+
+.productsContent {
+	display: none;
+}
+
+@media (max-width: 1199px) and (min-width: 994px) {
+	.navbarIcons {
+		font-size:20px; 
+		margin-top: 15px; 
+		margin-right: 5px; 
+		color: #1E90FF;
+	}
 }
 
 @media (max-width: 993px) {
@@ -631,6 +682,26 @@ td > p {
 		font-size: 30px;
 		margin-top: -10px;
 	}
+
+	.col-sm-eigth {
+		width: 25%;
+	}
+
+	.productsNav {
+		margin-top: 85px;
+	}
+
+	.affix {
+		position: static;	
+	}
+
+	.industriesNav .affix ~ .content {
+		position: static;
+	}
+
+	.productsNav .affix ~ .content {
+		position: static;
+	}
 }
 
 @media (max-width: 767px) {
@@ -679,6 +750,10 @@ td > p {
 
 	.affix ~ .content {
 		position: static;
+	}
+
+	.productsNavbar {
+		margin-top: 90px;
 	}
 }
 

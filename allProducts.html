@@ -10,18 +10,46 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-  <script>
-    if ( $(window).width() > 767) {      
-      var shiftWindow = function() { scrollBy(0, -200) };
-      window.addEventListener("hashchange", shiftWindow);
-      function load() { if (window.location.hash) shiftWindow(); }
-    } 
-    else {
-      var shiftWindow = function() { scrollBy(0, -80) };
-      window.addEventListener("hashchange", shiftWindow);
-      function load() { if (window.location.hash) shiftWindow(); }
+  
+  <script type="text/javascript">
+    function showContentFromDiffPage(link) {
+      var splitLink = link.split("#");
+      var showLink = "." + splitLink[1];
+      $(showLink).show();
+    }
+
+    function showContent(str) {
+      $(".productsContent").hide();
+
+      if(str == 'TFT'){
+        var tab = ".tftTab";
+      }
+      if(str == 'OLED'){
+        var tab = ".oledTab"
+      }
+      if(str == 'Touch Panel'){
+        var tab = ".tpTab"
+      }
+      if(str == 'Wireless Power'){
+        var tab = ".wipowTab"
+      }
+      if(str == 'Character Mono'){
+        var tab = ".charmonoTab"
+      }
+      if(str == 'Graphic Mono'){
+        var tab = ".graphmonoTab"
+      }
+      if(str == 'Segment'){
+        var tab = ".customTab"
+      }
+      if(str == 'Services'){
+        var tab = ".emsTab"
+      }
+
+      $(tab).show();
     }
   </script>
+
   <link rel="stylesheet" href="Jstylesheet.css">
   
   <script src="MTUSAjavascript.js"></script>
@@ -30,7 +58,7 @@
 
 </head>
 
-<body link="black" onload="load()">
+<body link="black" onload="showContentFromDiffPage(window.location.href)">
 
 <div class="example3">
   <nav class="navbar navbar-default navbar-fixed-top" style="background-color: white;">
@@ -67,76 +95,37 @@
   </nav>
 </div>
 
-<div class="navbar nav" style="margin-top: 100px;">
-  <div class="tabbable"> <!-- Only required for left/right tabs -->
+<div class="productsNav">
+  <nav class="productsNavbar navbar navbar-default" data-spy="affix" data-offset-top="0">
     <div class="container">
-      <ul class="nav nav-tabs nav-justified">
-        <li class="active"><a href="#tftTab" data-toggle="tab">TFT</a></li>
-        <li><a href="#oledTab" data-toggle="tab">OLED</a></li>
-        <li><a href="#tpTab" data-toggle="tab">Touch Panel</a></li>
-        <li><a href="#wipowTab" data-toggle="tab">Wireless Power</a></li>
-        <li><a href="#charmonoTab" data-toggle="tab">Character Mono</a></li>
-        <li><a href="#graphmonoTab" data-toggle="tab">Graphic Mono</a></li>
-        <li><a href="#customTab" data-toggle="tab">Custom Segment</a></li>
-        <li><a href="#emsTab" data-toggle="tab">Services</a></li>
-      </ul>
+      <div class="row">
+        <div class="col-xs-3 col-sm-eigth" onclick="showContent(this.innerHTML)">TFT</div>
+        <div class="col-xs-3 col-sm-eigth" onclick="showContent(this.innerHTML)">OLED</div>
+        <div class="col-xs-3 col-sm-eigth" onclick="showContent(this.innerHTML)">Touch Panel</div>
+        <div class="col-xs-3 col-sm-eigth" onclick="showContent(this.innerHTML)">Wireless Power</div>
+        <div class="col-xs-3 col-sm-eigth" onclick="showContent(this.innerHTML)">Character Mono</div>
+        <div class="col-xs-3 col-sm-eigth" onclick="showContent(this.innerHTML)">Graphic Mono</div>
+        <div class="col-xs-3 col-sm-eigth" onclick="showContent(this.innerHTML)">Segment</div>
+        <div class="col-xs-3 col-sm-eigth" onclick="showContent(this.innerHTML)">Services</div>
+      </div>
     </div>
-    <div class="tab-content">
+  </nav>
 
-      <div class="tab-pane active" id="tftTab">
-        <div class="section allProductsSection">
-          <div class="container">
+  <div class="content">
 
-            <table id="content-desktop">
-              <tr>
-                <th style="width: 50%;">
-                  <div id="tftCarousel" class="carousel slide" data-ride="carousel">
-                    <!-- Indicators -->
-                    <ol class="carousel-indicators">
-                      <li data-target="#tftCarousel" data-slide-to="0" class="active"></li>
-                      <li data-target="#tftCarousel" data-slide-to="1"></li>
-                      <li data-target="#tftCarousel" data-slide-to="2"></li>
-                    </ol>
+    <div class="productsContent tftTab">
+      <div class="section allProductsSection">
+        <div class="container">
 
-                    <!-- Wrapper for slides -->
-                    <div class="carousel-inner">
-                      <div class="item active">
-                        <img src="images/products/tft/2.4 TFT.png" alt="Img. 1" style="width:100%;">
-                      </div>
-
-                      <div class="item">
-                        <img src="images/products/tft/7.0 TFT.png" alt="Img. 2" style="width:100%;">
-                      </div>
-                    
-                      <div class="item">
-                        <img src="images/products/tft/TFT.png" alt="Img. 3" style="width:100%;">
-                      </div>
-
-                      <!-- Left and right controls -->
-                      <a class="left carousel-control" href="#tftCarousel" data-slide="prev" style="background:none;">
-                        <span class="glyphicon glyphicon-chevron-left"></span>
-                      </a>
-                      <a class="right carousel-control" href="#tftCarousel" data-slide="next" style="background:none;">
-                        <span class="glyphicon glyphicon-chevron-right"></span>
-                      </a>
-                    </div>
-                  </div>
-                </th>
-                <td>
-                  <h1 style="font-size: 70px;">TFT Liquid Crystal Display</h1>
-                  <h4>Displays capable of showing full color graphics using Thin-Film-Transistor technology<br></h4>
-                </td>
-              </tr>
-            </table>
-
-            <div class="row prods" style="padding-top: 20px; padding-bottom: 20px;" id="content-mobile">
-              <div class="col-xs-12 col-sm-6">
-                <div id="tftCarousel-mobile" class="carousel slide" data-ride="carousel">
+          <table id="content-desktop">
+            <tr>
+              <th style="width: 50%;">
+                <div id="tftCarousel" class="carousel slide" data-ride="carousel">
                   <!-- Indicators -->
                   <ol class="carousel-indicators">
-                    <li data-target="#tftCarousel-mobile" data-slide-to="0" class="active"></li>
-                    <li data-target="#tftCarousel-mobile" data-slide-to="1"></li>
-                    <li data-target="#tftCarousel-mobile" data-slide-to="2"></li>
+                    <li data-target="#tftCarousel" data-slide-to="0" class="active"></li>
+                    <li data-target="#tftCarousel" data-slide-to="1"></li>
+                    <li data-target="#tftCarousel" data-slide-to="2"></li>
                   </ol>
 
                   <!-- Wrapper for slides -->
@@ -154,177 +143,177 @@
                     </div>
 
                     <!-- Left and right controls -->
-                    <a class="left carousel-control" href="#tftCarousel-mobile" data-slide="prev" style="background:none;">
+                    <a class="left carousel-control" href="#tftCarousel" data-slide="prev" style="background:none;">
                       <span class="glyphicon glyphicon-chevron-left"></span>
                     </a>
-                    <a class="right carousel-control" href="#tftCarousel-mobile" data-slide="next" style="background:none;">
+                    <a class="right carousel-control" href="#tftCarousel" data-slide="next" style="background:none;">
                       <span class="glyphicon glyphicon-chevron-right"></span>
                     </a>
                   </div>
                 </div>
-              </div>
-              <div class="col-xs-12 col-sm-6">
-                <h1 style="font-size: 35px; padding-top: 10px;">TFT LCD</h1>
-                <h4 style="font-size: 15px;">Displays capable of showing full color graphics using Thin-Film-Transistor technology<br></h4>
-              </div>
-            </div>
-          </div>
-        </div>
+              </th>
+              <td>
+                <h1 style="font-size: 70px;">TFT Liquid Crystal Display</h1>
+                <h4>Displays capable of showing full color graphics using Thin-Film-Transistor technology<br></h4>
+              </td>
+            </tr>
+          </table>
 
-        <div class="container">
-          <h2 style="padding-bottom: 0px;">Features</h2>
-          <div class="blueSplitter" style="margin-bottom: 10px;"></div>
-          <div id="content-desktop">
-            <div style="height: 50px;"></div>
-            <table class="productFeatures">
-              <tr>
-                <th style="text-align: center; width: 45%">
-                  <img class="" src="images/products/tft/RGB.png" height="100px;">
-                </th>
-                <td>
-                  <h4>Full RGB Brilliance</h4>
-                  <p>With the ability to display up to 16.7 million colors, our TFT displays can provide the exact color and look to your products with the full RGB spectrum at your disposal.</p>
-                </td>
-              </tr>
-            </table>
-            <div style="height: 100px;"></div>
-            <table class="productFeatures">
-              <tr>
-                <td>
-                  <h4>Better Picture Quality</h4>
-                  <p>With high resolutions, IPS technology, and anti-reflective or anti-glare films available, our TFT displays can provide the best picture quality so that your product looks its best.</p>
-                </td>
-                <th style="text-align: center; width: 45%">
-                  <img class="" src="images/products/tft/Quality.png" height="100px;">
-                </th>
-              </tr>
-            </table>
-            <div style="height: 100px;"></div>
-            <table class="productFeatures">
-              <tr>
-                <th style="text-align: center; width: 45%">
-                  <i class="fa fa-dollar " style="font-size: 100px;"></i>
-                </th>
-                <td>
-                  <h4>Low Cost and Readily Available</h4>
-                  <p>TFT LCDs are a very popular choice which makes them an affordable solution for any product. Being prominent in the market also makes almost any size of TFT readily available.</p>
-                </td>
-              </tr>
-            </table>
-            <div style="height: 50px;"></div>
-          </div>
-          <div class="row" style="text-align: center; padding: 50px 20px;" id="content-mobile">
-            <div class="col-xs-12 col-sm-4">
-              <img class="" src="images/products/tft/RGB.png" height="100px;">
+          <div class="row prods" style="padding-top: 20px; padding-bottom: 20px;" id="content-mobile">
+            <div class="col-xs-12 col-sm-6">
+              <div id="tftCarousel-mobile" class="carousel slide" data-ride="carousel">
+                <!-- Indicators -->
+                <ol class="carousel-indicators">
+                  <li data-target="#tftCarousel-mobile" data-slide-to="0" class="active"></li>
+                  <li data-target="#tftCarousel-mobile" data-slide-to="1"></li>
+                  <li data-target="#tftCarousel-mobile" data-slide-to="2"></li>
+                </ol>
+
+                <!-- Wrapper for slides -->
+                <div class="carousel-inner">
+                  <div class="item active">
+                    <img src="images/products/tft/2.4 TFT.png" alt="Img. 1" style="width:100%;">
+                  </div>
+
+                  <div class="item">
+                    <img src="images/products/tft/7.0 TFT.png" alt="Img. 2" style="width:100%;">
+                  </div>
+                
+                  <div class="item">
+                    <img src="images/products/tft/TFT.png" alt="Img. 3" style="width:100%;">
+                  </div>
+
+                  <!-- Left and right controls -->
+                  <a class="left carousel-control" href="#tftCarousel-mobile" data-slide="prev" style="background:none;">
+                    <span class="glyphicon glyphicon-chevron-left"></span>
+                  </a>
+                  <a class="right carousel-control" href="#tftCarousel-mobile" data-slide="next" style="background:none;">
+                    <span class="glyphicon glyphicon-chevron-right"></span>
+                  </a>
+                </div>
+              </div>
             </div>
-            <div class="col-xs-12 col-sm-8">
-              <h4>Full RGB Brilliance</h4>
-              <p>With the ability to display up to 16.7 million colors, our TFT displays can provide the exact color and look to your products with the full RGB spectrum at your disposal.</p>
+            <div class="col-xs-12 col-sm-6">
+              <h1 style="font-size: 35px; padding-top: 10px;">TFT LCD</h1>
+              <h4 style="font-size: 15px;">Displays capable of showing full color graphics using Thin-Film-Transistor technology<br></h4>
             </div>
           </div>
-          <div class="row" style="text-align: center; padding: 50px 20px;" id="content-mobile">
-            <div class="col-xs-12 col-sm-4">
-              <img class="" src="images/products/tft/Quality.png" height="100px;">
-            </div>
-            <div class="col-xs-12 col-sm-8">
-              <h4>Better Picture Quality</h4>
-              <p>With high resolutions, IPS technology, and anti-reflective or anti-glare films available, our TFT displays can provide the best picture quality so that your product looks its best.</p>
-            </div>
-          </div>
-          <div class="row" style="text-align: center; padding: 50px 20px;" id="content-mobile">
-            <div class="col-xs-12 col-sm-4">
-              <i class="fa fa-dollar" style="font-size: 100px;"></i>
-            </div>
-            <div class="col-xs-12 col-sm-8">
-              <h4>Low Cost and Readily Available</h4>
-              <p>TFT LCDs are a very popular choice which makes them an affordable solution for any product. Being prominent in the market also makes almost any size of TFT readily available.</p>
-            </div>
-          </div>
-          <h2 style="padding-bottom: 0px;">Options</h2>
-          <div class="blueSplitter" style="margin-bottom: 10px;"></div>
-          <h4>Standard: </h4>
-          <p style="padding-left: 20px;">
-            Screen Sizes: 1.0 ~ 15 inches<br>
-            Resolutions: 128x128 ~ 1920x1200 pixels<br>
-            Interfaces: CCIR, CPU, Data Enable, I2C, LVDS, MIPI, SPI, Sync, USB, VRGB<br>
-            Screen Types: TN, MVA, IPS<br>
-          </p>
-          <h4>Customizations: </h4>
-          <p style="padding-left: 20px;">
-            Capacitive or Resistive Touch Panels<br>
-            Backlight Type and Brightness<br>
-            Interface<br>
-            FPC size<br>
-            Connection type<br>
-            Optical films, etc.
-          </p>
-          <h2>Learn More</h2>
-          <div class="blueSplitter" style="margin-bottom: 10px;"></div>
-          <ul>
-            <li><a href="articles/2016_Ultra_Low_Cost_4.3_TFT.html">Ultra Low Cost 4.3" TFT</a></li>
-            <li><a href="articles/2016_Low_Cost_LCD_Modules.html">2016 Low Cost LCD Modules</a></li>
-            <li><a href="articles/Value_Added_Services.html">Value Added Services</a></li>
-            <li><a href="articles/Microtips_OEM_Services.html">Microtips OEM Services</a></li>
-          </ul>
         </div>
       </div>
-      
+
+      <div class="container">
+        <h2 style="padding-bottom: 0px;">Features</h2>
+        <div class="blueSplitter" style="margin-bottom: 10px;"></div>
+        <div id="content-desktop">
+          <div style="height: 50px;"></div>
+          <table class="productFeatures">
+            <tr>
+              <th style="text-align: center; width: 45%">
+                <img class="" src="images/products/tft/RGB.png" height="100px;">
+              </th>
+              <td>
+                <h4>Full RGB Brilliance</h4>
+                <p>With the ability to display up to 16.7 million colors, our TFT displays can provide the exact color and look to your products with the full RGB spectrum at your disposal.</p>
+              </td>
+            </tr>
+          </table>
+          <div style="height: 100px;"></div>
+          <table class="productFeatures">
+            <tr>
+              <td>
+                <h4>Better Picture Quality</h4>
+                <p>With high resolutions, IPS technology, and anti-reflective or anti-glare films available, our TFT displays can provide the best picture quality so that your product looks its best.</p>
+              </td>
+              <th style="text-align: center; width: 45%">
+                <img class="" src="images/products/tft/Quality.png" height="100px;">
+              </th>
+            </tr>
+          </table>
+          <div style="height: 100px;"></div>
+          <table class="productFeatures">
+            <tr>
+              <th style="text-align: center; width: 45%">
+                <i class="fa fa-dollar " style="font-size: 100px;"></i>
+              </th>
+              <td>
+                <h4>Low Cost and Readily Available</h4>
+                <p>TFT LCDs are a very popular choice which makes them an affordable solution for any product. Being prominent in the market also makes almost any size of TFT readily available.</p>
+              </td>
+            </tr>
+          </table>
+          <div style="height: 50px;"></div>
+        </div>
+        <div class="row" style="text-align: center; padding: 50px 20px;" id="content-mobile">
+          <div class="col-xs-12 col-sm-4">
+            <img class="" src="images/products/tft/RGB.png" height="100px;">
+          </div>
+          <div class="col-xs-12 col-sm-8">
+            <h4>Full RGB Brilliance</h4>
+            <p>With the ability to display up to 16.7 million colors, our TFT displays can provide the exact color and look to your products with the full RGB spectrum at your disposal.</p>
+          </div>
+        </div>
+        <div class="row" style="text-align: center; padding: 50px 20px;" id="content-mobile">
+          <div class="col-xs-12 col-sm-4">
+            <img class="" src="images/products/tft/Quality.png" height="100px;">
+          </div>
+          <div class="col-xs-12 col-sm-8">
+            <h4>Better Picture Quality</h4>
+            <p>With high resolutions, IPS technology, and anti-reflective or anti-glare films available, our TFT displays can provide the best picture quality so that your product looks its best.</p>
+          </div>
+        </div>
+        <div class="row" style="text-align: center; padding: 50px 20px;" id="content-mobile">
+          <div class="col-xs-12 col-sm-4">
+            <i class="fa fa-dollar" style="font-size: 100px;"></i>
+          </div>
+          <div class="col-xs-12 col-sm-8">
+            <h4>Low Cost and Readily Available</h4>
+            <p>TFT LCDs are a very popular choice which makes them an affordable solution for any product. Being prominent in the market also makes almost any size of TFT readily available.</p>
+          </div>
+        </div>
+        <h2 style="padding-bottom: 0px;">Options</h2>
+        <div class="blueSplitter" style="margin-bottom: 10px;"></div>
+        <h4>Standard: </h4>
+        <p style="padding-left: 20px;">
+          Screen Sizes: 1.0 ~ 15 inches<br>
+          Resolutions: 128x128 ~ 1920x1200 pixels<br>
+          Interfaces: CCIR, CPU, Data Enable, I2C, LVDS, MIPI, SPI, Sync, USB, VRGB<br>
+          Screen Types: TN, MVA, IPS<br>
+        </p>
+        <h4>Customizations: </h4>
+        <p style="padding-left: 20px;">
+          Capacitive or Resistive Touch Panels<br>
+          Backlight Type and Brightness<br>
+          Interface<br>
+          FPC size<br>
+          Connection type<br>
+          Optical films, etc.
+        </p>
+        <h2>Learn More</h2>
+        <div class="blueSplitter" style="margin-bottom: 10px;"></div>
+        <ul>
+          <li><a href="articles/2016_Ultra_Low_Cost_4.3_TFT.html">Ultra Low Cost 4.3" TFT</a></li>
+          <li><a href="articles/2016_Low_Cost_LCD_Modules.html">2016 Low Cost LCD Modules</a></li>
+          <li><a href="articles/Value_Added_Services.html">Value Added Services</a></li>
+          <li><a href="articles/Microtips_OEM_Services.html">Microtips OEM Services</a></li>
+        </ul>
+      </div>
+    </div>
+    
 
 
-      <div class="tab-pane" id="oledTab">
-        <div class="section allProductsSection">
-          <div class="container">
+    <div class="productsContent oledTab">
+      <div class="section allProductsSection">
+        <div class="container">
 
-            <table id="content-desktop">
-              <tr>
-                <th style="width: 50%;">
-                  <div id="oledCarousel" class="carousel slide" data-ride="carousel">
-                    <!-- Indicators -->
-                    <ol class="carousel-indicators">
-                      <li data-target="#oledCarousel" data-slide-to="0" class="active"></li>
-                      <li data-target="#oledCarousel" data-slide-to="1"></li>
-                      <li data-target="#oledCarousel" data-slide-to="2"></li>
-                    </ol>
-
-                    <!-- Wrapper for slides -->
-                    <div class="carousel-inner">
-                      <div class="item active">
-                        <img src="images/products/oled/549 AMOLED Display Module.png" alt="Img. 1" style="width:100%;">
-                      </div>
-
-                      <div class="item">
-                        <img src="images/products/oled/OLED.png" alt="Img. 2" style="width:100%;">
-                      </div>
-                    
-                      <div class="item">
-                        <img src="images/products/oled/OLED1.png" alt="Img. 3" style="width:100%;">
-                      </div>
-
-                      <!-- Left and right controls -->
-                      <a class="left carousel-control" href="#oledCarousel" data-slide="prev" style="background:none;">
-                        <span class="glyphicon glyphicon-chevron-left"></span>
-                      </a>
-                      <a class="right carousel-control" href="#oledCarousel" data-slide="next" style="background:none;">
-                        <span class="glyphicon glyphicon-chevron-right"></span>
-                      </a>
-                    </div>
-                  </div>
-                </th>
-                <td>
-                  <h1 style="font-size: 70px;">OLED Display</h1>
-                  <h4>Displays using Passive Matrix (single color) and Active Matrix (full color) Organic Light Emitting Diode technology capable of showing characters, graphics, or custom icons<br></h4>
-                </td>
-              </tr>
-            </table>
-
-            <div class="row prods" style="padding-top: 20px; padding-bottom: 20px;" id="content-mobile">
-              <div class="col-xs-12 col-sm-6">
-                <div id="oledCarousel-mobile" class="carousel slide" data-ride="carousel">
+          <table id="content-desktop">
+            <tr>
+              <th style="width: 50%;">
+                <div id="oledCarousel" class="carousel slide" data-ride="carousel">
                   <!-- Indicators -->
                   <ol class="carousel-indicators">
-                    <li data-target="#oledCarousel-mobile" data-slide-to="0" class="active"></li>
-                    <li data-target="#oledCarousel-mobile" data-slide-to="1"></li>
-                    <li data-target="#oledCarousel-mobile" data-slide-to="2"></li>
+                    <li data-target="#oledCarousel" data-slide-to="0" class="active"></li>
+                    <li data-target="#oledCarousel" data-slide-to="1"></li>
+                    <li data-target="#oledCarousel" data-slide-to="2"></li>
                   </ol>
 
                   <!-- Wrapper for slides -->
@@ -342,446 +331,446 @@
                     </div>
 
                     <!-- Left and right controls -->
-                    <a class="left carousel-control" href="#oledCarousel-mobile" data-slide="prev" style="background:none;">
+                    <a class="left carousel-control" href="#oledCarousel" data-slide="prev" style="background:none;">
                       <span class="glyphicon glyphicon-chevron-left"></span>
                     </a>
-                    <a class="right carousel-control" href="#oledCarousel-mobile" data-slide="next" style="background:none;">
+                    <a class="right carousel-control" href="#oledCarousel" data-slide="next" style="background:none;">
                       <span class="glyphicon glyphicon-chevron-right"></span>
                     </a>
                   </div>
                 </div>
-              </div>
-              <div class="col-xs-12 col-sm-6">
-                <h1 style="font-size: 35px; padding-top: 10px;">OLED Display</h1>
-                <h4 style="font-size: 15px;">Displays using Passive Matrix (single color) and Active Matrix (full color) Organic Light Emitting Diode technology capable of showing characters, graphics, or custom icons<br></h4>
-              </div>
-            </div>
-          </div>
-        </div>
+              </th>
+              <td>
+                <h1 style="font-size: 70px;">OLED Display</h1>
+                <h4>Displays using Passive Matrix (single color) and Active Matrix (full color) Organic Light Emitting Diode technology capable of showing characters, graphics, or custom icons<br></h4>
+              </td>
+            </tr>
+          </table>
 
-        <div class="container">
-          <h2 style="padding-bottom: 0px;">Features</h2>
-          <div class="blueSplitter" style="margin-bottom: 10px;"></div>
-          <div id="content-desktop">
-            <div style="height: 50px;"></div>
-            <table class="productFeatures">
-              <tr>
-                <th style="text-align: center; width: 45%">
-                  <i class="fa fa-flash" style="font-size: 100px;"></i>
-                </th>
-                <td>
-                  <h4>Rapid Performance</h4>
-                  <p>OLED response times are up to 1,000 times faster than LCD, putting conservative estimates at under 10 μs (0.01 ms)</p>
-                </td>
-              </tr>
-            </table>
-            <div style="height: 100px;"></div>
-            <table class="productFeatures">
-              <tr>
-                <td>
-                  <h4>Better Contrast</h4>
-                  <p>OLEDs enable a greater contrast ratio and wider viewing angle compared to LCDs, because OLED pixels emit light directly</p>
-                </td>
-                <th style="text-align: center; width: 45%">
-                  <i class="fa fa-adjust" style="font-size: 100px;"></i>
-                </th>
-              </tr>
-            </table>
-            <div style="height: 100px;"></div>
-            <table class="productFeatures">
-              <tr>
-                <th style="text-align: center; width: 45%">
-                  <i class="fa fa-battery-full" style="font-size: 100px;"></i>
-                </th>
-                <td>
-                  <h4>Power Efficient and Thinner</h4>
-                  <p>LCDs filter the light emitted from a backlight, allowing a small fraction of light through. Thus, they cannot show true black. However, an inactive OLED element does not produce light or consume power, allowing true blacks.[69] Removing the backlight also makes OLEDs lighter because some substrates are not needed.</p>
-                </td>
-              </tr>
-            </table>
-            <div style="height: 50px;"></div>
-          </div>
-          <div class="row" style="text-align: center; padding: 50px 20px;" id="content-mobile">
-            <div class="col-xs-12 col-sm-4">
-              <i class="fa fa-flash" style="font-size: 100px;"></i>
-            </div>
-            <div class="col-xs-12 col-sm-8">
-              <h4>Rapid Performance</h4>
-              <p>OLED response times are up to 1,000 times faster than LCD, putting conservative estimates at under 10 μs (0.01 ms)</p>
-            </div>
-          </div>
-          <div class="row" style="text-align: center; padding: 50px 20px;" id="content-mobile">
-            <div class="col-xs-12 col-sm-4">
-              <i class="fa fa-adjust" style="font-size: 100px;"></i>
-            </div>
-            <div class="col-xs-12 col-sm-8">
-              <h4>Better Contrast</h4>
-              <p>OLEDs enable a greater contrast ratio and wider viewing angle compared to LCDs, because OLED pixels emit light directly</p>
-            </div>
-          </div>
-          <div class="row" style="text-align: center; padding: 50px 20px;" id="content-mobile">
-            <div class="col-xs-12 col-sm-4">
-              <i class="fa fa-battery-full" style="font-size: 100px;"></i>
-            </div>
-            <div class="col-xs-12 col-sm-8">
-              <h4>Power Efficient and Thinner</h4>
-              <p>LCDs filter the light emitted from a backlight, allowing a small fraction of light through. Thus, they cannot show true black. However, an inactive OLED element does not produce light or consume power, allowing true blacks.[69] Removing the backlight also makes OLEDs lighter because some substrates are not needed.</p>
-            </div>
-          </div>
-          <h2 style="padding-bottom: 0px;">Options</h2>
-          <div class="blueSplitter" style="margin-bottom: 10px;"></div>
-          <h4>Standard: </h4>
-          <p style="padding-left: 20px;">
-            Single Color Graphic Resolutions: 50x16 ~ 256x128 pixels<br>
-            Single Color Character Resolutions: 8 ~ 40 Characters and 1 ~ 4 Lines<br>
-            Standard Single Colors: amber, blue, green, red, sky blue, white, yellow<br>
-            Full Color Resolutions: 400x400 ~ 1920x1280 pixels<br>
-          </p>
-          <h4>Customizations: </h4>
-          <p style="padding-left: 20px;">
-            Capacitive or Resistive Touch Panels<br>
-            Interface<br>
-            FPC size<br>
-            Connection type<br>
-            Optical films, etc.
-          </p>
-          <h2>Learn More</h2>
-          <div class="blueSplitter" style="margin-bottom: 10px;"></div>
-          <ul>
-            <li><a href="articles/549_AMOLED_Display_Module.html">5.49" AMOLED Display Module</a></li>
-            <li><a href="articles/OLEDVideo.html">George Explains: OLED Displays</a></li>
-            <li><a href="articles/Value_Added_Services.html">Value Added Services</a></li>
-            <li><a href="articles/Microtips_OEM_Services.html">Microtips OEM Services</a></li>
-            <li><a href="articles/128x64_White_Passive_OLED_Matrix.html">128x64 White Passive OLED Matrix</a></li>
-            <li><a href="articles/So_does_PMOLED.html">As Future technologies advances: So does PMOLED</a></li>
-          </ul>
-        </div>
-      </div>
-      
+          <div class="row prods" style="padding-top: 20px; padding-bottom: 20px;" id="content-mobile">
+            <div class="col-xs-12 col-sm-6">
+              <div id="oledCarousel-mobile" class="carousel slide" data-ride="carousel">
+                <!-- Indicators -->
+                <ol class="carousel-indicators">
+                  <li data-target="#oledCarousel-mobile" data-slide-to="0" class="active"></li>
+                  <li data-target="#oledCarousel-mobile" data-slide-to="1"></li>
+                  <li data-target="#oledCarousel-mobile" data-slide-to="2"></li>
+                </ol>
 
-
-      <div class="tab-pane" id="tpTab">
-        <div class="section allProductsSection">
-          <div class="container">
-
-            <table id="content-desktop">
-              <tr>
-                <th style="width: 50%;">
-                  <img src="images/products/touchPanel/TP.png" alt="Img. 1" style="width:100%;">
-                </th>
-                <td>
-                  <h1 style="font-size: 70px;">Touch Panel</h1>
-                  <h4>Digital human input devices capable of detecting a user's touch for interface and control of dot-matrix and custom icon modules<br></h4>
-                </td>
-              </tr>
-            </table>
-
-            <div class="row prods" style="padding-top: 20px; padding-bottom: 20px;" id="content-mobile">
-              <div class="col-xs-12 col-sm-6">
-                <img src="images/products/touchPanel/TP.png" alt="Img. 1" style="width:100%;">
-              </div>
-              <div class="col-xs-12 col-sm-6">
-                <h1 style="font-size: 35px; padding-top: 10px;">Touch Panel</h1>
-                <h4 style="font-size: 15px;">Digital human input devices capable of detecting a user's touch for interface and control of dot-matrix and custom icon modules<br></h4>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="container">
-          <h2 style="padding-bottom: 0px;">Features</h2>
-          <div class="blueSplitter" style="margin-bottom: 10px;"></div>
-          <div id="content-desktop">
-            <div style="height: 50px;"></div>
-            <table class="productFeatures">
-              <tr>
-                <th style="text-align: center; width: 45%">
-                  <img class="" src="images/products/touchPanel/gloves.svg" height="100px;">
-                </th>
-                <td>
-                  <h4>Glove and Stylus Support</h4>
-                  <p>Our touch panels can be tuned to work with any glove or stylus on the market. This is important for those in medical or industrial markets where users might wear rubber gloves while interacting with devices.</p>
-                </td>
-              </tr>
-            </table>
-            <div style="height: 100px;"></div>
-            <table class="productFeatures">
-              <tr>
-                <td>
-                  <h4>Waterproofing Available</h4>
-                  <p>Our Projected Capacitive touch panels paired with our robust cover glass options make for a responsive screen that can also handle a splash.</p>
-                </td>
-                <th style="text-align: center; width: 45%">
-                  <img class="" src="images/products/touchPanel/water.png" height="100px;">
-                </th>
-              </tr>
-            </table>
-            <div style="height: 100px;"></div>
-            <table class="productFeatures">
-              <tr>
-                <th style="text-align: center; width: 45%">
-                  <i class="fa fa-hand-o-up " style="font-size: 100px;"></i>
-                </th>
-                <td>
-                  <h4>Precision Excellence</h4>
-                  <p>We manufacture our Capacitive and Resistive touch panels to the highest standards which means a more precise experience for users.</p>
-                </td>
-              </tr>
-            </table>
-            <div style="height: 50px;"></div>
-          </div>
-          <div class="row" style="text-align: center; padding: 50px 20px;" id="content-mobile">
-            <div class="col-xs-12 col-sm-4">
-              <img class="" src="images/products/touchPanel/gloves.svg" height="100px;">
-            </div>
-            <div class="col-xs-12 col-sm-8">
-              <h4>Glove and Stylus Support</h4>
-              <p>Our touch panels can be tuned to work with any glove or stylus on the market. This is important for those in medical or industrial markets where users might wear rubber gloves while interacting with devices.</p>
-            </div>
-          </div>
-          <div class="row" style="text-align: center; padding: 50px 20px;" id="content-mobile">
-            <div class="col-xs-12 col-sm-4">
-              <img class="" src="images/products/touchPanel/water.png" height="100px;">
-            </div>
-            <div class="col-xs-12 col-sm-8">
-              <h4>Waterproofing Available</h4>
-              <p>Our Projected Capacitive touch panels paired with our robust cover glass options make for a responsive screen that can also handle a splash.</p>
-            </div>
-          </div>
-          <div class="row" style="text-align: center; padding: 50px 20px;" id="content-mobile">
-            <div class="col-xs-12 col-sm-4">
-              <i class="fa fa-hand-o-up " style="font-size: 100px;"></i>
-            </div>
-            <div class="col-xs-12 col-sm-8">
-              <h4>Precision Excellence</h4>
-              <p>We manufacture our Capacitive and Resistive touch panels to the highest standards which means a more precise experience for users.</p>
-            </div>
-          </div>
-          <h2 style="padding-bottom: 0px;">Options</h2>
-          <div class="blueSplitter" style="margin-bottom: 10px;"></div>
-          <h4>Standard: </h4>
-          <p style="padding-left: 20px;">
-            4, 5, & 8 wire Resistive<br>
-            Projected Capacitive<br>
-            Touch IC built in<br>
-            Glass/Glass or Glass/Film/Film Sensor Packages<br>
-          </p>
-          <h4>Cover Glass Customizations: </h4>
-          <p style="padding-left: 20px;">
-            Size & Shape<br>
-            Screen Printing<br>
-            Rounded Corners<br>
-            Beveled Edges<br>
-            Optical Bonding<br>
-            Gaskets, etc.
-          </p>
-          <h2>Learn More</h2>
-          <div class="blueSplitter" style="margin-bottom: 10px;"></div>
-          <ul>
-            <li><a href="articles/Value_Added_Services.html">Value Added Services</a></li>
-            <li><a href="articles/Microtips_OEM_Services.html">Microtips OEM Services</a></li>
-          </ul>
-        </div>
-      </div>
-      
-
-
-      <div class="tab-pane" id="wipowTab">
-        <div class="section allProductsSection">
-          <div class="container">
-
-            <table id="content-desktop">
-              <tr>
-                <th style="width: 50%;">
-                  <img src="images/products/wirelessPower/airon.png" alt="Img. 1" style="width:100%;">
-                </th>
-                <td>
-                  <h1 style="font-size: 70px;">Wireless Power</h1>
-                  <h4>Devices that deliver and recieve power wirelessly using Magnetic Resonance technology capable of charging anything from small devices to full systems<br></h4>
-                </td>
-              </tr>
-            </table>
-
-            <div class="row prods" style="padding-top: 20px; padding-bottom: 20px;" id="content-mobile">
-              <div class="col-xs-12 col-sm-6">
-                <img src="images/products/wirelessPower/airon.png" alt="Img. 1" style="width:100%;">
-              </div>
-              <div class="col-xs-12 col-sm-6">
-                <h1 style="font-size: 35px; padding-top: 10px;">Wireless Power</h1>
-                <h4 style="font-size: 15px;">Devices that deliver and recieve power wirelessly using Magnetic Resonance technology capable of charging anything from small devices to full systems</h4>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="container">
-          <h2 style="padding-bottom: 0px;">Features</h2>
-          <div class="blueSplitter" style="margin-bottom: 10px;"></div>
-          <div id="content-desktop">
-            <div style="height: 50px;"></div>
-            <table class="productFeatures">
-              <tr>
-                <th style="text-align: center; width: 45%">
-                  <span class="fa-stack fa-lg" style="font-size: 100px; height: 100px; line-height: 100px;">
-                    <i class="fa fa-expand fa-stack-1x"></i>
-                    <i class="fa fa-expand fa-flip-vertical fa-stack-1x"></i>
-                  </span>
-                </th>
-                <td>
-                  <h4>Charge Multiple Devices</h4>
-                  <p>Place any number of recievers near a transmitter and they will all charge simultaneously. If a device is then needed, simply take the one away from the transmitter and the rest will keep charging.</p>
-                </td>
-              </tr>
-            </table>
-            <div style="height: 100px;"></div>
-            <table class="productFeatures">
-              <tr>
-                <td>
-                  <h4>Easy to Use</h4>
-                  <p>No need to pair the device with the charger. Just place the reciever on or near the transmitter to start charging instantly.</p>
-                </td>
-                <th style="text-align: center; width: 45%">
-                  <img class="" src="images/products/wirelessPower/easy.png" height="100px;">
-                </th>
-              </tr>
-            </table>
-            <div style="height: 100px;"></div>
-            <table class="productFeatures">
-              <tr>
-                <th style="text-align: center; width: 45%">
-                  <img class="" src="images/products/wirelessPower/ruler.png" height="100px;">
-                </th>
-                <td>
-                  <h4>Power That Goes the Distance</h4>
-                  <p>With Power Transmitting Units that can work with up to 35mm of non-conductive pass-through material, our wireless power solution can provide power while staying concealed under a table or other surface.</p>
-                </td>
-              </tr>
-            </table>
-            <div style="height: 50px;"></div>
-          </div>
-          <div class="row" style="text-align: center; padding: 50px 20px;" id="content-mobile">
-            <div class="col-xs-12 col-sm-4">
-              <span class="fa-stack fa-lg" style="font-size: 100px; height: 100px; line-height: 100px;">
-                <i class="fa fa-expand fa-stack-1x"></i>
-                <i class="fa fa-expand fa-flip-vertical fa-stack-1x"></i>
-              </span>
-            </div>
-            <div class="col-xs-12 col-sm-8">
-              <h4>Charge Multiple Devices</h4>
-              <p>Place any number of recievers near a transmitter and they will all charge simultaneously. If a device is then needed, simply take the one away from the transmitter and the rest will keep charging.</p>
-            </div>
-          </div>
-          <div class="row" style="text-align: center; padding: 50px 20px;" id="content-mobile">
-            <div class="col-xs-12 col-sm-4">
-              <img class="" src="images/products/wirelessPower/easy.png" height="100px;">
-            </div>
-            <div class="col-xs-12 col-sm-8">
-              <h4>Easy to Use</h4>
-              <p>No need to pair the device with the charger. Just place the reciever on or near the transmitter to start charging instantly.</p>
-            </div>
-          </div>
-          <div class="row" style="text-align: center; padding: 50px 20px;" id="content-mobile">
-            <div class="col-xs-12 col-sm-4">
-              <img class="" src="images/products/wirelessPower/ruler.png" height="100px;">
-            </div>
-            <div class="col-xs-12 col-sm-8">
-              <h4>Power That Goes the Distance</h4>
-              <p>With Power Transmitting Units that can work with up to 35mm of non-conductive pass-through material, our wireless power solution can provide power while staying concealed under a table or other surface.</p>
-            </div>
-          </div>
-          <h2 style="padding-bottom: 0px;">Options</h2>
-          <div class="blueSplitter" style="margin-bottom: 10px;"></div>
-          <div class="row">
-            <div class="col-xs-6">
-              <h4>PTU</h4>
-              <p style="padding-left: 20px;">
-                Class 1 : 2W<br>
-                Class 2 : 10W<br>
-                Class 3 : 16W<br>
-                Class 4 : 33W<br>
-                Class 5 : 50W<br>
-                Class 6 : 70W<br>
-              </p>
-            </div>
-            <div class="col-xs-6">
-              <h4>PRU</h4>
-              <p style="padding-left: 20px;">
-                Class 1 : TBD (Bluetooth Headset)<br>
-                Class 2 : 3.5W (Feature Phone)<br>
-                Class 3 : 6.5W (Smart Phone)<br>
-                Class 4 : 13W (Tablet)<br>
-                Class 5 : 25W (Ultrabook)<br>
-                Class 6 : 37.5W (Standard Laptop)<br>
-              </p>
-            </div>
-          </div>
-          <h4>Contact us today to learn more about integrating our wireless power solution into your product!</h4>
-          <h2>Learn More</h2>
-          <div class="blueSplitter" style="margin-bottom: 10px;"></div>
-          <ul>
-            <li><a href="articles/AirFuel.html">George Explains: AirFuel Wireless Power with Jordan</a></li>
-            <li><a href="articles/Value_Added_Services.html">Value Added Services</a></li>
-            <li><a href="articles/Microtips_OEM_Services.html">Microtips OEM Services</a></li>
-          </ul>
-        </div>
-      </div>
-      
-
-
-      <div class="tab-pane" id="charmonoTab">
-        <div class="section allProductsSection">
-          <div class="container">
-
-            <table id="content-desktop">
-              <tr>
-                <th style="width: 50%;">
-                  <div id="charmonoCarousel" class="carousel slide" data-ride="carousel">
-                    <!-- Indicators -->
-                    <ol class="carousel-indicators">
-                      <li data-target="#charmonoCarousel" data-slide-to="0" class="active"></li>
-                      <li data-target="#charmonoCarousel" data-slide-to="1"></li>
-                      <li data-target="#charmonoCarousel" data-slide-to="2"></li>
-                    </ol>
-
-                    <!-- Wrapper for slides -->
-                    <div class="carousel-inner">
-                      <div class="item active">
-                        <img src="images/products/charMono/charMono3.png" alt="Img. 1" style="width:100%;">
-                      </div>
-
-                      <div class="item">
-                        <img src="images/products/charMono/charMono2.png" alt="Img. 2" style="width:100%;">
-                      </div>
-                    
-                      <div class="item">
-                        <img src="images/products/charMono/charMono1.png" alt="Img. 3" style="width:100%;">
-                      </div>
-
-                      <!-- Left and right controls -->
-                      <a class="left carousel-control" href="#charmonoCarousel" data-slide="prev" style="background:none;">
-                        <span class="glyphicon glyphicon-chevron-left"></span>
-                      </a>
-                      <a class="right carousel-control" href="#charmonoCarousel" data-slide="next" style="background:none;">
-                        <span class="glyphicon glyphicon-chevron-right"></span>
-                      </a>
-                    </div>
+                <!-- Wrapper for slides -->
+                <div class="carousel-inner">
+                  <div class="item active">
+                    <img src="images/products/oled/549 AMOLED Display Module.png" alt="Img. 1" style="width:100%;">
                   </div>
-                </th>
-                <td>
-                  <h1 style="font-size: 70px;">Character Monochrome LCD</h1>
-                  <h4>Displays capable of showing monochrome (single color) text and symbols, with presets in various column and row formats</h4>
-                </td>
-              </tr>
-            </table>
 
-            <div class="row prods" style="padding-top: 20px; padding-bottom: 20px;" id="content-mobile">
-              <div class="col-xs-12 col-sm-6">
-                <div id="charmonoCarousel-mobile" class="carousel slide" data-ride="carousel">
+                  <div class="item">
+                    <img src="images/products/oled/OLED.png" alt="Img. 2" style="width:100%;">
+                  </div>
+                
+                  <div class="item">
+                    <img src="images/products/oled/OLED1.png" alt="Img. 3" style="width:100%;">
+                  </div>
+
+                  <!-- Left and right controls -->
+                  <a class="left carousel-control" href="#oledCarousel-mobile" data-slide="prev" style="background:none;">
+                    <span class="glyphicon glyphicon-chevron-left"></span>
+                  </a>
+                  <a class="right carousel-control" href="#oledCarousel-mobile" data-slide="next" style="background:none;">
+                    <span class="glyphicon glyphicon-chevron-right"></span>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="col-xs-12 col-sm-6">
+              <h1 style="font-size: 35px; padding-top: 10px;">OLED Display</h1>
+              <h4 style="font-size: 15px;">Displays using Passive Matrix (single color) and Active Matrix (full color) Organic Light Emitting Diode technology capable of showing characters, graphics, or custom icons<br></h4>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="container">
+        <h2 style="padding-bottom: 0px;">Features</h2>
+        <div class="blueSplitter" style="margin-bottom: 10px;"></div>
+        <div id="content-desktop">
+          <div style="height: 50px;"></div>
+          <table class="productFeatures">
+            <tr>
+              <th style="text-align: center; width: 45%">
+                <i class="fa fa-flash" style="font-size: 100px;"></i>
+              </th>
+              <td>
+                <h4>Rapid Performance</h4>
+                <p>OLED response times are up to 1,000 times faster than LCD, putting conservative estimates at under 10 μs (0.01 ms)</p>
+              </td>
+            </tr>
+          </table>
+          <div style="height: 100px;"></div>
+          <table class="productFeatures">
+            <tr>
+              <td>
+                <h4>Better Contrast</h4>
+                <p>OLEDs enable a greater contrast ratio and wider viewing angle compared to LCDs, because OLED pixels emit light directly</p>
+              </td>
+              <th style="text-align: center; width: 45%">
+                <i class="fa fa-adjust" style="font-size: 100px;"></i>
+              </th>
+            </tr>
+          </table>
+          <div style="height: 100px;"></div>
+          <table class="productFeatures">
+            <tr>
+              <th style="text-align: center; width: 45%">
+                <i class="fa fa-battery-full" style="font-size: 100px;"></i>
+              </th>
+              <td>
+                <h4>Power Efficient and Thinner</h4>
+                <p>LCDs filter the light emitted from a backlight, allowing a small fraction of light through. Thus, they cannot show true black. However, an inactive OLED element does not produce light or consume power, allowing true blacks.[69] Removing the backlight also makes OLEDs lighter because some substrates are not needed.</p>
+              </td>
+            </tr>
+          </table>
+          <div style="height: 50px;"></div>
+        </div>
+        <div class="row" style="text-align: center; padding: 50px 20px;" id="content-mobile">
+          <div class="col-xs-12 col-sm-4">
+            <i class="fa fa-flash" style="font-size: 100px;"></i>
+          </div>
+          <div class="col-xs-12 col-sm-8">
+            <h4>Rapid Performance</h4>
+            <p>OLED response times are up to 1,000 times faster than LCD, putting conservative estimates at under 10 μs (0.01 ms)</p>
+          </div>
+        </div>
+        <div class="row" style="text-align: center; padding: 50px 20px;" id="content-mobile">
+          <div class="col-xs-12 col-sm-4">
+            <i class="fa fa-adjust" style="font-size: 100px;"></i>
+          </div>
+          <div class="col-xs-12 col-sm-8">
+            <h4>Better Contrast</h4>
+            <p>OLEDs enable a greater contrast ratio and wider viewing angle compared to LCDs, because OLED pixels emit light directly</p>
+          </div>
+        </div>
+        <div class="row" style="text-align: center; padding: 50px 20px;" id="content-mobile">
+          <div class="col-xs-12 col-sm-4">
+            <i class="fa fa-battery-full" style="font-size: 100px;"></i>
+          </div>
+          <div class="col-xs-12 col-sm-8">
+            <h4>Power Efficient and Thinner</h4>
+            <p>LCDs filter the light emitted from a backlight, allowing a small fraction of light through. Thus, they cannot show true black. However, an inactive OLED element does not produce light or consume power, allowing true blacks.[69] Removing the backlight also makes OLEDs lighter because some substrates are not needed.</p>
+          </div>
+        </div>
+        <h2 style="padding-bottom: 0px;">Options</h2>
+        <div class="blueSplitter" style="margin-bottom: 10px;"></div>
+        <h4>Standard: </h4>
+        <p style="padding-left: 20px;">
+          Single Color Graphic Resolutions: 50x16 ~ 256x128 pixels<br>
+          Single Color Character Resolutions: 8 ~ 40 Characters and 1 ~ 4 Lines<br>
+          Standard Single Colors: amber, blue, green, red, sky blue, white, yellow<br>
+          Full Color Resolutions: 400x400 ~ 1920x1280 pixels<br>
+        </p>
+        <h4>Customizations: </h4>
+        <p style="padding-left: 20px;">
+          Capacitive or Resistive Touch Panels<br>
+          Interface<br>
+          FPC size<br>
+          Connection type<br>
+          Optical films, etc.
+        </p>
+        <h2>Learn More</h2>
+        <div class="blueSplitter" style="margin-bottom: 10px;"></div>
+        <ul>
+          <li><a href="articles/549_AMOLED_Display_Module.html">5.49" AMOLED Display Module</a></li>
+          <li><a href="articles/OLEDVideo.html">George Explains: OLED Displays</a></li>
+          <li><a href="articles/Value_Added_Services.html">Value Added Services</a></li>
+          <li><a href="articles/Microtips_OEM_Services.html">Microtips OEM Services</a></li>
+          <li><a href="articles/128x64_White_Passive_OLED_Matrix.html">128x64 White Passive OLED Matrix</a></li>
+          <li><a href="articles/So_does_PMOLED.html">As Future technologies advances: So does PMOLED</a></li>
+        </ul>
+      </div>
+    </div>
+    
+
+
+    <div class="productsContent tpTab">
+      <div class="section allProductsSection">
+        <div class="container">
+
+          <table id="content-desktop">
+            <tr>
+              <th style="width: 50%;">
+                <img src="images/products/touchPanel/TP.png" alt="Img. 1" style="width:100%;">
+              </th>
+              <td>
+                <h1 style="font-size: 70px;">Touch Panel</h1>
+                <h4>Digital human input devices capable of detecting a user's touch for interface and control of dot-matrix and custom icon modules<br></h4>
+              </td>
+            </tr>
+          </table>
+
+          <div class="row prods" style="padding-top: 20px; padding-bottom: 20px;" id="content-mobile">
+            <div class="col-xs-12 col-sm-6">
+              <img src="images/products/touchPanel/TP.png" alt="Img. 1" style="width:100%;">
+            </div>
+            <div class="col-xs-12 col-sm-6">
+              <h1 style="font-size: 35px; padding-top: 10px;">Touch Panel</h1>
+              <h4 style="font-size: 15px;">Digital human input devices capable of detecting a user's touch for interface and control of dot-matrix and custom icon modules<br></h4>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="container">
+        <h2 style="padding-bottom: 0px;">Features</h2>
+        <div class="blueSplitter" style="margin-bottom: 10px;"></div>
+        <div id="content-desktop">
+          <div style="height: 50px;"></div>
+          <table class="productFeatures">
+            <tr>
+              <th style="text-align: center; width: 45%">
+                <img class="" src="images/products/touchPanel/gloves.svg" height="100px;">
+              </th>
+              <td>
+                <h4>Glove and Stylus Support</h4>
+                <p>Our touch panels can be tuned to work with any glove or stylus on the market. This is important for those in medical or industrial markets where users might wear rubber gloves while interacting with devices.</p>
+              </td>
+            </tr>
+          </table>
+          <div style="height: 100px;"></div>
+          <table class="productFeatures">
+            <tr>
+              <td>
+                <h4>Waterproofing Available</h4>
+                <p>Our Projected Capacitive touch panels paired with our robust cover glass options make for a responsive screen that can also handle a splash.</p>
+              </td>
+              <th style="text-align: center; width: 45%">
+                <img class="" src="images/products/touchPanel/water.png" height="100px;">
+              </th>
+            </tr>
+          </table>
+          <div style="height: 100px;"></div>
+          <table class="productFeatures">
+            <tr>
+              <th style="text-align: center; width: 45%">
+                <i class="fa fa-hand-o-up " style="font-size: 100px;"></i>
+              </th>
+              <td>
+                <h4>Precision Excellence</h4>
+                <p>We manufacture our Capacitive and Resistive touch panels to the highest standards which means a more precise experience for users.</p>
+              </td>
+            </tr>
+          </table>
+          <div style="height: 50px;"></div>
+        </div>
+        <div class="row" style="text-align: center; padding: 50px 20px;" id="content-mobile">
+          <div class="col-xs-12 col-sm-4">
+            <img class="" src="images/products/touchPanel/gloves.svg" height="100px;">
+          </div>
+          <div class="col-xs-12 col-sm-8">
+            <h4>Glove and Stylus Support</h4>
+            <p>Our touch panels can be tuned to work with any glove or stylus on the market. This is important for those in medical or industrial markets where users might wear rubber gloves while interacting with devices.</p>
+          </div>
+        </div>
+        <div class="row" style="text-align: center; padding: 50px 20px;" id="content-mobile">
+          <div class="col-xs-12 col-sm-4">
+            <img class="" src="images/products/touchPanel/water.png" height="100px;">
+          </div>
+          <div class="col-xs-12 col-sm-8">
+            <h4>Waterproofing Available</h4>
+            <p>Our Projected Capacitive touch panels paired with our robust cover glass options make for a responsive screen that can also handle a splash.</p>
+          </div>
+        </div>
+        <div class="row" style="text-align: center; padding: 50px 20px;" id="content-mobile">
+          <div class="col-xs-12 col-sm-4">
+            <i class="fa fa-hand-o-up " style="font-size: 100px;"></i>
+          </div>
+          <div class="col-xs-12 col-sm-8">
+            <h4>Precision Excellence</h4>
+            <p>We manufacture our Capacitive and Resistive touch panels to the highest standards which means a more precise experience for users.</p>
+          </div>
+        </div>
+        <h2 style="padding-bottom: 0px;">Options</h2>
+        <div class="blueSplitter" style="margin-bottom: 10px;"></div>
+        <h4>Standard: </h4>
+        <p style="padding-left: 20px;">
+          4, 5, & 8 wire Resistive<br>
+          Projected Capacitive<br>
+          Touch IC built in<br>
+          Glass/Glass or Glass/Film/Film Sensor Packages<br>
+        </p>
+        <h4>Cover Glass Customizations: </h4>
+        <p style="padding-left: 20px;">
+          Size & Shape<br>
+          Screen Printing<br>
+          Rounded Corners<br>
+          Beveled Edges<br>
+          Optical Bonding<br>
+          Gaskets, etc.
+        </p>
+        <h2>Learn More</h2>
+        <div class="blueSplitter" style="margin-bottom: 10px;"></div>
+        <ul>
+          <li><a href="articles/Value_Added_Services.html">Value Added Services</a></li>
+          <li><a href="articles/Microtips_OEM_Services.html">Microtips OEM Services</a></li>
+        </ul>
+      </div>
+    </div>
+    
+
+
+    <div class="productsContent wipowTab">
+      <div class="section allProductsSection">
+        <div class="container">
+
+          <table id="content-desktop">
+            <tr>
+              <th style="width: 50%;">
+                <img src="images/products/wirelessPower/airon.png" alt="Img. 1" style="width:100%;">
+              </th>
+              <td>
+                <h1 style="font-size: 70px;">Wireless Power</h1>
+                <h4>Devices that deliver and recieve power wirelessly using Magnetic Resonance technology capable of charging anything from small devices to full systems<br></h4>
+              </td>
+            </tr>
+          </table>
+
+          <div class="row prods" style="padding-top: 20px; padding-bottom: 20px;" id="content-mobile">
+            <div class="col-xs-12 col-sm-6">
+              <img src="images/products/wirelessPower/airon.png" alt="Img. 1" style="width:100%;">
+            </div>
+            <div class="col-xs-12 col-sm-6">
+              <h1 style="font-size: 35px; padding-top: 10px;">Wireless Power</h1>
+              <h4 style="font-size: 15px;">Devices that deliver and recieve power wirelessly using Magnetic Resonance technology capable of charging anything from small devices to full systems</h4>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="container">
+        <h2 style="padding-bottom: 0px;">Features</h2>
+        <div class="blueSplitter" style="margin-bottom: 10px;"></div>
+        <div id="content-desktop">
+          <div style="height: 50px;"></div>
+          <table class="productFeatures">
+            <tr>
+              <th style="text-align: center; width: 45%">
+                <span class="fa-stack fa-lg" style="font-size: 100px; height: 100px; line-height: 100px;">
+                  <i class="fa fa-expand fa-stack-1x"></i>
+                  <i class="fa fa-expand fa-flip-vertical fa-stack-1x"></i>
+                </span>
+              </th>
+              <td>
+                <h4>Charge Multiple Devices</h4>
+                <p>Place any number of recievers near a transmitter and they will all charge simultaneously. If a device is then needed, simply take the one away from the transmitter and the rest will keep charging.</p>
+              </td>
+            </tr>
+          </table>
+          <div style="height: 100px;"></div>
+          <table class="productFeatures">
+            <tr>
+              <td>
+                <h4>Easy to Use</h4>
+                <p>No need to pair the device with the charger. Just place the reciever on or near the transmitter to start charging instantly.</p>
+              </td>
+              <th style="text-align: center; width: 45%">
+                <img class="" src="images/products/wirelessPower/easy.png" height="100px;">
+              </th>
+            </tr>
+          </table>
+          <div style="height: 100px;"></div>
+          <table class="productFeatures">
+            <tr>
+              <th style="text-align: center; width: 45%">
+                <img class="" src="images/products/wirelessPower/ruler.png" height="100px;">
+              </th>
+              <td>
+                <h4>Power That Goes the Distance</h4>
+                <p>With Power Transmitting Units that can work with up to 35mm of non-conductive pass-through material, our wireless power solution can provide power while staying concealed under a table or other surface.</p>
+              </td>
+            </tr>
+          </table>
+          <div style="height: 50px;"></div>
+        </div>
+        <div class="row" style="text-align: center; padding: 50px 20px;" id="content-mobile">
+          <div class="col-xs-12 col-sm-4">
+            <span class="fa-stack fa-lg" style="font-size: 100px; height: 100px; line-height: 100px;">
+              <i class="fa fa-expand fa-stack-1x"></i>
+              <i class="fa fa-expand fa-flip-vertical fa-stack-1x"></i>
+            </span>
+          </div>
+          <div class="col-xs-12 col-sm-8">
+            <h4>Charge Multiple Devices</h4>
+            <p>Place any number of recievers near a transmitter and they will all charge simultaneously. If a device is then needed, simply take the one away from the transmitter and the rest will keep charging.</p>
+          </div>
+        </div>
+        <div class="row" style="text-align: center; padding: 50px 20px;" id="content-mobile">
+          <div class="col-xs-12 col-sm-4">
+            <img class="" src="images/products/wirelessPower/easy.png" height="100px;">
+          </div>
+          <div class="col-xs-12 col-sm-8">
+            <h4>Easy to Use</h4>
+            <p>No need to pair the device with the charger. Just place the reciever on or near the transmitter to start charging instantly.</p>
+          </div>
+        </div>
+        <div class="row" style="text-align: center; padding: 50px 20px;" id="content-mobile">
+          <div class="col-xs-12 col-sm-4">
+            <img class="" src="images/products/wirelessPower/ruler.png" height="100px;">
+          </div>
+          <div class="col-xs-12 col-sm-8">
+            <h4>Power That Goes the Distance</h4>
+            <p>With Power Transmitting Units that can work with up to 35mm of non-conductive pass-through material, our wireless power solution can provide power while staying concealed under a table or other surface.</p>
+          </div>
+        </div>
+        <h2 style="padding-bottom: 0px;">Options</h2>
+        <div class="blueSplitter" style="margin-bottom: 10px;"></div>
+        <div class="row">
+          <div class="col-xs-6">
+            <h4>PTU</h4>
+            <p style="padding-left: 20px;">
+              Class 1 : 2W<br>
+              Class 2 : 10W<br>
+              Class 3 : 16W<br>
+              Class 4 : 33W<br>
+              Class 5 : 50W<br>
+              Class 6 : 70W<br>
+            </p>
+          </div>
+          <div class="col-xs-6">
+            <h4>PRU</h4>
+            <p style="padding-left: 20px;">
+              Class 1 : TBD (Bluetooth Headset)<br>
+              Class 2 : 3.5W (Feature Phone)<br>
+              Class 3 : 6.5W (Smart Phone)<br>
+              Class 4 : 13W (Tablet)<br>
+              Class 5 : 25W (Ultrabook)<br>
+              Class 6 : 37.5W (Standard Laptop)<br>
+            </p>
+          </div>
+        </div>
+        <h4>Contact us today to learn more about integrating our wireless power solution into your product!</h4>
+        <h2>Learn More</h2>
+        <div class="blueSplitter" style="margin-bottom: 10px;"></div>
+        <ul>
+          <li><a href="articles/AirFuel.html">George Explains: AirFuel Wireless Power with Jordan</a></li>
+          <li><a href="articles/Value_Added_Services.html">Value Added Services</a></li>
+          <li><a href="articles/Microtips_OEM_Services.html">Microtips OEM Services</a></li>
+        </ul>
+      </div>
+    </div>
+    
+
+
+    <div class="productsContent charmonoTab">
+      <div class="section allProductsSection">
+        <div class="container">
+
+          <table id="content-desktop">
+            <tr>
+              <th style="width: 50%;">
+                <div id="charmonoCarousel" class="carousel slide" data-ride="carousel">
                   <!-- Indicators -->
                   <ol class="carousel-indicators">
-                    <li data-target="#charmonoCarousel-mobile" data-slide-to="0" class="active"></li>
-                    <li data-target="#charmonoCarousel-mobile" data-slide-to="1"></li>
-                    <li data-target="#charmonoCarousel-mobile" data-slide-to="2"></li>
+                    <li data-target="#charmonoCarousel" data-slide-to="0" class="active"></li>
+                    <li data-target="#charmonoCarousel" data-slide-to="1"></li>
+                    <li data-target="#charmonoCarousel" data-slide-to="2"></li>
                   </ol>
 
                   <!-- Wrapper for slides -->
@@ -799,182 +788,182 @@
                     </div>
 
                     <!-- Left and right controls -->
-                    <a class="left carousel-control" href="#charmonoCarousel-mobile" data-slide="prev" style="background:none;">
+                    <a class="left carousel-control" href="#charmonoCarousel" data-slide="prev" style="background:none;">
                       <span class="glyphicon glyphicon-chevron-left"></span>
                     </a>
-                    <a class="right carousel-control" href="#charmonoCarousel-mobile" data-slide="next" style="background:none;">
+                    <a class="right carousel-control" href="#charmonoCarousel" data-slide="next" style="background:none;">
                       <span class="glyphicon glyphicon-chevron-right"></span>
                     </a>
                   </div>
                 </div>
-              </div>
-              <div class="col-xs-12 col-sm-6">
-                <h1 style="font-size: 35px; padding-top: 10px;">Character Monochrome LCD</h1>
-                <h4 style="font-size: 15px;">Displays capable of showing monochrome (single color) text and symbols, with presets in various column and row formats</h4>
-              </div>
-            </div>
-          </div>
-        </div>
+              </th>
+              <td>
+                <h1 style="font-size: 70px;">Character Monochrome LCD</h1>
+                <h4>Displays capable of showing monochrome (single color) text and symbols, with presets in various column and row formats</h4>
+              </td>
+            </tr>
+          </table>
 
-        <div class="container">
-          <h2 style="padding-bottom: 0px;">Features</h2>
-          <div class="blueSplitter" style="margin-bottom: 10px;"></div>
-          <div id="content-desktop">
-            <div style="height: 50px;"></div>
-            <table class="productFeatures">
-              <tr>
-                <th style="text-align: center; width: 45%">
-                  <i class="fa fa-eye" style="font-size: 100px;"></i>
-                </th>
-                <td>
-                  <h4>Easy to Read</h4>
-                  <p>With only alphanumeric symbols in a single color, users are able to read these displays easily. This means better efficiency for industrial applications and better usability in others.</p>
-                </td>
-              </tr>
-            </table>
-            <div style="height: 100px;"></div>
-            <table class="productFeatures">
-              <tr>
-                <td>
-                  <h4>Lower Power Consumption</h4>
-                  <p>Because character monochrome displays are basic in their functionality they are also very power efficient. This allows your device to be more usable by lasting longer on set of batteries or a single charge.</p>
-                </td>
-                <th style="text-align: center; width: 45%">
-                  <i class="fa fa-battery-full" style="font-size: 100px;"></i>
-                </th>
-              </tr>
-            </table>
-            <div style="height: 100px;"></div>
-            <table class="productFeatures">
-              <tr>
-                <th style="text-align: center; width: 45%">
-                  <img class="" src="images/products/wirelessPower/ruler.png" height="100px;">
-                </th>
-                <td>
-                  <h4>Small Form Factor</h4>
-                  <p>If you need to display a concise set of information in a small area, a character monoschrome display is what you need. With most being no bigger than a deck of cards, these displays can give you the right information at just the right size.</p>
-                </td>
-              </tr>
-            </table>
-            <div style="height: 50px;"></div>
-          </div>
-          <div class="row" style="text-align: center; padding: 50px 20px;" id="content-mobile">
-            <div class="col-xs-12 col-sm-4">
-              <i class="fa fa-eye" style="font-size: 100px;"></i>
+          <div class="row prods" style="padding-top: 20px; padding-bottom: 20px;" id="content-mobile">
+            <div class="col-xs-12 col-sm-6">
+              <div id="charmonoCarousel-mobile" class="carousel slide" data-ride="carousel">
+                <!-- Indicators -->
+                <ol class="carousel-indicators">
+                  <li data-target="#charmonoCarousel-mobile" data-slide-to="0" class="active"></li>
+                  <li data-target="#charmonoCarousel-mobile" data-slide-to="1"></li>
+                  <li data-target="#charmonoCarousel-mobile" data-slide-to="2"></li>
+                </ol>
+
+                <!-- Wrapper for slides -->
+                <div class="carousel-inner">
+                  <div class="item active">
+                    <img src="images/products/charMono/charMono3.png" alt="Img. 1" style="width:100%;">
+                  </div>
+
+                  <div class="item">
+                    <img src="images/products/charMono/charMono2.png" alt="Img. 2" style="width:100%;">
+                  </div>
+                
+                  <div class="item">
+                    <img src="images/products/charMono/charMono1.png" alt="Img. 3" style="width:100%;">
+                  </div>
+
+                  <!-- Left and right controls -->
+                  <a class="left carousel-control" href="#charmonoCarousel-mobile" data-slide="prev" style="background:none;">
+                    <span class="glyphicon glyphicon-chevron-left"></span>
+                  </a>
+                  <a class="right carousel-control" href="#charmonoCarousel-mobile" data-slide="next" style="background:none;">
+                    <span class="glyphicon glyphicon-chevron-right"></span>
+                  </a>
+                </div>
+              </div>
             </div>
-            <div class="col-xs-12 col-sm-8">
-              <h4>Easy to Read</h4>
-              <p>With only alphanumeric symbols in a single color, users are able to read these displays easily. This means better efficiency for industrial applications and better usability in others.</p>
+            <div class="col-xs-12 col-sm-6">
+              <h1 style="font-size: 35px; padding-top: 10px;">Character Monochrome LCD</h1>
+              <h4 style="font-size: 15px;">Displays capable of showing monochrome (single color) text and symbols, with presets in various column and row formats</h4>
             </div>
           </div>
-          <div class="row" style="text-align: center; padding: 50px 20px;" id="content-mobile">
-            <div class="col-xs-12 col-sm-4">
-              <i class="fa fa-battery-full" style="font-size: 100px;"></i>
-            </div>
-            <div class="col-xs-12 col-sm-8">
-              <h4>Lower Power Consumption</h4>
-              <p>Because character monochrome displays are basic in their functionality they are also very power efficient. This allows your device to be more usable by lasting longer on set of batteries or a single charge.</p>
-            </div>
-          </div>
-          <div class="row" style="text-align: center; padding: 50px 20px;" id="content-mobile">
-            <div class="col-xs-12 col-sm-4">
-              <img class="" src="images/products/wirelessPower/ruler.png" height="100px;">
-            </div>
-            <div class="col-xs-12 col-sm-8">
-              <h4>Small Form Factor</h4>
-              <p>If you need to display a concise set of information in a small area, a character monoschrome display is what you need. With most being no bigger than a deck of cards, these displays can give you the right information at just the right size.</p>
-            </div>
-          </div>
-          <h2 style="padding-bottom: 0px;">Options</h2>
-          <div class="blueSplitter" style="margin-bottom: 10px;"></div>
-          <h4>Standard: </h4>
-          <p style="padding-left: 20px;">
-            Resolutions: 8 ~ 40 Characters and 1 ~ 4 Lines<br>
-            LED Backlights: amber, blue, green, red, yellow/green, white<br>
-            Rear Polarizers: Reflective, Transflective, Transmissive<br>
-            Fluid/Polarizers: TN, STN, FSTN, FFSTN, High Black, Ultra Black, Paper White, VLCD<br>
-            IC Packages: chiponboard, chip on flex, chip on glass, TAB<br>
-            Font Generators: English, Euro, Chinese, Russian/Cyrillic<br>
-          </p>
-          <h4>Customizations: </h4>
-          <p style="padding-left: 20px;">
-            Glass Size<br>
-            Resolution<br>
-            IC Packages<br>
-            Touch Panels<br>
-            Backlight<br>
-            Interface<br>
-            FPC Size<br>
-            Connection Type<br>
-            Bezel<br>
-            Heaters<br>
-            Optical Films, etc.
-          </p>
-          <h2>Learn More</h2>
-          <div class="blueSplitter" style="margin-bottom: 10px;"></div>
-          <ul>
-            <li><a href="articles/Value_Added_Services.html">Value Added Services</a></li>
-            <li><a href="articles/Microtips_OEM_Services.html">Microtips OEM Services</a></li>
-          </ul>
         </div>
       </div>
-      
+
+      <div class="container">
+        <h2 style="padding-bottom: 0px;">Features</h2>
+        <div class="blueSplitter" style="margin-bottom: 10px;"></div>
+        <div id="content-desktop">
+          <div style="height: 50px;"></div>
+          <table class="productFeatures">
+            <tr>
+              <th style="text-align: center; width: 45%">
+                <i class="fa fa-eye" style="font-size: 100px;"></i>
+              </th>
+              <td>
+                <h4>Easy to Read</h4>
+                <p>With only alphanumeric symbols in a single color, users are able to read these displays easily. This means better efficiency for industrial applications and better usability in others.</p>
+              </td>
+            </tr>
+          </table>
+          <div style="height: 100px;"></div>
+          <table class="productFeatures">
+            <tr>
+              <td>
+                <h4>Lower Power Consumption</h4>
+                <p>Because character monochrome displays are basic in their functionality they are also very power efficient. This allows your device to be more usable by lasting longer on set of batteries or a single charge.</p>
+              </td>
+              <th style="text-align: center; width: 45%">
+                <i class="fa fa-battery-full" style="font-size: 100px;"></i>
+              </th>
+            </tr>
+          </table>
+          <div style="height: 100px;"></div>
+          <table class="productFeatures">
+            <tr>
+              <th style="text-align: center; width: 45%">
+                <img class="" src="images/products/wirelessPower/ruler.png" height="100px;">
+              </th>
+              <td>
+                <h4>Small Form Factor</h4>
+                <p>If you need to display a concise set of information in a small area, a character monoschrome display is what you need. With most being no bigger than a deck of cards, these displays can give you the right information at just the right size.</p>
+              </td>
+            </tr>
+          </table>
+          <div style="height: 50px;"></div>
+        </div>
+        <div class="row" style="text-align: center; padding: 50px 20px;" id="content-mobile">
+          <div class="col-xs-12 col-sm-4">
+            <i class="fa fa-eye" style="font-size: 100px;"></i>
+          </div>
+          <div class="col-xs-12 col-sm-8">
+            <h4>Easy to Read</h4>
+            <p>With only alphanumeric symbols in a single color, users are able to read these displays easily. This means better efficiency for industrial applications and better usability in others.</p>
+          </div>
+        </div>
+        <div class="row" style="text-align: center; padding: 50px 20px;" id="content-mobile">
+          <div class="col-xs-12 col-sm-4">
+            <i class="fa fa-battery-full" style="font-size: 100px;"></i>
+          </div>
+          <div class="col-xs-12 col-sm-8">
+            <h4>Lower Power Consumption</h4>
+            <p>Because character monochrome displays are basic in their functionality they are also very power efficient. This allows your device to be more usable by lasting longer on set of batteries or a single charge.</p>
+          </div>
+        </div>
+        <div class="row" style="text-align: center; padding: 50px 20px;" id="content-mobile">
+          <div class="col-xs-12 col-sm-4">
+            <img class="" src="images/products/wirelessPower/ruler.png" height="100px;">
+          </div>
+          <div class="col-xs-12 col-sm-8">
+            <h4>Small Form Factor</h4>
+            <p>If you need to display a concise set of information in a small area, a character monoschrome display is what you need. With most being no bigger than a deck of cards, these displays can give you the right information at just the right size.</p>
+          </div>
+        </div>
+        <h2 style="padding-bottom: 0px;">Options</h2>
+        <div class="blueSplitter" style="margin-bottom: 10px;"></div>
+        <h4>Standard: </h4>
+        <p style="padding-left: 20px;">
+          Resolutions: 8 ~ 40 Characters and 1 ~ 4 Lines<br>
+          LED Backlights: amber, blue, green, red, yellow/green, white<br>
+          Rear Polarizers: Reflective, Transflective, Transmissive<br>
+          Fluid/Polarizers: TN, STN, FSTN, FFSTN, High Black, Ultra Black, Paper White, VLCD<br>
+          IC Packages: chiponboard, chip on flex, chip on glass, TAB<br>
+          Font Generators: English, Euro, Chinese, Russian/Cyrillic<br>
+        </p>
+        <h4>Customizations: </h4>
+        <p style="padding-left: 20px;">
+          Glass Size<br>
+          Resolution<br>
+          IC Packages<br>
+          Touch Panels<br>
+          Backlight<br>
+          Interface<br>
+          FPC Size<br>
+          Connection Type<br>
+          Bezel<br>
+          Heaters<br>
+          Optical Films, etc.
+        </p>
+        <h2>Learn More</h2>
+        <div class="blueSplitter" style="margin-bottom: 10px;"></div>
+        <ul>
+          <li><a href="articles/Value_Added_Services.html">Value Added Services</a></li>
+          <li><a href="articles/Microtips_OEM_Services.html">Microtips OEM Services</a></li>
+        </ul>
+      </div>
+    </div>
+    
 
 
-      <div class="tab-pane" id="graphmonoTab">
-        <div class="section allProductsSection">
-          <div class="container">
+    <div class="productsContent graphmonoTab">
+      <div class="section allProductsSection">
+        <div class="container">
 
-            <table id="content-desktop">
-              <tr>
-                <th style="width: 50%;">
-                  <div id="graphmonoCarousel" class="carousel slide" data-ride="carousel">
-                    <!-- Indicators -->
-                    <ol class="carousel-indicators">
-                      <li data-target="#graphmonoCarousel" data-slide-to="0" class="active"></li>
-                      <li data-target="#graphmonoCarousel" data-slide-to="1"></li>
-                      <li data-target="#graphmonoCarousel" data-slide-to="2"></li>
-                    </ol>
-
-                    <!-- Wrapper for slides -->
-                    <div class="carousel-inner">
-                      <div class="item active">
-                        <img src="images/products/graphMono/graphMono4.png" alt="Img. 1" style="width:100%;">
-                      </div>
-
-                      <div class="item">
-                        <img src="images/products/graphMono/graphMono1.png" alt="Img. 2" style="width:100%;">
-                      </div>
-                    
-                      <div class="item">
-                        <img src="images/products/graphMono/graphMono3.png" alt="Img. 3" style="width:100%;">
-                      </div>
-
-                      <!-- Left and right controls -->
-                      <a class="left carousel-control" href="#graphmonoCarousel" data-slide="prev" style="background:none;">
-                        <span class="glyphicon glyphicon-chevron-left"></span>
-                      </a>
-                      <a class="right carousel-control" href="#graphmonoCarousel" data-slide="next" style="background:none;">
-                        <span class="glyphicon glyphicon-chevron-right"></span>
-                      </a>
-                    </div>
-                  </div>
-                </th>
-                <td>
-                  <h1 style="font-size: 70px;">Graphic Monochrome LCD</h1>
-                  <h4>Displays capable of showing monochrome (single color) graphical images, with pixels arranged into various dot-matrix formats</h4>
-                </td>
-              </tr>
-            </table>
-
-            <div class="row prods" style="padding-top: 20px; padding-bottom: 20px;" id="content-mobile">
-              <div class="col-xs-12 col-sm-6">
-                <div id="graphmonoCarousel-mobile" class="carousel slide" data-ride="carousel">
+          <table id="content-desktop">
+            <tr>
+              <th style="width: 50%;">
+                <div id="graphmonoCarousel" class="carousel slide" data-ride="carousel">
                   <!-- Indicators -->
                   <ol class="carousel-indicators">
-                    <li data-target="#graphmonoCarousel-mobile" data-slide-to="0" class="active"></li>
-                    <li data-target="#graphmonoCarousel-mobile" data-slide-to="1"></li>
-                    <li data-target="#graphmonoCarousel-mobile" data-slide-to="2"></li>
+                    <li data-target="#graphmonoCarousel" data-slide-to="0" class="active"></li>
+                    <li data-target="#graphmonoCarousel" data-slide-to="1"></li>
+                    <li data-target="#graphmonoCarousel" data-slide-to="2"></li>
                   </ol>
 
                   <!-- Wrapper for slides -->
@@ -992,287 +981,287 @@
                     </div>
 
                     <!-- Left and right controls -->
-                    <a class="left carousel-control" href="#graphmonoCarousel-mobile" data-slide="prev" style="background:none;">
+                    <a class="left carousel-control" href="#graphmonoCarousel" data-slide="prev" style="background:none;">
                       <span class="glyphicon glyphicon-chevron-left"></span>
                     </a>
-                    <a class="right carousel-control" href="#graphmonoCarousel-mobile" data-slide="next" style="background:none;">
+                    <a class="right carousel-control" href="#graphmonoCarousel" data-slide="next" style="background:none;">
                       <span class="glyphicon glyphicon-chevron-right"></span>
                     </a>
                   </div>
                 </div>
-              </div>
-              <div class="col-xs-12 col-sm-6">
-                <h1 style="font-size: 35px; padding-top: 10px;">Graphic Monochrome LCD</h1>
-                <h4 style="font-size: 15px;">Displays capable of showing monochrome (single color) graphical images, with pixels arranged into various dot-matrix formats</h4>
-              </div>
-            </div>
-          </div>
-        </div>
+              </th>
+              <td>
+                <h1 style="font-size: 70px;">Graphic Monochrome LCD</h1>
+                <h4>Displays capable of showing monochrome (single color) graphical images, with pixels arranged into various dot-matrix formats</h4>
+              </td>
+            </tr>
+          </table>
 
-        <div class="container">
-          <h2 style="padding-bottom: 0px;">Features</h2>
-          <div class="blueSplitter" style="margin-bottom: 10px;"></div>
-          <div id="content-desktop">
-            <div style="height: 50px;"></div>
-            <table class="productFeatures">
-              <tr>
-                <th style="text-align: center; width: 45%">
-                  <img class="" src="images/products/graphMono/swissArmyKnife.png" height="100px;">
-                </th>
-                <td>
-                  <h4>Versatile Functionality</h4>
-                  <p>Graphic monochrome displays can display text and graphics and everything in between. They can be made with a ppi value (pixels per inch) of up to 100 which will look sharp no matter what is displayed.</p>
-                </td>
-              </tr>
-            </table>
-            <div style="height: 100px;"></div>
-            <table class="productFeatures">
-              <tr>
-                <td>
-                  <h4>Low Cost</h4>
-                  <p>Graphic monochrome displays are simple to manufacture and use so they are an economic option when graphics are needed but full-color is not.</p>
-                </td>
-                <th style="text-align: center; width: 45%">
-                  <i class="fa fa-dollar" style="font-size: 100px;"></i>
-                </th>
-              </tr>
-            </table>
-            <div style="height: 100px;"></div>
-            <table class="productFeatures">
-              <tr>
-                <th style="text-align: center; width: 45%">
-                  <i class="fa fa-battery-full" style="font-size: 100px;"></i>
-                </th>
-                <td>
-                  <h4>Energy Efficient</h4>
-                  <p>Because graphic monochrome displays are basic in their functionality they are also very power efficient. This allows your device to be more usable by lasting longer on set of batteries or a single charge.</p>
-                </td>
-              </tr>
-            </table>
-            <div style="height: 50px;"></div>
-          </div>
-          <div class="row" style="text-align: center; padding: 50px 20px;" id="content-mobile">
-            <div class="col-xs-12 col-sm-4">
-              <img class="" src="images/products/graphMono/swissArmyKnife.png" height="100px;">
-            </div>
-            <div class="col-xs-12 col-sm-8">
-              <h4>Versatile Functionality</h4>
-              <p>Graphic monochrome displays can display text and graphics and everything in between. They can be made with a ppi value (pixels per inch) of up to 100 which will look sharp no matter what is displayed.</p>
-            </div>
-          </div>
-          <div class="row" style="text-align: center; padding: 50px 20px;" id="content-mobile">
-            <div class="col-xs-12 col-sm-4">
-              <i class="fa fa-dollar" style="font-size: 100px;"></i>
-            </div>
-            <div class="col-xs-12 col-sm-8">
-              <h4>Low Cost</h4>
-              <p>Graphic monochrome displays are simple to manufacture and use so they are an economic option when graphics are needed but full-color is not.</p>
-            </div>
-          </div>
-          <div class="row" style="text-align: center; padding: 50px 20px;" id="content-mobile">
-            <div class="col-xs-12 col-sm-4">
-              <i class="fa fa-battery-full" style="font-size: 100px;"></i>
-            </div>
-            <div class="col-xs-12 col-sm-8">
-              <h4>Energy Efficient</h4>
-              <p>Because graphic monochrome displays are basic in their functionality they are also very power efficient. This allows your device to be more usable by lasting longer on set of batteries or a single charge.</p>
-            </div>
-          </div>
-          <h2 style="padding-bottom: 0px;">Options</h2>
-          <div class="blueSplitter" style="margin-bottom: 10px;"></div>
-          <h4>Standard: </h4>
-          <p style="padding-left: 20px;">
-            Resolutions: 24x24 ~ 320x240 pixels<br>
-            LED Backlights: amber, blue, green, red, yellow/green, white<br>
-            Rear Polarizers: Reflective, Transflective, Transmissive<br>
-            Fluid/Polarizers: TN, STN, FSTN, FFSTN, High Black, Ultra Black, Paper White, VLCD<br>
-            IC Packages: chiponboard, chip on flex, chip on glass, TAB<br>
-          </p>
-          <h4>Customizations: </h4>
-          <p style="padding-left: 20px;">
-            Glass Size<br>
-            Resolution<br>
-            IC Packages<br>
-            Touch Panels<br>
-            Backlight<br>
-            Interface<br>
-            FPC Size<br>
-            Connection Type<br>
-            Bezel<br>
-            Heaters<br>
-            Optical Films, etc.
-          </p>
-          <h2>Learn More</h2>
-          <div class="blueSplitter" style="margin-bottom: 10px;"></div>
-          <ul>
-            <li><a href="articles/Value_Added_Services.html">Value Added Services</a></li>
-            <li><a href="articles/Microtips_OEM_Services.html">Microtips OEM Services</a></li>
-          </ul>
-        </div>
-      </div>
-      
+          <div class="row prods" style="padding-top: 20px; padding-bottom: 20px;" id="content-mobile">
+            <div class="col-xs-12 col-sm-6">
+              <div id="graphmonoCarousel-mobile" class="carousel slide" data-ride="carousel">
+                <!-- Indicators -->
+                <ol class="carousel-indicators">
+                  <li data-target="#graphmonoCarousel-mobile" data-slide-to="0" class="active"></li>
+                  <li data-target="#graphmonoCarousel-mobile" data-slide-to="1"></li>
+                  <li data-target="#graphmonoCarousel-mobile" data-slide-to="2"></li>
+                </ol>
 
-
-      <div class="tab-pane" id="customTab">
-        <div class="section allProductsSection">
-          <div class="container">
-
-            <table id="content-desktop">
-              <tr>
-                <th style="width: 50%;">
-                  <img src="images/products/customSegment/CustomSegment.png" alt="Img. 1" style="width:100%;">
-                </th>
-                <td>
-                  <h1 style="font-size: 70px;">Custom Segment Icon LCD</h1>
-                  <h4>Displays capable of showing any combination of segments and custom designed icons to give any product a truly personalized feel</h4>
-                </td>
-              </tr>
-            </table>
-
-            <div class="row prods" style="padding-top: 20px; padding-bottom: 20px;" id="content-mobile">
-              <div class="col-xs-12 col-sm-6">
-                <img src="images/products/customSegment/CustomSegment.png" alt="Img. 1" style="width:100%;">
-              </div>
-              <div class="col-xs-12 col-sm-6">
-                <h1 style="font-size: 35px; padding-top: 10px;">Custom Segment Icon LCD</h1>
-                <h4 style="font-size: 15px;">Displays capable of showing any combination of segments and custom designed icons to give any product a truly personalized feel</h4>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="container">
-          <h2 style="padding-bottom: 0px;">Features</h2>
-          <div class="blueSplitter" style="margin-bottom: 10px;"></div>
-          <div id="content-desktop">
-            <div style="height: 50px;"></div>
-            <table class="productFeatures">
-              <tr>
-                <th style="text-align: center; width: 45%">
-                  <i class="fa fa-wrench" style="font-size: 100px;"></i>
-                </th>
-                <td>
-                  <h4>Truly Customized</h4>
-                  <p>Custom Icon Segment displays are truly customized to what your product needs to say. Whether it is a calculator or a vital monitoring system, a custom icon segment display will show exactly what you want it to.</p>
-                </td>
-              </tr>
-            </table>
-            <div style="height: 100px;"></div>
-            <table class="productFeatures">
-              <tr>
-                <td>
-                  <h4>Easy to Read</h4>
-                  <p>With well-defined number segments and icons and color options like our signature Ultra-Black, a custom icon segment display is easy to read and a great way to display information clearly and consicely</p>
-                </td>
-                <th style="text-align: center; width: 45%">
-                  <i class="fa fa-eye" style="font-size: 100px;"></i>
-                </th>
-              </tr>
-            </table>
-            <div style="height: 50px;"></div>
-          </div>
-          <div class="row" style="text-align: center; padding: 50px 20px;" id="content-mobile">
-            <div class="col-xs-12 col-sm-4">
-              <i class="fa fa-wrench" style="font-size: 100px;"></i>
-            </div>
-            <div class="col-xs-12 col-sm-8">
-              <h4>Truly Customized</h4>
-              <p>Custom Icon Segment displays are truly customized to what your product needs to say. Whether it is a calculator or a vital monitoring system, a custom icon segment display will show exactly what you want it to.</p>
-            </div>
-          </div>
-          <div class="row" style="text-align: center; padding: 50px 20px;" id="content-mobile">
-            <div class="col-xs-12 col-sm-4">
-              <i class="fa fa-eye" style="font-size: 100px;"></i>
-            </div>
-            <div class="col-xs-12 col-sm-8">
-              <h4>Easy to Read</h4>
-              <p>With well-defined number segments and icons and color options like our signature Ultra-Black, a custom icon segment display is easy to read and a great way to display information clearly and consicely</p>
-            </div>
-          </div>
-          <h2 style="padding-bottom: 0px;">Options</h2>
-          <div class="blueSplitter" style="margin-bottom: 10px;"></div>
-          <h4>Customizations: </h4>
-          <p style="padding-left: 20px;">
-            Number of Icons<br>
-            Shape and Size of Icons<br>
-            Glass Size<br>
-            Resolution<br>
-            IC Packages<br>
-            Touch Panels<br>
-            Backlight<br>
-            Interface<br>
-            FPC Size<br>
-            Connection Type<br>
-            Bezel<br>
-            Heaters<br>
-            Optical Films, etc.
-          </p>
-          <h4 style="text-align: center;">Please contact us to talk about all our customization options and how they can make your display look truly unique.</h4>
-          <h2>Learn More</h2>
-          <div class="blueSplitter" style="margin-bottom: 10px;"></div>
-          <ul>
-            <li><a href="articles/Value_Added_Services.html">Value Added Services</a></li>
-            <li><a href="articles/Microtips_OEM_Services.html">Microtips OEM Services</a></li>
-          </ul>
-        </div>
-      </div>
-      
-
-
-      <div class="tab-pane" id="emsTab">
-        <div class="section allProductsSection">
-          <div class="container">
-
-            <table id="content-desktop">
-              <tr>
-                <th style="width: 50%;">
-                  <div id="emsCarousel" class="carousel slide" data-ride="carousel">
-                    <!-- Indicators -->
-                    <ol class="carousel-indicators">
-                      <li data-target="#emsCarousel" data-slide-to="0" class="active"></li>
-                      <li data-target="#emsCarousel" data-slide-to="1"></li>
-                      <li data-target="#emsCarousel" data-slide-to="2"></li>
-                    </ol>
-
-                    <!-- Wrapper for slides -->
-                    <div class="carousel-inner">
-                      <div class="item active">
-                        <img src="images/products/EMS/ems1.jpeg" alt="Img. 1" style="width:100%;">
-                      </div>
-
-                      <div class="item">
-                        <img src="images/products/EMS/ems2.jpeg" alt="Img. 2" style="width:100%;">
-                      </div>
-                    
-                      <div class="item">
-                        <img src="images/products/EMS/ems3.jpeg" alt="Img. 3" style="width:100%;">
-                      </div>
-
-                      <!-- Left and right controls -->
-                      <a class="left carousel-control" href="#emsCarousel" data-slide="prev" style="background:none;">
-                        <span class="glyphicon glyphicon-chevron-left"></span>
-                      </a>
-                      <a class="right carousel-control" href="#emsCarousel" data-slide="next" style="background:none;">
-                        <span class="glyphicon glyphicon-chevron-right"></span>
-                      </a>
-                    </div>
+                <!-- Wrapper for slides -->
+                <div class="carousel-inner">
+                  <div class="item active">
+                    <img src="images/products/graphMono/graphMono4.png" alt="Img. 1" style="width:100%;">
                   </div>
-                </th>
-                <td>
-                  <h1 style="font-size: 70px;">Electronics Manufacturing Services</h1>
-                  <h4>Assembly Services and Product Integration done by Microtips Technology using components suggested by you or carefully selected by our team of professionals</h4>
-                </td>
-              </tr>
-            </table>
 
-            <div class="row prods" style="padding-top: 20px; padding-bottom: 20px;" id="content-mobile">
-              <div class="col-xs-12 col-sm-6">
-                <div id="emsCarousel-mobile" class="carousel slide" data-ride="carousel">
+                  <div class="item">
+                    <img src="images/products/graphMono/graphMono1.png" alt="Img. 2" style="width:100%;">
+                  </div>
+                
+                  <div class="item">
+                    <img src="images/products/graphMono/graphMono3.png" alt="Img. 3" style="width:100%;">
+                  </div>
+
+                  <!-- Left and right controls -->
+                  <a class="left carousel-control" href="#graphmonoCarousel-mobile" data-slide="prev" style="background:none;">
+                    <span class="glyphicon glyphicon-chevron-left"></span>
+                  </a>
+                  <a class="right carousel-control" href="#graphmonoCarousel-mobile" data-slide="next" style="background:none;">
+                    <span class="glyphicon glyphicon-chevron-right"></span>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="col-xs-12 col-sm-6">
+              <h1 style="font-size: 35px; padding-top: 10px;">Graphic Monochrome LCD</h1>
+              <h4 style="font-size: 15px;">Displays capable of showing monochrome (single color) graphical images, with pixels arranged into various dot-matrix formats</h4>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="container">
+        <h2 style="padding-bottom: 0px;">Features</h2>
+        <div class="blueSplitter" style="margin-bottom: 10px;"></div>
+        <div id="content-desktop">
+          <div style="height: 50px;"></div>
+          <table class="productFeatures">
+            <tr>
+              <th style="text-align: center; width: 45%">
+                <img class="" src="images/products/graphMono/swissArmyKnife.png" height="100px;">
+              </th>
+              <td>
+                <h4>Versatile Functionality</h4>
+                <p>Graphic monochrome displays can display text and graphics and everything in between. They can be made with a ppi value (pixels per inch) of up to 100 which will look sharp no matter what is displayed.</p>
+              </td>
+            </tr>
+          </table>
+          <div style="height: 100px;"></div>
+          <table class="productFeatures">
+            <tr>
+              <td>
+                <h4>Low Cost</h4>
+                <p>Graphic monochrome displays are simple to manufacture and use so they are an economic option when graphics are needed but full-color is not.</p>
+              </td>
+              <th style="text-align: center; width: 45%">
+                <i class="fa fa-dollar" style="font-size: 100px;"></i>
+              </th>
+            </tr>
+          </table>
+          <div style="height: 100px;"></div>
+          <table class="productFeatures">
+            <tr>
+              <th style="text-align: center; width: 45%">
+                <i class="fa fa-battery-full" style="font-size: 100px;"></i>
+              </th>
+              <td>
+                <h4>Energy Efficient</h4>
+                <p>Because graphic monochrome displays are basic in their functionality they are also very power efficient. This allows your device to be more usable by lasting longer on set of batteries or a single charge.</p>
+              </td>
+            </tr>
+          </table>
+          <div style="height: 50px;"></div>
+        </div>
+        <div class="row" style="text-align: center; padding: 50px 20px;" id="content-mobile">
+          <div class="col-xs-12 col-sm-4">
+            <img class="" src="images/products/graphMono/swissArmyKnife.png" height="100px;">
+          </div>
+          <div class="col-xs-12 col-sm-8">
+            <h4>Versatile Functionality</h4>
+            <p>Graphic monochrome displays can display text and graphics and everything in between. They can be made with a ppi value (pixels per inch) of up to 100 which will look sharp no matter what is displayed.</p>
+          </div>
+        </div>
+        <div class="row" style="text-align: center; padding: 50px 20px;" id="content-mobile">
+          <div class="col-xs-12 col-sm-4">
+            <i class="fa fa-dollar" style="font-size: 100px;"></i>
+          </div>
+          <div class="col-xs-12 col-sm-8">
+            <h4>Low Cost</h4>
+            <p>Graphic monochrome displays are simple to manufacture and use so they are an economic option when graphics are needed but full-color is not.</p>
+          </div>
+        </div>
+        <div class="row" style="text-align: center; padding: 50px 20px;" id="content-mobile">
+          <div class="col-xs-12 col-sm-4">
+            <i class="fa fa-battery-full" style="font-size: 100px;"></i>
+          </div>
+          <div class="col-xs-12 col-sm-8">
+            <h4>Energy Efficient</h4>
+            <p>Because graphic monochrome displays are basic in their functionality they are also very power efficient. This allows your device to be more usable by lasting longer on set of batteries or a single charge.</p>
+          </div>
+        </div>
+        <h2 style="padding-bottom: 0px;">Options</h2>
+        <div class="blueSplitter" style="margin-bottom: 10px;"></div>
+        <h4>Standard: </h4>
+        <p style="padding-left: 20px;">
+          Resolutions: 24x24 ~ 320x240 pixels<br>
+          LED Backlights: amber, blue, green, red, yellow/green, white<br>
+          Rear Polarizers: Reflective, Transflective, Transmissive<br>
+          Fluid/Polarizers: TN, STN, FSTN, FFSTN, High Black, Ultra Black, Paper White, VLCD<br>
+          IC Packages: chiponboard, chip on flex, chip on glass, TAB<br>
+        </p>
+        <h4>Customizations: </h4>
+        <p style="padding-left: 20px;">
+          Glass Size<br>
+          Resolution<br>
+          IC Packages<br>
+          Touch Panels<br>
+          Backlight<br>
+          Interface<br>
+          FPC Size<br>
+          Connection Type<br>
+          Bezel<br>
+          Heaters<br>
+          Optical Films, etc.
+        </p>
+        <h2>Learn More</h2>
+        <div class="blueSplitter" style="margin-bottom: 10px;"></div>
+        <ul>
+          <li><a href="articles/Value_Added_Services.html">Value Added Services</a></li>
+          <li><a href="articles/Microtips_OEM_Services.html">Microtips OEM Services</a></li>
+        </ul>
+      </div>
+    </div>
+    
+
+
+    <div class="productsContent customTab">
+      <div class="section allProductsSection">
+        <div class="container">
+
+          <table id="content-desktop">
+            <tr>
+              <th style="width: 50%;">
+                <img src="images/products/customSegment/CustomSegment.png" alt="Img. 1" style="width:100%;">
+              </th>
+              <td>
+                <h1 style="font-size: 70px;">Custom Segment Icon LCD</h1>
+                <h4>Displays capable of showing any combination of segments and custom designed icons to give any product a truly personalized feel</h4>
+              </td>
+            </tr>
+          </table>
+
+          <div class="row prods" style="padding-top: 20px; padding-bottom: 20px;" id="content-mobile">
+            <div class="col-xs-12 col-sm-6">
+              <img src="images/products/customSegment/CustomSegment.png" alt="Img. 1" style="width:100%;">
+            </div>
+            <div class="col-xs-12 col-sm-6">
+              <h1 style="font-size: 35px; padding-top: 10px;">Custom Segment Icon LCD</h1>
+              <h4 style="font-size: 15px;">Displays capable of showing any combination of segments and custom designed icons to give any product a truly personalized feel</h4>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="container">
+        <h2 style="padding-bottom: 0px;">Features</h2>
+        <div class="blueSplitter" style="margin-bottom: 10px;"></div>
+        <div id="content-desktop">
+          <div style="height: 50px;"></div>
+          <table class="productFeatures">
+            <tr>
+              <th style="text-align: center; width: 45%">
+                <i class="fa fa-wrench" style="font-size: 100px;"></i>
+              </th>
+              <td>
+                <h4>Truly Customized</h4>
+                <p>Custom Icon Segment displays are truly customized to what your product needs to say. Whether it is a calculator or a vital monitoring system, a custom icon segment display will show exactly what you want it to.</p>
+              </td>
+            </tr>
+          </table>
+          <div style="height: 100px;"></div>
+          <table class="productFeatures">
+            <tr>
+              <td>
+                <h4>Easy to Read</h4>
+                <p>With well-defined number segments and icons and color options like our signature Ultra-Black, a custom icon segment display is easy to read and a great way to display information clearly and consicely</p>
+              </td>
+              <th style="text-align: center; width: 45%">
+                <i class="fa fa-eye" style="font-size: 100px;"></i>
+              </th>
+            </tr>
+          </table>
+          <div style="height: 50px;"></div>
+        </div>
+        <div class="row" style="text-align: center; padding: 50px 20px;" id="content-mobile">
+          <div class="col-xs-12 col-sm-4">
+            <i class="fa fa-wrench" style="font-size: 100px;"></i>
+          </div>
+          <div class="col-xs-12 col-sm-8">
+            <h4>Truly Customized</h4>
+            <p>Custom Icon Segment displays are truly customized to what your product needs to say. Whether it is a calculator or a vital monitoring system, a custom icon segment display will show exactly what you want it to.</p>
+          </div>
+        </div>
+        <div class="row" style="text-align: center; padding: 50px 20px;" id="content-mobile">
+          <div class="col-xs-12 col-sm-4">
+            <i class="fa fa-eye" style="font-size: 100px;"></i>
+          </div>
+          <div class="col-xs-12 col-sm-8">
+            <h4>Easy to Read</h4>
+            <p>With well-defined number segments and icons and color options like our signature Ultra-Black, a custom icon segment display is easy to read and a great way to display information clearly and consicely</p>
+          </div>
+        </div>
+        <h2 style="padding-bottom: 0px;">Options</h2>
+        <div class="blueSplitter" style="margin-bottom: 10px;"></div>
+        <h4>Customizations: </h4>
+        <p style="padding-left: 20px;">
+          Number of Icons<br>
+          Shape and Size of Icons<br>
+          Glass Size<br>
+          Resolution<br>
+          IC Packages<br>
+          Touch Panels<br>
+          Backlight<br>
+          Interface<br>
+          FPC Size<br>
+          Connection Type<br>
+          Bezel<br>
+          Heaters<br>
+          Optical Films, etc.
+        </p>
+        <h4 style="text-align: center;">Please contact us to talk about all our customization options and how they can make your display look truly unique.</h4>
+        <h2>Learn More</h2>
+        <div class="blueSplitter" style="margin-bottom: 10px;"></div>
+        <ul>
+          <li><a href="articles/Value_Added_Services.html">Value Added Services</a></li>
+          <li><a href="articles/Microtips_OEM_Services.html">Microtips OEM Services</a></li>
+        </ul>
+      </div>
+    </div>
+    
+
+
+    <div class="productsContent emsTab">
+      <div class="section allProductsSection">
+        <div class="container">
+
+          <table id="content-desktop">
+            <tr>
+              <th style="width: 50%;">
+                <div id="emsCarousel" class="carousel slide" data-ride="carousel">
                   <!-- Indicators -->
                   <ol class="carousel-indicators">
-                    <li data-target="#emsCarousel-mobile" data-slide-to="0" class="active"></li>
-                    <li data-target="#emsCarousel-mobile" data-slide-to="1"></li>
-                    <li data-target="#emsCarousel-mobile" data-slide-to="2"></li>
+                    <li data-target="#emsCarousel" data-slide-to="0" class="active"></li>
+                    <li data-target="#emsCarousel" data-slide-to="1"></li>
+                    <li data-target="#emsCarousel" data-slide-to="2"></li>
                   </ol>
 
                   <!-- Wrapper for slides -->
@@ -1290,103 +1279,142 @@
                     </div>
 
                     <!-- Left and right controls -->
-                    <a class="left carousel-control" href="#emsCarousel-mobile" data-slide="prev" style="background:none;">
+                    <a class="left carousel-control" href="#emsCarousel" data-slide="prev" style="background:none;">
                       <span class="glyphicon glyphicon-chevron-left"></span>
                     </a>
-                    <a class="right carousel-control" href="#emsCarousel-mobile" data-slide="next" style="background:none;">
+                    <a class="right carousel-control" href="#emsCarousel" data-slide="next" style="background:none;">
                       <span class="glyphicon glyphicon-chevron-right"></span>
                     </a>
                   </div>
                 </div>
-              </div>
-              <div class="col-xs-12 col-sm-6">
-                <h1 style="font-size: 35px; padding-top: 10px;">Electronics Manufacturing Services</h1>
-                <h4 style="font-size: 15px;">Assembly Services and Product Integration done by Microtips Technology using components suggested by you or carefully selected by our team of professionals</h4>
-              </div>
-            </div>
-          </div>
-        </div>
+              </th>
+              <td>
+                <h1 style="font-size: 70px;">Electronics Manufacturing Services</h1>
+                <h4>Assembly Services and Product Integration done by Microtips Technology using components suggested by you or carefully selected by our team of professionals</h4>
+              </td>
+            </tr>
+          </table>
 
-        <div class="container">
-          <h2 style="padding-bottom: 0px;">Features</h2>
-          <div class="blueSplitter" style="margin-bottom: 10px;"></div>
-          <div id="content-desktop">
-            <div style="height: 50px;"></div>
-            <table class="productFeatures">
-              <tr>
-                <th style="text-align: center; width: 45%">
-                  <i class="fa fa-gears" style="font-size: 100px;"></i>
-                </th>
-                <td>
-                  <h4>Manufacturing Assistance</h4>
-                  <p>Our team of engineers will work with you from start to finish to make sure your product gets assembled the right way with the right components.</p>
-                </td>
-              </tr>
-            </table>
-            <div style="height: 100px;"></div>
-            <table class="productFeatures">
-              <tr>
-                <td>
-                  <h4>Time Efficient and Cost Effective</h4>
-                  <p>By using our electronic manufacturing services in Asia you will save time and money because shipping times and component cost decreases when bundling components through us.</p>
-                </td>
-                <th style="text-align: center; width: 45%">
-                  <i class="fa fa-clock-o" style="font-size: 100px;"></i>
-                </th>
-              </tr>
-            </table>
-            <div style="height: 50px;"></div>
-          </div>
-          <div class="row" style="text-align: center; padding: 50px 20px;" id="content-mobile">
-            <div class="col-xs-12 col-sm-4">
-              <i class="fa fa-gears" style="font-size: 100px;"></i>
+          <div class="row prods" style="padding-top: 20px; padding-bottom: 20px;" id="content-mobile">
+            <div class="col-xs-12 col-sm-6">
+              <div id="emsCarousel-mobile" class="carousel slide" data-ride="carousel">
+                <!-- Indicators -->
+                <ol class="carousel-indicators">
+                  <li data-target="#emsCarousel-mobile" data-slide-to="0" class="active"></li>
+                  <li data-target="#emsCarousel-mobile" data-slide-to="1"></li>
+                  <li data-target="#emsCarousel-mobile" data-slide-to="2"></li>
+                </ol>
+
+                <!-- Wrapper for slides -->
+                <div class="carousel-inner">
+                  <div class="item active">
+                    <img src="images/products/EMS/ems1.jpeg" alt="Img. 1" style="width:100%;">
+                  </div>
+
+                  <div class="item">
+                    <img src="images/products/EMS/ems2.jpeg" alt="Img. 2" style="width:100%;">
+                  </div>
+                
+                  <div class="item">
+                    <img src="images/products/EMS/ems3.jpeg" alt="Img. 3" style="width:100%;">
+                  </div>
+
+                  <!-- Left and right controls -->
+                  <a class="left carousel-control" href="#emsCarousel-mobile" data-slide="prev" style="background:none;">
+                    <span class="glyphicon glyphicon-chevron-left"></span>
+                  </a>
+                  <a class="right carousel-control" href="#emsCarousel-mobile" data-slide="next" style="background:none;">
+                    <span class="glyphicon glyphicon-chevron-right"></span>
+                  </a>
+                </div>
+              </div>
             </div>
-            <div class="col-xs-12 col-sm-8">
-              <h4>Manufacturing Assistance</h4>
-              <p>Our team of engineers will work with you from start to finish to make sure your product gets assembled the right way with the right components.</p>
-            </div>
-          </div>
-          <div class="row" style="text-align: center; padding: 50px 20px;" id="content-mobile">
-            <div class="col-xs-12 col-sm-4">
-              <i class="fa fa-clock-o" style="font-size: 100px;"></i>
-            </div>
-            <div class="col-xs-12 col-sm-8">
-              <h4>Time Efficient and Cost Effective</h4>
-              <p>By using our electronic manufacturing services in Asia you will save time and money because shipping times and component cost decreases when bundling components through us.</p>
+            <div class="col-xs-12 col-sm-6">
+              <h1 style="font-size: 35px; padding-top: 10px;">Electronics Manufacturing Services</h1>
+              <h4 style="font-size: 15px;">Assembly Services and Product Integration done by Microtips Technology using components suggested by you or carefully selected by our team of professionals</h4>
             </div>
           </div>
-          <h2 style="padding-bottom: 0px;">Options</h2>
-          <div class="blueSplitter" style="margin-bottom: 10px;"></div>
-          <h4>Engineering Services: </h4>
-          <p style="padding-left: 20px;">
-            Product Development<br>
-            Electrical Engineering<br>
-            Tool Engineering<br>
-            Prototype Engineering<br>
-            Manufacturing Process Engineering<br>
-            Quality Engineering
-          </p>
-          <h4>Microtips Capacity: </h4>
-          <p style="padding-left: 20px;">
-            PCB Assembly<br>
-            Full Product Assembly<br>
-            Tooling Design<br>
-            Molding<br>
-            Industrial Design<br>
-            Quality<br>
-            Testing<br>
-            Distribution and Logistics<br>
-            Repair and Service
-          </p>
-          <h2>Learn More</h2>
-          <div class="blueSplitter" style="margin-bottom: 10px;"></div>
-          <ul>
-            <li><a href="articles/Value_Added_Services.html">Value Added Services</a></li>
-            <li><a href="articles/Microtips_OEM_Services.html">Microtips OEM Services</a></li>
-          </ul>
         </div>
       </div>
 
+      <div class="container">
+        <h2 style="padding-bottom: 0px;">Features</h2>
+        <div class="blueSplitter" style="margin-bottom: 10px;"></div>
+        <div id="content-desktop">
+          <div style="height: 50px;"></div>
+          <table class="productFeatures">
+            <tr>
+              <th style="text-align: center; width: 45%">
+                <i class="fa fa-gears" style="font-size: 100px;"></i>
+              </th>
+              <td>
+                <h4>Manufacturing Assistance</h4>
+                <p>Our team of engineers will work with you from start to finish to make sure your product gets assembled the right way with the right components.</p>
+              </td>
+            </tr>
+          </table>
+          <div style="height: 100px;"></div>
+          <table class="productFeatures">
+            <tr>
+              <td>
+                <h4>Time Efficient and Cost Effective</h4>
+                <p>By using our electronic manufacturing services in Asia you will save time and money because shipping times and component cost decreases when bundling components through us.</p>
+              </td>
+              <th style="text-align: center; width: 45%">
+                <i class="fa fa-clock-o" style="font-size: 100px;"></i>
+              </th>
+            </tr>
+          </table>
+          <div style="height: 50px;"></div>
+        </div>
+        <div class="row" style="text-align: center; padding: 50px 20px;" id="content-mobile">
+          <div class="col-xs-12 col-sm-4">
+            <i class="fa fa-gears" style="font-size: 100px;"></i>
+          </div>
+          <div class="col-xs-12 col-sm-8">
+            <h4>Manufacturing Assistance</h4>
+            <p>Our team of engineers will work with you from start to finish to make sure your product gets assembled the right way with the right components.</p>
+          </div>
+        </div>
+        <div class="row" style="text-align: center; padding: 50px 20px;" id="content-mobile">
+          <div class="col-xs-12 col-sm-4">
+            <i class="fa fa-clock-o" style="font-size: 100px;"></i>
+          </div>
+          <div class="col-xs-12 col-sm-8">
+            <h4>Time Efficient and Cost Effective</h4>
+            <p>By using our electronic manufacturing services in Asia you will save time and money because shipping times and component cost decreases when bundling components through us.</p>
+          </div>
+        </div>
+        <h2 style="padding-bottom: 0px;">Options</h2>
+        <div class="blueSplitter" style="margin-bottom: 10px;"></div>
+        <h4>Engineering Services: </h4>
+        <p style="padding-left: 20px;">
+          Product Development<br>
+          Electrical Engineering<br>
+          Tool Engineering<br>
+          Prototype Engineering<br>
+          Manufacturing Process Engineering<br>
+          Quality Engineering
+        </p>
+        <h4>Microtips Capacity: </h4>
+        <p style="padding-left: 20px;">
+          PCB Assembly<br>
+          Full Product Assembly<br>
+          Tooling Design<br>
+          Molding<br>
+          Industrial Design<br>
+          Quality<br>
+          Testing<br>
+          Distribution and Logistics<br>
+          Repair and Service
+        </p>
+        <h2>Learn More</h2>
+        <div class="blueSplitter" style="margin-bottom: 10px;"></div>
+        <ul>
+          <li><a href="articles/Value_Added_Services.html">Value Added Services</a></li>
+          <li><a href="articles/Microtips_OEM_Services.html">Microtips OEM Services</a></li>
+        </ul>
+      </div>
     </div>
   </div>
 </div>
