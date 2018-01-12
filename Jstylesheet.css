@@ -394,7 +394,7 @@ h2.news {
 
 table { 
     display: table;
-    border-collapse: separate;
+    border-collapse: collapse;
     border-spacing: 2px;
     border-color: gray;
     height: 100px;
@@ -419,6 +419,18 @@ th img{
 
 td > p {
 	margin-bottom: 0px;
+}
+
+.featuredProductsTableHeader {
+	background-color: #D9EDF7;
+}
+
+.featuredProductsTableOdd {
+	background-color: #FFFFFF;
+}
+
+.featuredProductsTableEven {
+	background-color: #F3F3F3;
 }
 
 .productFeatures {}

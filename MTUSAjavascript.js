@@ -13,6 +13,22 @@ $(document).ready(function(){
     {
       alert("Company name is required");
     }
+    else if($('#companyLocation').val() == "")
+    {
+      alert("Company location is required");
+    }
+    else if($('#contactEmail').val() == "")
+    {
+      alert("Contact email is required");
+    }
+    else if($('#contactPhoneNumber').val() == "")
+    {
+      alert("Contact phone number is required");
+    }
+    else if($('#msg').val() == "")
+    {
+      alert("Message is required");
+    }
     else
     {
       $.ajax({
@@ -21,9 +37,17 @@ $(document).ready(function(){
         data:$('#contactForm').serialize(),
         success:function(data)
         {
-          $('#contactForm')[0].reset();
-          $('#contactModal').modal('hide');
-          alert("Your contact request has been sent!");
+          if (data == "CAPTCHA") {
+            alert("Please make sure you check the security CAPTCHA box.");
+          }
+          else if (data == "error") {
+            alert("Mail not sent. Please send an email with the entered information directly to mtusainfo@microtipsusa.com.");
+          }
+          else {
+            $('#contactForm')[0].reset();
+            $('#contactModal').modal('hide');
+            alert("Your contact request has been sent!");
+          }
         }
       });
     }
