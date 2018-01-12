@@ -517,6 +517,7 @@ td > p {
 .industriesNav > .affix {
 	top: 81px;
 	width: 100%;
+	background-color: #EFEFEF;
     z-index: 9999 !important;
 }
 
@@ -560,6 +561,16 @@ td > p {
 .productsNav > .affix ~ .content {
 	position: relative;
 	top: 130px;
+}
+
+#featuredProductsTable > .affix-top {
+	position: relative;
+}
+
+#featuredProductsTable > .affix {
+	top: 1000px;
+	width: 100%;
+	z-index: 9999 !important;
 }
 
 .col-sm-eigth {
